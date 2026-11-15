@@ -33,9 +33,17 @@ UA = "WorldPantry-recipe-app/1.0 (open-source recipe app; dish photos with attri
 FOOD = re.compile(r"\b(dish|food|cuisine|soup|stew|bread|cake|pastry|pastries|sauce|salad|dessert|dumpling|noodle|pasta|"
                   r"rice|curry|sandwich|pie|tart|pudding|snack|biscuit|cookie|porridge|pancake|flatbread|confection|"
                   r"sausage|meatball|casserole|condiment|dip|spread|beverage|drink|fritter|omelette|kebab|stir[- ]fr|"
-                  r"street food|delicacy|appetizer|breakfast|staple|preparation|recipe|sweet|cheese|bun|roll|waffle)", re.I)
+                  r"street food|delicacy|appetizer|breakfast|staple|preparation|recipe|sweet|cheese|bun|roll|waffle|roast|braise|meat|lentil)", re.I)
 FREE = re.compile(r"^(cc0|cc[ -]by|public domain|pd|gfdl|attribution|fal|free art|no restrictions|copyrighted free use)", re.I)
 TARGET_W, TARGET_H = 640, 480
+
+# Recipes whose automatic search picks the wrong article: use this Wikipedia title instead.
+OVERRIDES = {
+    "bratkartoffeln": "Home fries", "cheeseburger": "Cheeseburger", "jerk-chicken": "Jerk (cooking)",
+    "kartoffelsuppe": "Potato soup", "kottbullar": "Swedish meatballs", "lasagne": "Lasagna",
+    "linseneintopf": "Lentil soup", "pesto-genovese": "Pesto", "teriyaki": "Teriyaki", "tacos-pastor": "Al pastor",
+    "sauerbraten": "Sauerbraten", "rotkohl": "Rotkohl", "flammkuchen": "Tarte flambée", "dal-tadka": "Dal",
+}
 
 
 def get(url, binary=False, tries=4):
@@ -81,6 +89,35 @@ def pick_page(r):
             if p.get("thumbnail") and FOOD.search(p.get("description") or ""):
                 return p
     return None
+
+
+def summary_page(title):
+    data = get("https://en.wikipedia.org/api/rest_v1/page/summary/" + urllib.parse.quote(title.replace(" ", "_")))
+    if not data:
+        return None
+    d = json.loads(data)
+    if d.get("type") == "disambiguation":
+        return None
+    thumb = (d.get("thumbnail") or {}).get("source")
+    return {"title": d.get("title", title), "thumbnail": {"url": thumb} if thumb else None}
+
+
+def commons_files(title, lead_thumb):
+    """Candidate Commons file names for an article: the lead image first, then the other images."""
+    files = []
+    if lead_thumb and "/commons/" in lead_thumb:
+        m = re.search(r"/commons/thumb/\w/\w\w/([^/]+)/", lead_thumb)
+        if m:
+            files.append(urllib.parse.unquote(m.group(1)).replace("_", " "))
+    data = get("https://en.wikipedia.org/api/rest_v1/page/media-list/" + urllib.parse.quote(title.replace(" ", "_")))
+    if data:
+        for it in json.loads(data).get("items", []):
+            t = it.get("title", "")
+            if it.get("type") == "image" and re.search(r"\.(jpe?g|png|webp)$", t, re.I):
+                name = t.split(":", 1)[-1].replace("_", " ")
+                if name not in files:
+                    files.append(name)
+    return files[:6]
 
 
 def commons_credit(file_name):
@@ -134,18 +171,19 @@ def main():
     todo = [r for r in recipes() if r["id"] not in photos or r["id"] in redo]
     print(len(todo), "recipes to look up")
     for n, r in enumerate(todo, 1):
-        page = pick_page(r)
+        page = summary_page(OVERRIDES[r["id"]]) if r["id"] in OVERRIDES else pick_page(r)
         if not page:
             print(f"[{n}] {r['id']}: no matching article"); continue
-        thumb = page["thumbnail"]["url"]
-        if "/commons/" not in thumb:
-            print(f"[{n}] {r['id']}: lead image is not on Commons, skipped"); continue
-        file_name = urllib.parse.unquote(re.search(r"/commons/thumb/\w/\w\w/([^/]+)/", thumb).group(1)).replace("_", " ")
-        credit = commons_credit(file_name)
-        if not credit:
-            print(f"[{n}] {r['id']}: no free license found for {file_name}"); continue
-        if not save_image(file_name, os.path.join(OUT_DIR, r["id"] + ".jpg")):
-            print(f"[{n}] {r['id']}: download failed"); continue
+        lead = (page.get("thumbnail") or {}).get("url")
+        chosen = None
+        for file_name in commons_files(page["title"], lead):
+            credit = commons_credit(file_name)
+            if credit and save_image(file_name, os.path.join(OUT_DIR, r["id"] + ".jpg")):
+                chosen = (file_name, credit)
+                break
+        if not chosen:
+            print(f"[{n}] {r['id']}: no freely licensed photo in {page['title']}"); continue
+        file_name, credit = chosen
         photos[r["id"]] = {"src": f"images/dishes/{r['id']}.jpg", "article": page["title"], "file": file_name,
                            "source": "https://commons.wikimedia.org/wiki/File:" + urllib.parse.quote(file_name.replace(" ", "_")), **credit}
         print(f"[{n}] {r['id']}: {page['title']} | {credit['license']} | {credit['author']}")
