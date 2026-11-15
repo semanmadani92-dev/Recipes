@@ -469,7 +469,8 @@
     el.caption.textContent = sc.text;
     el.overlay.innerHTML = "";
     if (sc.kind === "intro") {
-      el.overlay.innerHTML = '<div class="v-title"><span class="v-kicker">' + escHtml(current.country) + " · " + current.time + " min · serves " + current.serves + '</span><strong>' + escHtml(recipeName) + "</strong></div>";
+      el.overlay.innerHTML = (current.photo ? '<img class="v-photo" src="' + escHtml(current.photo) + '" alt="" onerror="this.remove()">' : "") +
+        '<div class="v-title"><span class="v-kicker">' + escHtml(current.country) + " · " + current.time + " min · serves " + current.serves + '</span><strong>' + escHtml(recipeName) + "</strong></div>";
     } else if (sc.kind === "ingredients") {
       const max = el.stage.clientWidth < 520 ? 8 : 16;
       const shown = current.ingredients.slice(0, max);
@@ -478,7 +479,7 @@
         '<li style="animation-delay:' + (reduce ? 0 : Math.min(i * 0.35, 6)) + 's"><b>' + escHtml(x.qty) + "</b> " + escHtml(x.name) + "</li>").join("") +
         (more > 0 ? '<li class="v-more" style="animation-delay:' + (reduce ? 0 : Math.min(shown.length * 0.35, 6)) + 's">+ ' + more + " more</li>" : "") + "</ul>";
     } else if (sc.kind === "outro") {
-      el.overlay.innerHTML = '<div class="v-title v-end"><strong>Enjoy!</strong><span class="v-kicker">' + escHtml(recipeName) + "</span></div>";
+      el.overlay.innerHTML = (current.photo ? '<img class="v-photo" src="' + escHtml(current.photo) + '" alt="" onerror="this.remove()">' : "") + '<div class="v-title v-end"><strong>Enjoy!</strong><span class="v-kicker">' + escHtml(recipeName) + "</span></div>";
     }
     el.prev.disabled = idx === 0;
     el.next.disabled = idx === scenes.length - 1;

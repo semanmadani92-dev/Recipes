@@ -3,6 +3,7 @@
   "use strict";
 
   const PRICES = window.PRICES;
+  const PHOTOS = window.PHOTOS || {};
   const RECIPES = window.RECIPES;
   const COUNTRIES = window.COUNTRIES;
 
@@ -119,7 +120,9 @@
   function card(r, extra) {
     const c = COUNTRIES[r.country];
     const saved = state.saved.has(r.id);
-    return `<button type="button" class="r-card${saved ? " is-saved" : ""}" data-recipe="${r.id}" aria-label="${esc(r.name)}, ${esc(c.name)}">
+    const ph = PHOTOS[r.id];
+    return `<button type="button" class="r-card${saved ? " is-saved" : ""}${ph ? " has-photo" : ""}" data-recipe="${r.id}" aria-label="${esc(r.name)}, ${esc(c.name)}">
+      ${ph ? `<span class="r-photo"><img src="${esc(ph.src)}" alt="" loading="lazy" decoding="async" onerror="this.parentNode.remove()"></span>` : ""}
       <span class="saved-dot" title="Saved"></span>
       <span class="r-where">${esc(c.name)} · ${esc(c.region)}</span>
       <span class="r-name">${esc(r.name)}</span>
@@ -647,7 +650,12 @@
     const cost = costOf(r, state.servings, state.includeStaples);
     const saved = state.saved.has(r.id);
     const skipped = cost.lines.filter((l) => !l.counted);
+    const ph = PHOTOS[r.id];
     $("#recipe-body").innerHTML = `
+      ${ph ? `<figure class="d-photo">
+        <img src="${esc(ph.src)}" alt="${esc(r.name)}" onerror="this.closest('figure').remove()">
+        <figcaption>Photo: <a href="${esc(ph.source)}" target="_blank" rel="noopener">${esc(ph.author)}</a>, ${ph.licenseUrl ? `<a href="${esc(ph.licenseUrl)}" target="_blank" rel="noopener">${esc(ph.license)}</a>` : esc(ph.license)}, via Wikimedia Commons</figcaption>
+      </figure>` : ""}
       <div class="d-top">
         <div class="d-head">
           <div class="d-where"><button type="button" data-country-link="${r.country}">${esc(c.name)}</button> · ${esc(c.region)}</div>
@@ -709,6 +717,7 @@
     const cost = costOf(r, state.servings, true);
     window.RecipePlayer.open({
       name: r.name, desc: r.desc, country: COUNTRIES[r.country].name, time: r.time, serves: cost.servings, steps: r.steps,
+      photo: PHOTOS[r.id] ? PHOTOS[r.id].src : null,
       ingredients: cost.lines.map((l) => ({ name: l.name, qty: fmtQty(l.q, l.u) }))
     });
   }
