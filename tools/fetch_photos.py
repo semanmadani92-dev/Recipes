@@ -45,6 +45,9 @@ OVERRIDES = {
     "sauerbraten": "Sauerbraten", "rotkohl": "Rotkohl", "flammkuchen": "Tarte flambée", "dal-tadka": "Dal",
     "soda-bread": "Soda bread", "poffertjes": "Poffertjes", "tarator": "Tarator", "sarmale": "Sarma (food)",
     "plokkfiskur": "Plokkfiskur", "brudet": "Brodetto",
+    "kofte": "Köfte", "kefta-tagine": "Tajine", "suya": "Suya", "kelewele": "Kelewele", "chakalaka": "Chakalaka",
+    "sl-chicken-curry": "Chicken curry", "parippu": "Dal", "mchuzi-samaki": "Fish curry", "piri-piri": "Peri-peri",
+    "sadza-nyama": "Sadza",
 }
 
 
