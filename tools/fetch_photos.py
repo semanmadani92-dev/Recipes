@@ -51,6 +51,9 @@ OVERRIDES = {
     "pepian": "Pepián", "empanadas-pino": "Empanada", "empanadas-arg": "Empanada", "buffalo-wings": "Buffalo wing",
     "gnocchi-pomodoro": "Gnocchi", "albondigas": "Albóndigas", "roast-lamb-nz": "Sunday roast", "victoria-sponge": "Victoria sponge",
     "kartoffelsalat": "Potato salad", "spargel": "Spargel",
+    "zurek": "Żurek", "shuwa": "Shuwa", "kapana": "Braai", "egusi": "Egusi", "gomen": "Gomen", "githeri": "Githeri",
+    "char-siu": "Char siu", "malai-kofta": "Malai kofta", "sutlac": "Rice pudding", "machboos": "Machboos",
+    "shorba-libiya": "Shorba", "kansiye": "Peanut stew", "chambo": "Chambo", "agatogo": "Matoke", "ikan-sabuko": "Ikan bakar",
 }
 
 
@@ -94,6 +97,8 @@ def pick_page(r):
         queries.insert(1, alt.group(1))
     for q in queries:
         for p in search(q):
+            if re.match(r"(List of|National dish|.* cuisine$)", p.get("title", "")):
+                continue
             if p.get("thumbnail") and FOOD.search(p.get("description") or ""):
                 return p
     return None
