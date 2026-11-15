@@ -18,6 +18,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Af%C3%A9lia.jpg",
 "src": "images/dishes/afelia.jpg"
 },
+"agatogo": {
+"article": "Matoke",
+"author": "Sagiomhza",
+"file": "Matooke to the market.jpg",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Matooke_to_the_market.jpg",
+"src": "images/dishes/agatogo.jpg"
+},
 "aglio-olio": {
 "article": "Spaghetti aglio e olio",
 "author": "Spaghetti_aglio_olio_e_peperoncino_by_matsuyuki_retouched.jpg derivative work: J",
@@ -46,12 +55,12 @@ window.PHOTOS = {
 "src": "images/dishes/ajiaco.jpg"
 },
 "albondigas": {
-"article": "Huevos rancheros",
-"author": "jeffreyw",
-"file": "Mmm...huevos rancheros.jpg",
-"license": "CC BY 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Mmm...huevos_rancheros.jpg",
+"article": "Meatball",
+"author": "ralphhogaboom",
+"file": "Soup with meatballs-01.jpg",
+"license": "CC BY-SA 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Soup_with_meatballs-01.jpg",
 "src": "images/dishes/albondigas.jpg"
 },
 "alfajores": {
@@ -135,6 +144,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Arepitas_Food_Macro.jpg",
 "src": "images/dishes/arepas.jpg"
 },
+"aussie-sausage-sizzle": {
+"article": "Sausage sizzle",
+"author": "Alpha",
+"file": "Sausage Sizzle - Snowy Valley Resort AUD3.50.jpg",
+"license": "CC BY-SA 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Sausage_Sizzle_-_Snowy_Valley_Resort_AUD3.50.jpg",
+"src": "images/dishes/aussie-sausage-sizzle.jpg"
+},
 "avgolemono": {
 "article": "Avgolemono",
 "author": "robin.norwood",
@@ -189,6 +207,33 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Baleada.jpg",
 "src": "images/dishes/baleadas.jpg"
 },
+"bami": {
+"article": "Mie goreng",
+"author": "Gunawan Kartapranata",
+"file": "Mi Goreng GM.jpg",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Mi_Goreng_GM.jpg",
+"src": "images/dishes/bami.jpg"
+},
+"banana-bread": {
+"article": "Banana bread",
+"author": "Shisma",
+"file": "Banana bread slices.jpg",
+"license": "CC BY 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Banana_bread_slices.jpg",
+"src": "images/dishes/banana-bread.jpg"
+},
+"bandeja-paisa": {
+"article": "Bandeja paisa",
+"author": ".mw-parser-output .commons-creator-table{background-color:#f0f0ff;box-sizing:bor",
+"file": "Bandeja paisa, plato Colombiano.jpg",
+"license": "CC0",
+"licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+"source": "https://commons.wikimedia.org/wiki/File:Bandeja_paisa%2C_plato_Colombiano.jpg",
+"src": "images/dishes/bandeja-paisa.jpg"
+},
 "banh-mi": {
 "article": "Bánh mì",
 "author": "nsaum75¡שיחת!‎",
@@ -206,6 +251,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
 "source": "https://commons.wikimedia.org/wiki/File:Somalicamelmeat.jpg",
 "src": "images/dishes/bariis-iskukaris.jpg"
+},
+"bbq-ribs": {
+"article": "Ribs (food)",
+"author": "David Monniaux",
+"file": "Cote de boeuf p1040932.jpg",
+"license": "GFDL",
+"licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
+"source": "https://commons.wikimedia.org/wiki/File:Cote_de_boeuf_p1040932.jpg",
+"src": "images/dishes/bbq-ribs.jpg"
 },
 "beef-noodle-soup": {
 "article": "Beef noodle soup",
@@ -324,6 +378,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Bolani.jpg",
 "src": "images/dishes/bolani.jpg"
 },
+"bolo-cenoura": {
+"article": "Carrot cake",
+"author": "Elitre",
+"file": "Carrot cake at America Graffiti (cropped).jpg",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Carrot_cake_at_America_Graffiti_%28cropped%29.jpg",
+"src": "images/dishes/bolo-cenoura.jpg"
+},
 "borscht": {
 "article": "Borscht",
 "author": "liz west from Boxborough, MA",
@@ -332,6 +395,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
 "source": "https://commons.wikimedia.org/wiki/File:Borscht_served.jpg",
 "src": "images/dishes/borscht.jpg"
+},
+"bougna": {
+"article": "Bougna",
+"author": "Unknown author",
+"file": "Femme kanak.jpg",
+"license": "CC BY-SA 2.5",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+"source": "https://commons.wikimedia.org/wiki/File:Femme_kanak.jpg",
+"src": "images/dishes/bougna.jpg"
 },
 "bouillabaisse": {
 "article": "Bouillabaisse",
@@ -352,12 +424,12 @@ window.PHOTOS = {
 "src": "images/dishes/bourguignon.jpg"
 },
 "bratkartoffeln": {
-"article": "Fried egg",
-"author": "Matthew Murdoch",
-"file": "Fried Egg 2.jpg",
-"license": "CC BY 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Fried_Egg_2.jpg",
+"article": "Home fries",
+"author": "Marshall Astor from San Pedro, California, USA",
+"file": "Flickr lifeontheedge 3672951574--Home fried potatoes.jpg",
+"license": "CC BY-SA 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Flickr_lifeontheedge_3672951574--Home_fried_potatoes.jpg",
 "src": "images/dishes/bratkartoffeln.jpg"
 },
 "brigadeiros": {
@@ -369,13 +441,22 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Brigadeiro.jpg",
 "src": "images/dishes/brigadeiros.jpg"
 },
+"brownies": {
+"article": "Chocolate brownie",
+"author": "Ɱ",
+"file": "Chocolatebrownie.JPG",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Chocolatebrownie.JPG",
+"src": "images/dishes/brownies.jpg"
+},
 "buffalo-wings": {
-"article": "Lemon pepper wings",
-"author": "Elsie Hui",
-"file": "Lemon Pepper Chicken Wings.jpg",
+"article": "Buffalo wing",
+"author": "Clotee Pridgen Allochuku",
+"file": "Buffalo wings-01.jpg",
 "license": "CC BY 2.0",
 "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Lemon_Pepper_Chicken_Wings.jpg",
+"source": "https://commons.wikimedia.org/wiki/File:Buffalo_wings-01.jpg",
 "src": "images/dishes/buffalo-wings.jpg"
 },
 "bulgogi": {
@@ -513,6 +594,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Jielbeaumadier_carbonade_flamande_2010.jpg",
 "src": "images/dishes/carbonnade.jpg"
 },
+"carnitas": {
+"article": "Carnitas",
+"author": "Mike McCune",
+"file": "Carnitas.jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Carnitas.jpg",
+"src": "images/dishes/carnitas.jpg"
+},
 "cassoulet": {
 "article": "Cassoulet",
 "author": "BrokenSphere",
@@ -521,6 +611,15 @@ window.PHOTOS = {
 "licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
 "source": "https://commons.wikimedia.org/wiki/File:Bowl_of_cassoulet.JPG",
 "src": "images/dishes/cassoulet.jpg"
+},
+"causa": {
+"article": "Causa limeña",
+"author": "spersper",
+"file": "Causa Rellena.jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Causa_Rellena.jpg",
+"src": "images/dishes/causa.jpg"
 },
 "cepelinai": {
 "article": "Cepelinai",
@@ -550,12 +649,12 @@ window.PHOTOS = {
 "src": "images/dishes/ceviche.jpg"
 },
 "chakalaka": {
-"article": "Boerewors",
-"author": "TempestSA at English Wikipedia",
-"file": "Boerewors raw.jpg",
-"license": "CC BY-SA 3.0",
-"licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-"source": "https://commons.wikimedia.org/wiki/File:Boerewors_raw.jpg",
+"article": "Chakalaka",
+"author": "philipp from cape town, south africa",
+"file": "Chakalaka.jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Chakalaka.jpg",
 "src": "images/dishes/chakalaka.jpg"
 },
 "challah": {
@@ -604,21 +703,21 @@ window.PHOTOS = {
 "src": "images/dishes/char-kway-teow.jpg"
 },
 "char-siu": {
-"article": "Cha siu bao",
-"author": "Takeaway",
-"file": "Char siu bao.jpg",
-"license": "CC BY-SA 3.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-"source": "https://commons.wikimedia.org/wiki/File:Char_siu_bao.jpg",
+"article": "Char siu",
+"author": "Simon Shek",
+"file": "Charsiu.jpg",
+"license": "GFDL",
+"licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
+"source": "https://commons.wikimedia.org/wiki/File:Charsiu.jpg",
 "src": "images/dishes/char-siu.jpg"
 },
 "cheeseburger": {
-"article": "Wendy's",
-"author": "Nheyob",
-"file": "Wendy's flagship restaurant (Dublin, Ohio).jpg",
-"license": "CC BY-SA 4.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Wendy%27s_flagship_restaurant_%28Dublin%2C_Ohio%29.jpg",
+"article": "Cheeseburger",
+"author": "Renee Comet (photographer)",
+"file": "Cheeseburger.jpg",
+"license": "Public domain",
+"licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+"source": "https://commons.wikimedia.org/wiki/File:Cheeseburger.jpg",
 "src": "images/dishes/cheeseburger.jpg"
 },
 "chicken-karahi": {
@@ -711,6 +810,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Chorba_frik_algerienne.jpg",
 "src": "images/dishes/chorba-frik.jpg"
 },
+"choripan": {
+"article": "Choripán",
+"author": "SimpleFoodie",
+"file": "Choripan.jpg",
+"license": "Public domain",
+"licenseUrl": "",
+"source": "https://commons.wikimedia.org/wiki/File:Choripan.jpg",
+"src": "images/dishes/choripan.jpg"
+},
 "chow-mein": {
 "article": "Chow mein",
 "author": "Peachyeung316",
@@ -728,6 +836,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
 "source": "https://commons.wikimedia.org/wiki/File:Chocolate_con_churros_%2827343655726%29.jpg",
 "src": "images/dishes/churros.jpg"
+},
+"cochinita-pibil": {
+"article": "Cochinita pibil",
+"author": "Popo le Chien",
+"file": "Cochinita pibil 2.jpg",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Cochinita_pibil_2.jpg",
+"src": "images/dishes/cochinita-pibil.jpg"
 },
 "colcannon": {
 "article": "Colcannon",
@@ -782,6 +899,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
 "source": "https://commons.wikimedia.org/wiki/File:Moroccan_cuscus%2C_from_Casablanca%2C_September_2018.jpg",
 "src": "images/dishes/couscous-7.jpg"
+},
+"coxinha": {
+"article": "Coxinha",
+"author": "Romerito Pontes from São Carlos",
+"file": "(2014-11-22) La Donosti - Agudos - Coxinha de Leitoa Romerito Pontes (15870107515).jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:%282014-11-22%29_La_Donosti_-_Agudos_-_Coxinha_de_Leitoa_Romerito_Pontes_%2815870107515%29.jpg",
+"src": "images/dishes/coxinha.jpg"
 },
 "crema-catalana": {
 "article": "Crema catalana",
@@ -856,21 +982,21 @@ window.PHOTOS = {
 "src": "images/dishes/currywurst.jpg"
 },
 "dal-bhat": {
-"article": "Khichdi",
-"author": "Rpande",
-"file": "Dall Khichdi.jpg",
+"article": "Dal bhat",
+"author": "Sgnpkd",
+"file": "Dal bhat Birethani.jpg",
 "license": "CC BY-SA 4.0",
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Dall_Khichdi.jpg",
+"source": "https://commons.wikimedia.org/wiki/File:Dal_bhat_Birethani.jpg",
 "src": "images/dishes/dal-bhat.jpg"
 },
 "dal-tadka": {
-"article": "Dal makhani",
-"author": "Radhikamprabhu82",
-"file": "Punjabi style Dal Makhani.jpg",
-"license": "CC BY-SA 4.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Punjabi_style_Dal_Makhani.jpg",
+"article": "Dal",
+"author": "User:Justinc",
+"file": "3 types of lentil.png",
+"license": "CC BY-SA 2.5",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+"source": "https://commons.wikimedia.org/wiki/File:3_types_of_lentil.png",
 "src": "images/dishes/dal-tadka.jpg"
 },
 "dampfnudeln": {
@@ -928,12 +1054,12 @@ window.PHOTOS = {
 "src": "images/dishes/egg-fried-rice.jpg"
 },
 "egusi": {
-"article": "Ogbono soup",
-"author": "Bukky658",
-"file": "Ogbono soup with assorted meats.jpg",
-"license": "CC BY-SA 4.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Ogbono_soup_with_assorted_meats.jpg",
+"article": "Egusi",
+"author": "Zz411 at English Wikipedia",
+"file": "EGUSI.JPG",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+"source": "https://commons.wikimedia.org/wiki/File:EGUSI.JPG",
 "src": "images/dishes/egusi.jpg"
 },
 "elote": {
@@ -954,13 +1080,22 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Ema_datshi%28Dry_red_chilli_version%29.jpg",
 "src": "images/dishes/ema-datshi.jpg"
 },
+"empanadas-arg": {
+"article": "Empanada",
+"author": "Tamorlan",
+"file": "Tapa de empanadillitas.JPG",
+"license": "CC BY 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Tapa_de_empanadillitas.JPG",
+"src": "images/dishes/empanadas-arg.jpg"
+},
 "empanadas-pino": {
-"article": "Pastel de choclo",
-"author": "Paloma Baytelman from Santiago, Chile",
-"file": "Pastel de choclo.jpg",
-"license": "CC BY-SA 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Pastel_de_choclo.jpg",
+"article": "Empanada",
+"author": "Tamorlan",
+"file": "Tapa de empanadillitas.JPG",
+"license": "CC BY 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Tapa_de_empanadillitas.JPG",
 "src": "images/dishes/empanadas-pino.jpg"
 },
 "enchiladas": {
@@ -980,6 +1115,15 @@ window.PHOTOS = {
 "licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
 "source": "https://commons.wikimedia.org/wiki/File:Hernekeitto.jpg",
 "src": "images/dishes/erwtensoep.jpg"
+},
+"escovitch": {
+"article": "Escabeche",
+"author": "Tamorlan",
+"file": "Trucha en escabeche.jpg",
+"license": "CC BY 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Trucha_en_escabeche.jpg",
+"src": "images/dishes/escovitch.jpg"
 },
 "fabada": {
 "article": "Fabada asturiana",
@@ -1207,21 +1351,21 @@ window.PHOTOS = {
 "src": "images/dishes/ghormeh-sabzi.jpg"
 },
 "githeri": {
-"article": "National dish",
-"author": "Austin Keys",
-"file": "Traditional pizza from Napoli.jpg",
-"license": "CC BY-SA 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Traditional_pizza_from_Napoli.jpg",
+"article": "Githeri",
+"author": "safaritravelplus",
+"file": "Githeri Meal.jpg",
+"license": "CC0",
+"licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+"source": "https://commons.wikimedia.org/wiki/File:Githeri_Meal.jpg",
 "src": "images/dishes/githeri.jpg"
 },
 "gnocchi-pomodoro": {
-"article": "Pasta",
-"author": "David Adam Kess",
-"file": "(Pasta) by David Adam Kess (pic.2).jpg",
-"license": "CC BY-SA 4.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:%28Pasta%29_by_David_Adam_Kess_%28pic.2%29.jpg",
+"article": "Gnocchi",
+"author": "Paoletta S.",
+"file": "Gnocchi di ricotta burro e salvia.jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Gnocchi_di_ricotta_burro_e_salvia.jpg",
 "src": "images/dishes/gnocchi-pomodoro.jpg"
 },
 "goi-cuon": {
@@ -1331,6 +1475,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
 "source": "https://commons.wikimedia.org/wiki/File:Guacamole_IMGP1271.jpg",
 "src": "images/dishes/guacamole.jpg"
+},
+"gumbo": {
+"article": "Gumbo",
+"author": "Amadscientist",
+"file": "Gumbo.JPG",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Gumbo.JPG",
+"src": "images/dishes/gumbo.jpg"
 },
 "guyanese-curry": {
 "article": "Curry",
@@ -1449,6 +1602,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Ifisashi.jpg",
 "src": "images/dishes/ifisashi.jpg"
 },
+"ikan-sabuko": {
+"article": "Ikan bakar",
+"author": "Gunawan Kartapranata",
+"file": "Gurame bakar kecap 2.JPG",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Gurame_bakar_kecap_2.JPG",
+"src": "images/dishes/ikan-sabuko.jpg"
+},
 "imam-bayildi": {
 "article": "İmam bayıldı",
 "author": "AlexanderVanLoon",
@@ -1531,12 +1693,12 @@ window.PHOTOS = {
 "src": "images/dishes/japchae.jpg"
 },
 "jerk-chicken": {
-"article": "Festival (food)",
-"author": "Xaymacan",
-"file": "Jamaican seafood and festival.jpg",
-"license": "CC BY-SA 4.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Jamaican_seafood_and_festival.jpg",
+"article": "Jerk (cooking)",
+"author": "OUTography.com from Gilbert, AZ, USA",
+"file": "BBQJerk Chicken.jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:BBQJerk_Chicken.jpg",
 "src": "images/dishes/jerk-chicken.jpg"
 },
 "jiaozi": {
@@ -1547,6 +1709,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
 "source": "https://commons.wikimedia.org/wiki/File:%E5%8F%B0%E7%81%A3%E5%8D%97%E6%8A%95%E8%8D%89%E5%B1%AF%E6%B0%B4%E9%A4%83Nantou%2C_Taiwan_Caotun_dumplings.jpg",
 "src": "images/dishes/jiaozi.jpg"
+},
+"johnnycake": {
+"article": "Johnnycake",
+"author": "Douglas Perkins",
+"file": "Johnnycakes.jpg",
+"license": "CC BY 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Johnnycakes.jpg",
+"src": "images/dishes/johnnycake.jpg"
 },
 "jollof": {
 "article": "Jollof rice",
@@ -1629,6 +1800,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Cinnamon_roll_in_Stockholm.jpg",
 "src": "images/dishes/kanelbullar.jpg"
 },
+"kansiye": {
+"article": "Peanut stew",
+"author": "Marshiayers",
+"file": "Mafe.malien.jpg",
+"license": "CC0",
+"licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+"source": "https://commons.wikimedia.org/wiki/File:Mafe.malien.jpg",
+"src": "images/dishes/kansiye.jpg"
+},
 "kapana": {
 "article": "List of African dishes",
 "author": "James Moore200",
@@ -1656,6 +1836,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Reibekuchen_mit_Apfelmus.jpg",
 "src": "images/dishes/kartoffelpuffer.jpg"
 },
+"kartoffelsalat": {
+"article": "Potato salad",
+"author": "SajjadF",
+"file": "Potato salad (1).jpg",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Potato_salad_%281%29.jpg",
+"src": "images/dishes/kartoffelsalat.jpg"
+},
 "kartoffelsuppe": {
 "article": "Leek soup",
 "author": "Ewan Munro from London, UK",
@@ -1675,12 +1864,12 @@ window.PHOTOS = {
 "src": "images/dishes/kedjenou.jpg"
 },
 "kefta-tagine": {
-"article": "Tehane",
-"author": "Pasquale Paolo Cardo",
-"file": "Moroccan Beef Spleen Stuffed with Kefta.jpg",
-"license": "CC BY 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Moroccan_Beef_Spleen_Stuffed_with_Kefta.jpg",
+"article": "Tagine",
+"author": "BBouchra00",
+"file": "Tajine-marocain-un-plat-varie-et-sain (cropped).jpg",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Tajine-marocain-un-plat-varie-et-sain_%28cropped%29.jpg",
 "src": "images/dishes/kefta-tagine.jpg"
 },
 "kelewele": {
@@ -1755,6 +1944,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Korean_Gimchi01.jpg",
 "src": "images/dishes/kimchi.jpg"
 },
+"kimchi-jjigae": {
+"article": "Kimchi-jjigae",
+"author": "English: Korea.net / Korean Culture and Information Service한국어: 코리아넷 / 해외문화홍보원",
+"file": "KOCIS Korean meal table (4553953910).jpg",
+"license": "CC BY-SA 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:KOCIS_Korean_meal_table_%284553953910%29.jpg",
+"src": "images/dishes/kimchi-jjigae.jpg"
+},
 "knedliky-ovocne": {
 "article": "Apple dumpling",
 "author": "tracy ducasse from Massachusetts, United States",
@@ -1774,12 +1972,12 @@ window.PHOTOS = {
 "src": "images/dishes/koenigsberger-klopse.jpg"
 },
 "kofte": {
-"article": "Wet hamburger",
-"author": "Unknown author",
-"file": "Islak hamburger istanbul 2023.jpg",
-"license": "CC BY-SA 4.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Islak_hamburger_istanbul_2023.jpg",
+"article": "Kofta",
+"author": "Fabienkhan",
+"file": "Koofteh tabrizi.jpg",
+"license": "CC BY-SA 2.5",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+"source": "https://commons.wikimedia.org/wiki/File:Koofteh_tabrizi.jpg",
 "src": "images/dishes/kofte.jpg"
 },
 "kokoda": {
@@ -1836,6 +2034,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Kuku_Sabzi_%28Iranian_food%29.jpg",
 "src": "images/dishes/kuku-sabzi.jpg"
 },
+"kumara-fritters": {
+"article": "Pitha",
+"author": "Mohammed Tawsif Salam",
+"file": "Pitha for Wedding- Pakan, Patishapta, Bharandash.jpg",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Pitha_for_Wedding-_Pakan%2C_Patishapta%2C_Bharandash.jpg",
+"src": "images/dishes/kumara-fritters.jpg"
+},
 "kung-pao": {
 "article": "Kung Pao chicken",
 "author": "Steven G. Johnson",
@@ -1890,6 +2097,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Langos_Eger_Hungary.jpg",
 "src": "images/dishes/langos.jpg"
 },
+"lap-lap": {
+"article": "Laplap",
+"author": "Lenzo Nimoho",
+"file": "Laplap sosor.jpg",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Laplap_sosor.jpg",
+"src": "images/dishes/lap-lap.jpg"
+},
 "larb": {
 "article": "Larb",
 "author": "Jpatokal",
@@ -1900,12 +2116,12 @@ window.PHOTOS = {
 "src": "images/dishes/larb.jpg"
 },
 "lasagne": {
-"article": "Bolognese sauce",
-"author": "Ivan Vighetto",
-"file": "Tagliatelle al ragù (image modified).jpg",
-"license": "GFDL",
-"licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
-"source": "https://commons.wikimedia.org/wiki/File:Tagliatelle_al_rag%C3%B9_%28image_modified%29.jpg",
+"article": "Lasagna",
+"author": "jules / stonesoup",
+"file": "Lasagne - stonesoup.jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Lasagne_-_stonesoup.jpg",
 "src": "images/dishes/lasagne.jpg"
 },
 "lechon-kawali": {
@@ -1936,12 +2152,12 @@ window.PHOTOS = {
 "src": "images/dishes/liege-waffles.jpg"
 },
 "linseneintopf": {
-"article": "Stew",
-"author": "FiveRings (talk)",
-"file": "Lamb-stew.jpg",
-"license": "CC BY 3.0",
-"licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-"source": "https://commons.wikimedia.org/wiki/File:Lamb-stew.jpg",
+"article": "Lentil soup",
+"author": "Roland Unger",
+"file": "EgFoodLentilSoup.jpg",
+"license": "GFDL",
+"licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
+"source": "https://commons.wikimedia.org/wiki/File:EgFoodLentilSoup.jpg",
 "src": "images/dishes/linseneintopf.jpg"
 },
 "lobio": {
@@ -2024,6 +2240,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
 "source": "https://commons.wikimedia.org/wiki/File:Original_Mac_n_Cheese_.jpg",
 "src": "images/dishes/mac-cheese.jpg"
+},
+"machboos": {
+"article": "Kabsa",
+"author": "Miansari66",
+"file": "Machboos (cropped).JPG",
+"license": "CC0",
+"licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+"source": "https://commons.wikimedia.org/wiki/File:Machboos_%28cropped%29.JPG",
+"src": "images/dishes/machboos.jpg"
 },
 "macher-jhol": {
 "article": "Machher jhol",
@@ -2268,6 +2493,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Moin-Moin-good.jpg",
 "src": "images/dishes/moi-moi.jpg"
 },
+"mole-poblano": {
+"article": "Mole (sauce)",
+"author": "AlejandroLinaresGarcia",
+"file": "ChickRedMole.JPG",
+"license": "GFDL",
+"licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
+"source": "https://commons.wikimedia.org/wiki/File:ChickRedMole.JPG",
+"src": "images/dishes/mole-poblano.jpg"
+},
 "momos": {
 "article": "Momo (food)",
 "author": "Kushal Goyal",
@@ -2340,6 +2574,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Naengmyeon_%28cold_noodles%29.jpg",
 "src": "images/dishes/naengmyeon.jpg"
 },
+"nanaimo-bars": {
+"article": "Nanaimo bar",
+"author": "Stephanie Spencer",
+"file": "Nanaimo bar.JPG",
+"license": "GFDL",
+"licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
+"source": "https://commons.wikimedia.org/wiki/File:Nanaimo_bar.JPG",
+"src": "images/dishes/nanaimo-bars.jpg"
+},
 "nasi-goreng": {
 "article": "Nasi goreng",
 "author": "shankar s. from Dubai, united arab emirates",
@@ -2393,6 +2636,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
 "source": "https://commons.wikimedia.org/wiki/File:Nalli_Nihari_India.jpg",
 "src": "images/dishes/nihari.jpg"
+},
+"ny-cheesecake": {
+"article": "Cheesecake",
+"author": "zingyyellow",
+"file": "Baked cheesecake with raspberries and blueberries.jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Baked_cheesecake_with_raspberries_and_blueberries.jpg",
+"src": "images/dishes/ny-cheesecake.jpg"
 },
 "nyembwe": {
 "article": "Moambe chicken",
@@ -2575,12 +2827,12 @@ window.PHOTOS = {
 "src": "images/dishes/paprikash.jpg"
 },
 "parippu": {
-"article": "Vada (food)",
-"author": "Mdsmds0",
-"file": "Medu Vadas.JPG",
-"license": "CC BY-SA 4.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Medu_Vadas.JPG",
+"article": "Dal",
+"author": "User:Justinc",
+"file": "3 types of lentil.png",
+"license": "CC BY-SA 2.5",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+"source": "https://commons.wikimedia.org/wiki/File:3_types_of_lentil.png",
 "src": "images/dishes/parippu.jpg"
 },
 "pasta-norma": {
@@ -2665,12 +2917,12 @@ window.PHOTOS = {
 "src": "images/dishes/pelmeni.jpg"
 },
 "pepian": {
-"article": "National dish",
-"author": "Austin Keys",
-"file": "Traditional pizza from Napoli.jpg",
-"license": "CC BY-SA 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Traditional_pizza_from_Napoli.jpg",
+"article": "Pepián",
+"author": "erwin.flores69",
+"file": "Cocinando El Pepian.jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Cocinando_El_Pepian.jpg",
 "src": "images/dishes/pepian.jpg"
 },
 "pepper-soup": {
@@ -2683,13 +2935,22 @@ window.PHOTOS = {
 "src": "images/dishes/pepper-soup.jpg"
 },
 "pesto-genovese": {
-"article": "Genovese sauce",
-"author": "Darouet",
-"file": "Genovesesauce.jpg",
+"article": "Pesto",
+"author": "Ɱ",
+"file": "BasilPesto.JPG",
 "license": "CC BY-SA 3.0",
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-"source": "https://commons.wikimedia.org/wiki/File:Genovesesauce.jpg",
+"source": "https://commons.wikimedia.org/wiki/File:BasilPesto.JPG",
 "src": "images/dishes/pesto-genovese.jpg"
+},
+"philly-cheesesteak": {
+"article": "Texas Tommy (food)",
+"author": "Ser Amantio di Nicolao",
+"file": "Texas Tommy from Ishkabibble's, Philadelphia - both halves facing the viewer (cropped).jpg",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Texas_Tommy_from_Ishkabibble%27s%2C_Philadelphia_-_both_halves_facing_the_viewer_%28cropped%29.jpg",
+"src": "images/dishes/philly-cheesesteak.jpg"
 },
 "pho": {
 "article": "Pho",
@@ -2699,6 +2960,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
 "source": "https://commons.wikimedia.org/wiki/File:Bowl_of_Meatball_pho.jpg",
 "src": "images/dishes/pho.jpg"
+},
+"picadillo": {
+"article": "Picadillo",
+"author": "Cary Bass",
+"file": "Picadillo and rice.jpg",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Picadillo_and_rice.jpg",
+"src": "images/dishes/picadillo.jpg"
 },
 "pierogi": {
 "article": "Pierogi",
@@ -2717,6 +2987,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
 "source": "https://commons.wikimedia.org/wiki/File:Piroshki.JPG",
 "src": "images/dishes/piragi.jpg"
+},
+"piri-piri": {
+"article": "Piri piri",
+"author": "Bovineone at English Wikipedia",
+"file": "African red devil peppers.jpg",
+"license": "Public domain",
+"licenseUrl": "",
+"source": "https://commons.wikimedia.org/wiki/File:African_red_devil_peppers.jpg",
+"src": "images/dishes/piri-piri.jpg"
 },
 "placinte": {
 "article": "Plăcintă",
@@ -2746,12 +3025,12 @@ window.PHOTOS = {
 "src": "images/dishes/plov.jpg"
 },
 "poffertjes": {
-"article": "Takoyaki",
-"author": "加茂川の民",
-"file": "ソースとポン酢のたこ焼き.jpg",
-"license": "CC0",
-"licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-"source": "https://commons.wikimedia.org/wiki/File:%E3%82%BD%E3%83%BC%E3%82%B9%E3%81%A8%E3%83%9D%E3%83%B3%E9%85%A2%E3%81%AE%E3%81%9F%E3%81%93%E7%84%BC%E3%81%8D.jpg",
+"article": "Poffertjes",
+"author": "Illustratedjc",
+"file": "Poffertjes-Melkhuis (cropped).jpg",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Poffertjes-Melkhuis_%28cropped%29.jpg",
 "src": "images/dishes/poffertjes.jpg"
 },
 "pol-sambol": {
@@ -2771,6 +3050,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
 "source": "https://commons.wikimedia.org/wiki/File:Food_at_WIkimanian_2017_02.jpg",
 "src": "images/dishes/poutine.jpg"
+},
+"pozole": {
+"article": "Pozole",
+"author": "T.Tseng",
+"file": "Green pozole, dressed (29161841908) (cropped).jpg",
+"license": "CC BY 2.0",
+"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+"source": "https://commons.wikimedia.org/wiki/File:Green_pozole%2C_dressed_%2829161841908%29_%28cropped%29.jpg",
+"src": "images/dishes/pozole.jpg"
 },
 "puff-puff": {
 "article": "Puff-puff",
@@ -2890,12 +3178,12 @@ window.PHOTOS = {
 "src": "images/dishes/riz-gras.jpg"
 },
 "roast-lamb-nz": {
-"article": "Mint sauce",
-"author": "rjp",
-"file": "Mint Sauce.jpg",
-"license": "CC BY-SA 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Mint_Sauce.jpg",
+"article": "Sunday roast",
+"author": "Acabashi",
+"file": "Sunday roast lamb Cock Inn Henham Essex England 01.jpg",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Sunday_roast_lamb_Cock_Inn_Henham_Essex_England_01.jpg",
 "src": "images/dishes/roast-lamb-nz.jpg"
 },
 "roesti": {
@@ -3042,6 +3330,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Sate_Udang.JPG",
 "src": "images/dishes/sate-ayam.jpg"
 },
+"sauerbraten": {
+"article": "Sauerbraten",
+"author": "Dr. Bernd Gross",
+"file": "Heldrunger Sauerbraten 2.JPG",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Heldrunger_Sauerbraten_2.JPG",
+"src": "images/dishes/sauerbraten.jpg"
+},
 "schwarzwaelder": {
 "article": "Black Forest gateau",
 "author": "Mikelo",
@@ -3132,6 +3429,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Chopska.jpg",
 "src": "images/dishes/shopska.jpg"
 },
+"shorba-libiya": {
+"article": "Chorba",
+"author": "Gillgaramond",
+"file": "Bean soup with tomatoes and red peppers.jpeg",
+"license": "CC BY-SA 4.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+"source": "https://commons.wikimedia.org/wiki/File:Bean_soup_with_tomatoes_and_red_peppers.jpeg",
+"src": "images/dishes/shorba-libiya.jpg"
+},
 "shoyu-ramen": {
 "article": "Ramen",
 "author": "Quercus acuta",
@@ -3169,12 +3475,12 @@ window.PHOTOS = {
 "src": "images/dishes/sinigang.jpg"
 },
 "sl-chicken-curry": {
-"article": "Kottu",
-"author": "Dan arndt",
-"file": "Chicken Kottu.jpg",
+"article": "Chicken curry",
+"author": "Thamizhpparithi Maari",
+"file": "Aesthetic Chicken Curry.jpg",
 "license": "CC BY-SA 4.0",
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Chicken_Kottu.jpg",
+"source": "https://commons.wikimedia.org/wiki/File:Aesthetic_Chicken_Curry.jpg",
 "src": "images/dishes/sl-chicken-curry.jpg"
 },
 "smorrebrod": {
@@ -3187,12 +3493,12 @@ window.PHOTOS = {
 "src": "images/dishes/smorrebrod.jpg"
 },
 "soda-bread": {
-"article": "Full breakfast",
-"author": "Joadl",
-"file": "Full English breakfast (cropped).jpg",
+"article": "Soda bread",
+"author": "w:en:User:Canterbury Tail",
+"file": "Ben W Bell Soda Bread Farl 05 June 2007.jpg",
 "license": "GFDL",
 "licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
-"source": "https://commons.wikimedia.org/wiki/File:Full_English_breakfast_%28cropped%29.jpg",
+"source": "https://commons.wikimedia.org/wiki/File:Ben_W_Bell_Soda_Bread_Farl_05_June_2007.jpg",
 "src": "images/dishes/soda-bread.jpg"
 },
 "som-tam": {
@@ -3222,6 +3528,15 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Sopa_de_tortilla_con_chicharron_de_real_del_monte.jpg",
 "src": "images/dishes/sopa-tortilla.jpg"
 },
+"sopaipillas": {
+"article": "Vetkoek",
+"author": "NJR ZA",
+"file": "Vetkoek with mince-001.jpg",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Vetkoek_with_mince-001.jpg",
+"src": "images/dishes/sopaipillas.jpg"
+},
 "soto-ayam": {
 "article": "Soto ayam",
 "author": "Sakurai Midori",
@@ -3248,6 +3563,15 @@ window.PHOTOS = {
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
 "source": "https://commons.wikimedia.org/wiki/File:Spanakopita.jpg",
 "src": "images/dishes/spanakopita.jpg"
+},
+"spargel": {
+"article": "Asparagus",
+"author": "Evan-Amos",
+"file": "Asparagus-Bundle.jpg",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Asparagus-Bundle.jpg",
+"src": "images/dishes/spargel.jpg"
 },
 "stamppot": {
 "article": "Stamppot",
@@ -3304,21 +3628,21 @@ window.PHOTOS = {
 "src": "images/dishes/sukuma-wiki.jpg"
 },
 "sutlac": {
-"article": "Muhallebi",
-"author": "Jktab",
-"file": "Mhallabiyyeh (Arabic milk pudding).jpg",
+"article": "Rice pudding",
+"author": "Shivangisj",
+"file": "Kheer with condensed milk..JPG",
 "license": "CC BY-SA 4.0",
 "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Mhallabiyyeh_%28Arabic_milk_pudding%29.jpg",
+"source": "https://commons.wikimedia.org/wiki/File:Kheer_with_condensed_milk..JPG",
 "src": "images/dishes/sutlac.jpg"
 },
 "suya": {
-"article": "Dibi (food)",
-"author": "Kalsoum17",
-"file": "Dibi accompagné de salades et frites.jpg",
-"license": "CC BY-SA 4.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-"source": "https://commons.wikimedia.org/wiki/File:Dibi_accompagn%C3%A9_de_salades_et_frites.jpg",
+"article": "Suya",
+"author": "WhisperToMe",
+"file": "SuyavarietiesTX.JPG",
+"license": "CC0",
+"licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+"source": "https://commons.wikimedia.org/wiki/File:SuyavarietiesTX.JPG",
 "src": "images/dishes/suya.jpg"
 },
 "svickova": {
@@ -3349,12 +3673,12 @@ window.PHOTOS = {
 "src": "images/dishes/tabbouleh.jpg"
 },
 "tacos-pastor": {
-"article": "Taco",
-"author": "Larry Miller",
-"file": "001 Tacos de carnitas, carne asada y al pastor.jpg",
-"license": "CC BY-SA 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:001_Tacos_de_carnitas%2C_carne_asada_y_al_pastor.jpg",
+"article": "Al pastor",
+"author": "Matt Saunders",
+"file": "Tacos-al-Pastor.jpg",
+"license": "GFDL",
+"licenseUrl": "http://www.gnu.org/copyleft/fdl.html",
+"source": "https://commons.wikimedia.org/wiki/File:Tacos-al-Pastor.jpg",
 "src": "images/dishes/tacos-pastor.jpg"
 },
 "tafelspitz": {
@@ -3421,12 +3745,12 @@ window.PHOTOS = {
 "src": "images/dishes/tequenos.jpg"
 },
 "teriyaki": {
-"article": "Soy sauce chicken",
-"author": "Dennis Wong from Hong Kong, Hong Kong",
-"file": "Soy Sauce Chicken.jpg",
-"license": "CC BY 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Soy_Sauce_Chicken.jpg",
+"article": "Teriyaki",
+"author": "Murcotipton",
+"file": "22nd June 2012 Teriyaki Duck.jpg",
+"license": "CC BY-SA 3.0",
+"licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+"source": "https://commons.wikimedia.org/wiki/File:22nd_June_2012_Teriyaki_Duck.jpg",
 "src": "images/dishes/teriyaki.jpg"
 },
 "thieboudienne": {

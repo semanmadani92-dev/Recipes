@@ -40,9 +40,9 @@ TARGET_W, TARGET_H = 640, 480
 # Recipes whose automatic search picks the wrong article: use this Wikipedia title instead.
 OVERRIDES = {
     "bratkartoffeln": "Home fries", "cheeseburger": "Cheeseburger", "jerk-chicken": "Jerk (cooking)",
-    "kartoffelsuppe": "Potato soup", "kottbullar": "Swedish meatballs", "lasagne": "Lasagna",
+    "kartoffelsuppe": "Kartoffelsuppe", "kottbullar": "Swedish meatballs", "lasagne": "Lasagna",
     "linseneintopf": "Lentil soup", "pesto-genovese": "Pesto", "teriyaki": "Teriyaki", "tacos-pastor": "Al pastor",
-    "sauerbraten": "Sauerbraten", "rotkohl": "Rotkohl", "flammkuchen": "Tarte flambée", "dal-tadka": "Dal",
+    "sauerbraten": "Sauerbraten", "rotkohl": "Red cabbage", "flammkuchen": "Tarte flambée", "dal-tadka": "Dal",
     "soda-bread": "Soda bread", "poffertjes": "Poffertjes", "tarator": "Tarator", "sarmale": "Sarma (food)",
     "plokkfiskur": "Plokkfiskur", "brudet": "Brodetto",
     "kofte": "Köfte", "kefta-tagine": "Tajine", "suya": "Suya", "kelewele": "Kelewele", "chakalaka": "Chakalaka",
@@ -51,7 +51,7 @@ OVERRIDES = {
     "pepian": "Pepián", "empanadas-pino": "Empanada", "empanadas-arg": "Empanada", "buffalo-wings": "Buffalo wing",
     "gnocchi-pomodoro": "Gnocchi", "albondigas": "Albóndigas", "roast-lamb-nz": "Sunday roast", "victoria-sponge": "Victoria sponge",
     "kartoffelsalat": "Potato salad", "spargel": "Spargel",
-    "zurek": "Żurek", "shuwa": "Shuwa", "kapana": "Braai", "egusi": "Egusi", "gomen": "Gomen", "githeri": "Githeri",
+    "zurek": "Żurek", "shuwa": "Shuwa", "kapana": "Braai", "egusi": "Egusi", "gomen": "Collard (plant)", "githeri": "Githeri",
     "char-siu": "Char siu", "malai-kofta": "Malai kofta", "sutlac": "Rice pudding", "machboos": "Machboos",
     "shorba-libiya": "Shorba", "kansiye": "Peanut stew", "chambo": "Chambo", "agatogo": "Matoke", "ikan-sabuko": "Ikan bakar",
 }
@@ -68,7 +68,7 @@ def get(url, binary=False, tries=4):
         except urllib.error.HTTPError as e:
             if e.code == 404:
                 return None
-            time.sleep(2 * (i + 1))
+            time.sleep((30 if e.code == 429 else 2) * (i + 1))  # back off harder when rate-limited
         except Exception:
             time.sleep(2 * (i + 1))
     return None
