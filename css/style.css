@@ -192,20 +192,56 @@ button, input, select { font: inherit; color: inherit; }
 .check { display: flex; align-items: center; gap: 8px; cursor: pointer; }
 .check input, .seg input { accent-color: var(--herb); width: 16px; height: 16px; }
 .chip-input {
-  display: flex; flex-direction: column; gap: 6px; border: 1px solid var(--line); border-radius: 8px; padding: 6px;
-  background: var(--paper);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px; min-height: 46px;
+  border: 1px solid var(--line); border-radius: 12px; padding: 6px 8px; background: var(--paper); cursor: text;
+  transition: border-color .15s, box-shadow .15s;
 }
-.chip-input:focus-within { border-color: var(--herb); }
-.chip-input input { border: 0; background: transparent; padding: 4px 6px; min-width: 0; width: 100%; }
+.chip-input:focus-within { border-color: var(--herb); box-shadow: 0 0 0 3px color-mix(in srgb, var(--herb) 18%, transparent); background: var(--surface); }
+.chip-input input { flex: 1 1 140px; border: 0; background: transparent; padding: 6px 4px; min-width: 0; font-size: 16px; }
 .chip-input input:focus { outline: none; }
+.chip-input input::placeholder { color: var(--muted); opacity: 0.8; }
+
+/* suggestion panel: sits in the page flow under the box, so it never covers the keyboard or the page */
+.suggest {
+  margin-top: -2px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface);
+  box-shadow: var(--shadow); padding: 6px; max-height: 320px; overflow-y: auto; overscroll-behavior: contain;
+}
+.sg-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; color: var(--muted); padding: 6px 8px 4px; }
+.sg-quick { display: flex; flex-wrap: wrap; gap: 6px; padding: 4px 6px 6px; }
+.sg-pill {
+  border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: 999px;
+  padding: 7px 12px; font-size: 14px; cursor: pointer; line-height: 1.2;
+}
+.sg-pill:hover { border-color: var(--herb); color: var(--herb); }
+.sg-hint { font-size: 12px; color: var(--muted); padding: 4px 8px 6px; }
+.sg-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 11px 10px; border-radius: 8px; cursor: pointer; min-height: 44px;
+}
+.sg-row + .sg-row { margin-top: 1px; }
+.sg-row.active { background: var(--herb-soft); }
+.sg-name { min-width: 0; }
+.sg-name b { color: var(--herb); font-weight: 700; }
+.sg-meta { color: var(--muted); font-size: 12px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.sg-empty { padding: 12px 10px; color: var(--muted); font-size: 14px; }
+
+.more-filters { display: flex; flex-direction: column; gap: 18px; }
+.more-toggle {
+  display: none; align-items: center; justify-content: space-between; gap: 8px; width: 100%;
+  border: 1px solid var(--line); background: var(--paper); border-radius: 12px; padding: 12px 14px; cursor: pointer; font-weight: 600;
+}
+.more-toggle svg { width: 18px; height: 18px; margin-left: auto; transition: transform .2s; }
+.more-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+.more-count { font-size: 12px; min-width: 20px; padding: 1px 6px; border-radius: 999px; background: var(--herb); color: var(--herb-ink); text-align: center; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chips:empty { display: none; }
+.chip-input .chips { display: contents; }
 .chip {
-  display: inline-flex; align-items: center; gap: 4px; font-size: 13px; padding: 3px 4px 3px 10px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 4px; font-size: 14px; padding: 5px 4px 5px 12px; border-radius: 999px;
   background: var(--herb-soft); color: var(--herb); font-weight: 500; border: 0;
 }
 .chip.ex { background: color-mix(in srgb, var(--chili) 14%, var(--surface)); color: var(--chili); }
-.chip button { border: 0; background: transparent; color: inherit; cursor: pointer; width: 20px; height: 20px; border-radius: 50%; line-height: 1; font-size: 15px; }
+.chip button { border: 0; background: transparent; color: inherit; cursor: pointer; width: 26px; height: 26px; border-radius: 50%; line-height: 1; font-size: 15px; }
 .chip button:hover { background: color-mix(in srgb, currentColor 15%, transparent); }
 .seg { display: flex; gap: 14px; font-size: 13px; flex-wrap: wrap; }
 .seg label { display: flex; gap: 6px; align-items: center; cursor: pointer; }
@@ -329,7 +365,10 @@ button, input, select { font: inherit; color: inherit; }
   .globe-stage { height: min(62vh, 560px); min-height: 320px; }
   .country-panel { max-height: none; min-height: 0; }
   .find-layout { grid-template-columns: 1fr; }
-  .filters { position: static; max-height: none; }
+  .filters { position: static; max-height: none; gap: 14px; }
+  .more-toggle { display: flex; }
+  .more-filters { display: none; }
+  .more-filters.open { display: flex; }
   .f-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
   .d-body { grid-template-columns: 1fr; }
 }

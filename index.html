@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>World Pantry</title>
-<meta name="description" content="Spin a globe to find 300 famous dishes from over 100 countries, search recipes by ingredient, and see what each one costs to cook in Germany.">
+<meta name="description" content="Spin a globe to find over 440 famous dishes from more than 150 countries, search recipes by ingredient, and see what each one costs to cook in Germany.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -55,21 +55,25 @@
       <form class="filters" id="filters" autocomplete="off">
         <fieldset class="f-group">
           <legend>Must include</legend>
-          <div class="chip-input" data-list="inc">
+          <div class="chip-input" data-kind="inc">
             <div class="chips" id="inc-chips"></div>
-            <input id="inc-input" list="ing-list" placeholder="Add an ingredient you have…" aria-label="Add ingredient to include">
+            <input id="inc-input" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="inc-suggest" placeholder="Type an ingredient you have…" aria-label="Add an ingredient to include" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done">
           </div>
+          <div class="suggest" id="inc-suggest" role="listbox" aria-label="Ingredient suggestions" hidden></div>
           <div class="seg" role="radiogroup" aria-label="Match mode">
             <label><input type="radio" name="match" id="match-all" value="all" checked> All of them</label>
             <label><input type="radio" name="match" id="match-any" value="any"> Any of them</label>
           </div>
         </fieldset>
+        <button type="button" class="more-toggle" id="more-toggle" aria-expanded="false" aria-controls="more-filters">More filters<span class="more-count" id="more-count" hidden></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="more-filters" id="more-filters">
         <fieldset class="f-group">
           <legend>Leave out</legend>
-          <div class="chip-input" data-list="exc">
+          <div class="chip-input" data-kind="exc">
             <div class="chips" id="exc-chips"></div>
-            <input id="exc-input" list="ing-list" placeholder="e.g. Fresh coriander" aria-label="Add ingredient to exclude">
+            <input id="exc-input" type="text" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="exc-suggest" placeholder="Type an ingredient to avoid…" aria-label="Add an ingredient to leave out" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="done">
           </div>
+          <div class="suggest" id="exc-suggest" role="listbox" aria-label="Ingredient suggestions" hidden></div>
         </fieldset>
         <fieldset class="f-group">
           <legend>Diet</legend>
@@ -96,6 +100,7 @@
           </div>
         </fieldset>
         <button type="button" class="btn-ghost" id="clear-filters">Clear all filters</button>
+        </div>
       </form>
       <div class="results">
         <div class="results-bar">
@@ -146,8 +151,6 @@
   <p>Prices are estimates for Germany and vary by store, region, season and offers. Country shapes from Natural Earth.</p>
 </footer>
 
-<datalist id="ing-list"></datalist>
-
 <!-- ============ RECIPE DIALOG ============ -->
 <dialog id="recipe-dialog" class="recipe-dialog" aria-labelledby="r-title">
   <div class="dialog-inner" id="recipe-body"></div>
@@ -160,11 +163,15 @@
 <script src="js/data/world.js"></script>
 <script src="js/data/prices.js"></script>
 <script src="js/data/prices-more.js"></script>
+<script src="js/data/prices-extra.js"></script>
 <script src="js/data/recipes.js"></script>
 <script src="js/data/recipes-europe.js"></script>
 <script src="js/data/recipes-mideast-africa.js"></script>
 <script src="js/data/recipes-asia.js"></script>
 <script src="js/data/recipes-americas-oceania.js"></script>
+<script src="js/data/recipes-more-europe-mideast.js"></script>
+<script src="js/data/recipes-more-africa-asia.js"></script>
+<script src="js/data/recipes-more-americas-oceania.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

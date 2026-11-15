@@ -325,17 +325,43 @@
   }
 
   // ---------- find ----------
-  const ingIndex = Object.entries(PRICES).map(([id, p]) => ({ id, name: p.n }))
-    .filter((x) => RECIPES.some((r) => r.ing.some(([i]) => i === x.id)))
+  const usage = {};
+  RECIPES.forEach((r) => r.ing.forEach(([id]) => { usage[id] = (usage[id] || 0) + 1; }));
+  // extra words people search with that are not in the ingredient name
+  const ALIASES = {
+    coriander: "cilantro", spring_onions: "scallions green onions", eggplant: "aubergine", zucchini: "courgette",
+    chickpeas_can: "garbanzo", dried_chickpeas: "garbanzo", beef_mince: "ground beef hamburger", mixed_mince: "ground meat",
+    pork_mince: "ground pork", lamb_mince: "ground lamb", bell_pepper: "capsicum paprika", shrimp: "shrimp seafood",
+    fresh_chili: "chilli hot pepper", cream: "heavy cream sahne", sour_cream: "creme fraiche", quark: "curd cheese",
+    white_fish: "cod pollock fish", salmon: "fish", tuna_can: "fish", tofu: "bean curd", potatoes: "kartoffeln",
+    floury_potatoes: "kartoffeln", sweet_potatoes: "yam kumara", plantain: "banana", mussels: "seafood"
+  };
+  const ingIndex = Object.entries(PRICES).filter(([id]) => usage[id])
+    .map(([id, p]) => ({ id, name: p.n, cat: p.c, uses: usage[id], staple: !!p.s, hay: (p.n + " " + id.replace(/_/g, " ") + " " + (ALIASES[id] || "")).toLowerCase() }))
     .sort((a, b) => a.name.localeCompare(b.name));
-  const ingByName = Object.fromEntries(ingIndex.map((x) => [x.name.toLowerCase(), x.id]));
+  const ingById = Object.fromEntries(ingIndex.map((x) => [x.id, x]));
+  const AVOID = ["coriander", "mushrooms", "pork_belly", "shrimp", "eggplant", "olives", "fresh_chili", "peanuts", "eggs", "milk", "beef_mince", "fish_sauce"];
 
-  function findIngredient(text) {
+  function matchIngredients(text, exclude) {
     const t = text.trim().toLowerCase();
-    if (!t) return null;
-    if (ingByName[t]) return ingByName[t];
-    const hit = ingIndex.find((x) => x.name.toLowerCase().startsWith(t)) || ingIndex.find((x) => x.name.toLowerCase().includes(t));
-    return hit ? hit.id : null;
+    if (!t) return [];
+    const words = t.split(/\s+/);
+    const out = [];
+    ingIndex.forEach((x) => {
+      if (exclude.includes(x.id)) return;
+      if (!words.every((w) => x.hay.includes(w))) return;
+      const name = x.name.toLowerCase();
+      const score = name.startsWith(t) ? 0 : new RegExp("\\b" + t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).test(name) ? 1 : name.includes(t) ? 2 : 3;
+      out.push({ x, score });
+    });
+    out.sort((a, b) => a.score - b.score || b.x.uses - a.x.uses || a.x.name.localeCompare(b.x.name));
+    return out.slice(0, 8).map((o) => o.x);
+  }
+  function highlight(name, text) {
+    const t = text.trim();
+    const i = t ? name.toLowerCase().indexOf(t.toLowerCase()) : -1;
+    if (i < 0) return esc(name);
+    return esc(name.slice(0, i)) + "<b>" + esc(name.slice(i, i + t.length)) + "</b>" + esc(name.slice(i + t.length));
   }
 
   function renderChips() {
@@ -343,17 +369,109 @@
     $("#exc-chips").innerHTML = state.exc.map((id) => `<span class="chip ex">${esc(PRICES[id].n)}<button type="button" data-remove-exc="${id}" aria-label="Remove ${esc(PRICES[id].n)}">×</button></span>`).join("");
   }
 
-  function addChip(kind, input) {
-    const id = findIngredient(input.value);
-    if (!id) { if (input.value.trim()) toast("No recipe uses “" + input.value.trim() + "”. Try another ingredient."); return; }
+  function addChip(kind, id) {
     const list = state[kind];
     if (!list.includes(id)) list.push(id);
     const other = kind === "inc" ? state.exc : state.inc;
     const i = other.indexOf(id); if (i >= 0) other.splice(i, 1);
-    input.value = "";
     renderChips();
     if (kind === "inc" && state.inc.length === 1) $("#sort").value = "match";
+    updateMoreCount();
     renderResults();
+  }
+
+  // ---------- ingredient picker (combobox) ----------
+  const picker = {};
+  function setupPicker(kind) {
+    const input = $("#" + kind + "-input");
+    const box = $("#" + kind + "-suggest");
+    const st = { items: [], active: -1, open: false };
+    picker[kind] = { input, box, st, render, close };
+
+    function render() {
+      const chosen = state.inc.concat(state.exc);
+      const text = input.value;
+      st.active = -1;
+      if (!text.trim()) {
+        const pool = kind === "inc"
+          ? ingIndex.filter((x) => !x.staple).sort((a, b) => b.uses - a.uses).map((x) => x.id)
+          : AVOID.filter((id) => ingById[id]);
+        const quick = pool.filter((id) => !chosen.includes(id)).slice(0, kind === "inc" ? 12 : 10);
+        st.items = [];
+        box.innerHTML = `<div class="sg-label">${kind === "inc" ? "Popular ingredients" : "Often left out"}</div>
+          <div class="sg-quick">${quick.map((id) => `<button type="button" class="sg-pill" data-pick="${id}" tabindex="-1">+ ${esc(PRICES[id].n)}</button>`).join("")}</div>
+          <div class="sg-hint">Or type to search ${ingIndex.length} ingredients</div>`;
+      } else {
+        st.items = matchIngredients(text, chosen);
+        box.innerHTML = st.items.length
+          ? st.items.map((x, i) => `<div class="sg-row" role="option" id="${kind}-opt-${i}" data-pick="${x.id}" aria-selected="false">
+              <span class="sg-name">${highlight(x.name, text)}</span>
+              <span class="sg-meta">${x.uses} recipe${x.uses > 1 ? "s" : ""}</span></div>`).join("")
+          : `<div class="sg-empty">No ingredient matches “${esc(text.trim())}”. Try a shorter word, like “chick” or “beef”.</div>`;
+        if (st.items.length) setActive(0);
+      }
+      box.hidden = false;
+      st.open = true;
+      input.setAttribute("aria-expanded", "true");
+    }
+    function setActive(i) {
+      const rows = box.querySelectorAll(".sg-row");
+      if (!rows.length) return;
+      st.active = (i + rows.length) % rows.length;
+      rows.forEach((r, j) => { r.classList.toggle("active", j === st.active); r.setAttribute("aria-selected", j === st.active ? "true" : "false"); });
+      input.setAttribute("aria-activedescendant", rows[st.active].id);
+      rows[st.active].scrollIntoView({ block: "nearest" });
+    }
+    function close() {
+      box.hidden = true; st.open = false;
+      input.setAttribute("aria-expanded", "false");
+      input.removeAttribute("aria-activedescendant");
+    }
+    function pick(id) {
+      addChip(kind, id);
+      input.value = "";
+      render();
+      input.focus({ preventScroll: true });
+    }
+
+    input.addEventListener("focus", () => {
+      render();
+      // on phones, lift the box above the keyboard so the suggestions stay visible
+      if (window.matchMedia("(max-width: 960px)").matches) {
+        setTimeout(() => {
+          const top = input.closest(".f-group").getBoundingClientRect().top + window.scrollY - $(".topbar").offsetHeight - 12;
+          window.scrollTo({ top, behavior: "smooth" });
+        }, 250);
+      }
+    });
+    input.addEventListener("input", render);
+    input.addEventListener("blur", () => setTimeout(() => { if (document.activeElement !== input) close(); }, 120));
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown") { e.preventDefault(); if (!st.open) render(); setActive(st.active + 1); }
+      else if (e.key === "ArrowUp") { e.preventDefault(); setActive(st.active - 1); }
+      else if (e.key === "Enter" || e.key === ",") {
+        e.preventDefault();
+        if (st.items.length) pick(st.items[Math.max(0, st.active)].id);
+        else if (input.value.trim()) toast("No ingredient matches “" + input.value.trim() + "”.");
+        else input.blur();
+      } else if (e.key === "Escape") { if (input.value) { input.value = ""; render(); } else { close(); input.blur(); } }
+      else if (e.key === "Backspace" && !input.value && state[kind].length) { state[kind].pop(); renderChips(); updateMoreCount(); renderResults(); render(); }
+    });
+    // pointerdown keeps focus in the input, so several ingredients can be added in a row
+    box.addEventListener("pointerdown", (e) => { if (e.target.closest("[data-pick]")) e.preventDefault(); });
+    box.addEventListener("click", (e) => { const el = e.target.closest("[data-pick]"); if (el) pick(el.dataset.pick); });
+    box.addEventListener("mousemove", (e) => {
+      const row = e.target.closest(".sg-row"); if (!row) return;
+      const rows = [...box.querySelectorAll(".sg-row")]; const i = rows.indexOf(row);
+      if (i !== st.active) setActive(i);
+    });
+  }
+
+  function updateMoreCount() {
+    const f = readFilters();
+    const n = state.exc.length + (f.veg ? 1 : 0) + (f.vegan ? 1 : 0) + (f.gf ? 1 : 0) + (f.region ? 1 : 0) + (f.maxtime ? 1 : 0) + (f.level ? 1 : 0) + (f.maxcost < 6 ? 1 : 0);
+    const el = $("#more-count");
+    el.hidden = !n; el.textContent = n;
   }
 
   function readFilters() {
@@ -435,7 +553,7 @@
     $("#q").value = "";
     state.inc = []; state.exc = [];
     $("#sort").value = "cost";
-    renderChips(); renderResults();
+    renderChips(); updateMoreCount(); renderResults();
   }
 
   // ---------- saved ----------
@@ -653,22 +771,19 @@
     if (link) { state.openRecipe = null; dialog.close(); }
   });
 
-  ["inc", "exc"].forEach((kind) => {
-    const input = $("#" + kind + "-input");
-    input.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === ",") { e.preventDefault(); addChip(kind, input); }
-      if (e.key === "Backspace" && !input.value && state[kind].length) { state[kind].pop(); renderChips(); renderResults(); }
-    });
-    // picking a datalist option fires "input" with the exact option text
-    input.addEventListener("input", (e) => {
-      if (ingByName[input.value.trim().toLowerCase()] && (!e.inputType || e.inputType === "insertReplacementText")) addChip(kind, input);
-    });
-    input.addEventListener("blur", () => { if (input.value.trim()) addChip(kind, input); });
+  setupPicker("inc");
+  setupPicker("exc");
+  document.querySelectorAll(".chip-input").forEach((el) => el.addEventListener("click", (e) => {
+    if (!e.target.closest("button")) el.querySelector("input").focus();
+  }));
+  $("#more-toggle").addEventListener("click", (e) => {
+    const open = $("#more-filters").classList.toggle("open");
+    e.currentTarget.setAttribute("aria-expanded", open ? "true" : "false");
   });
 
   $("#filters").addEventListener("submit", (e) => e.preventDefault());
-  $("#filters").addEventListener("input", (e) => { if (!e.target.matches("#inc-input, #exc-input")) renderResults(); });
-  $("#filters").addEventListener("change", (e) => { if (!e.target.matches("#inc-input, #exc-input")) renderResults(); });
+  $("#filters").addEventListener("input", (e) => { if (!e.target.matches("#inc-input, #exc-input")) { updateMoreCount(); renderResults(); } });
+  $("#filters").addEventListener("change", (e) => { if (!e.target.matches("#inc-input, #exc-input")) { updateMoreCount(); renderResults(); } });
   $("#clear-filters").addEventListener("click", clearFilters);
   $("#q").addEventListener("input", () => {
     if (state.view !== "find") { setHash("find"); showView("find"); }
@@ -695,7 +810,6 @@
   window.addEventListener("hashchange", route);
 
   // ---------- init ----------
-  $("#ing-list").innerHTML = ingIndex.map((x) => `<option value="${esc(x.name)}"></option>`).join("");
   const regions = [...new Set(Object.values(COUNTRIES).map((c) => c.region))];
   $("#region").innerHTML += ["Europe", "Middle East", "Africa", "Asia", "Americas", "Oceania"].filter((r) => regions.includes(r)).map((r) => `<option>${r}</option>`).join("");
   $("#saved-count").textContent = state.saved.size;
