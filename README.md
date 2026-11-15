@@ -2,7 +2,7 @@
 
 A recipe app in English with two ways to find food:
 
-- **Globe**: spin a 3D globe, tap a highlighted country and see its famous dishes (64 recipes from 40 countries).
+- **Globe**: spin a 3D globe, tap a highlighted country and see its famous dishes (303 recipes from 106 countries).
 - **Find recipes**: search by name, country or ingredient, then filter by:
   - ingredients you want to use (all or any of them)
   - ingredients to leave out
@@ -18,7 +18,7 @@ Every recipe shows **what it costs to cook in Germany**, as a supermarket-receip
 - Change the servings and all amounts and costs scale with them.
 - **Copy shopping list** copies the list with pack sizes and prices.
 
-The **Prices** tab lists all 190 ingredient prices. You can change any of them to match your store. Your changes and saved recipes are kept in your browser.
+The **Prices** tab lists all 310 ingredient prices. You can change any of them to match your store. Your changes and saved recipes are kept in your browser.
 
 ## Run it
 
@@ -44,13 +44,14 @@ node tools/build-single.mjs
 | `index.html` | App shell |
 | `css/style.css` | Styles, with light and dark themes |
 | `js/app.js` | Globe, search and filters, cost calculation, routing |
-| `js/data/recipes.js` | Countries and recipes. Quantities use the units from the price list. |
-| `js/data/prices.js` | German ingredient prices, pack sizes and diet flags |
+| `js/data/recipes.js` | Core countries and recipes. Quantities use the units from the price list. |
+| `js/data/recipes-europe.js`, `recipes-mideast-africa.js`, `recipes-asia.js`, `recipes-americas-oceania.js` | More recipes and countries, by region |
+| `js/data/prices.js`, `js/data/prices-more.js` | German ingredient prices, pack sizes and diet flags |
 | `js/data/world.js` | Country outlines (Natural Earth 1:110m, public domain) |
 
 ### Adding a recipe
 
-Add an entry to `RECIPES` in `js/data/recipes.js`:
+Add an entry to `RECIPES` in `js/data/recipes.js`, or push it from one of the regional files:
 
 ```js
 { id: "my-dish", name: "My Dish", country: "276", serves: 4, time: 30, level: "Easy",
@@ -59,8 +60,8 @@ Add an entry to `RECIPES` in `js/data/recipes.js`:
   steps: ["First step.", "Second step."] }
 ```
 
-- `country` is the ISO 3166 numeric code. It must also be listed in `COUNTRIES`.
-- Quantities use the unit of the matching entry in `prices.js` (g, ml, pc, clove, bunch, can, …).
+- `country` is the ISO 3166 numeric code. It must also be listed in `COUNTRIES` (a regional file can add countries with `Object.assign(window.COUNTRIES, {...})`).
+- Quantities use the unit of the matching price entry (g, ml, pc, clove, bunch, can, slice, leaf, …). Add any new ingredient to `prices-more.js`.
 - Diet labels (vegetarian, vegan, gluten-free) are worked out automatically from the ingredients.
 
 ## About the prices

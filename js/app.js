@@ -49,7 +49,7 @@
     if (f) return (whole ? whole : "") + f;
     return fmtNumber(n);
   }
-  const PLURAL = { clove: "cloves", bunch: "bunches", can: "cans", cube: "cubes", sachet: "sachets", sheet: "sheets", stalk: "stalks" };
+  const PLURAL = { clove: "cloves", bunch: "bunches", can: "cans", cube: "cubes", sachet: "sachets", sheet: "sheets", stalk: "stalks", slice: "slices", leaf: "leaves" };
   function fmtQty(q, u) {
     if (u === "g") return q >= 1000 ? fmtNumber(q / 1000) + " kg" : fmtNumber(q) + " g";
     if (u === "ml") return q >= 1000 ? fmtNumber(q / 1000) + " l" : fmtNumber(q) + " ml";
