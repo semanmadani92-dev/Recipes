@@ -37,6 +37,9 @@ FOOD = re.compile(r"\b(dish|food|cuisine|soup|stew|bread|cake|pastry|pastries|sa
 FREE = re.compile(r"^(cc0|cc[ -]by|public domain|pd|gfdl|attribution|fal|free art|no restrictions|copyrighted free use)", re.I)
 TARGET_W, TARGET_H = 640, 480
 
+# Recipes where no correct, freely licensed photo was found: show no photo rather than a misleading one.
+SKIP = {"dal-tadka", "parippu", "kelewele", "piri-piri", "agatogo", "egusi", "albondigas", "spargel", "philly-cheesesteak", "bbq-ribs", "kumara-fritters", "lechon-kawali", "kimchi-jjigae", "kartoffelsuppe", "kottbullar", "flammkuchen", "kapana", "gomen"}
+
 # Recipes whose automatic search picks the wrong article: use this Wikipedia title instead.
 OVERRIDES = {
     "bratkartoffeln": "Home fries", "cheeseburger": "Cheeseburger", "jerk-chicken": "Jerk (cooking)",
@@ -181,7 +184,7 @@ def main():
         if m:
             photos = json.loads(m.group(1))
     redo = set(sys.argv[sys.argv.index("--redo") + 1:]) if "--redo" in sys.argv else set()
-    todo = [r for r in recipes() if r["id"] not in photos or r["id"] in redo]
+    todo = [r for r in recipes() if (r["id"] not in photos or r["id"] in redo) and r["id"] not in SKIP]
     print(len(todo), "recipes to look up")
     for n, r in enumerate(todo, 1):
         page = summary_page(OVERRIDES[r["id"]]) if r["id"] in OVERRIDES else pick_page(r)
