@@ -18,7 +18,7 @@ Every recipe shows **what it costs to cook in Germany**, as a supermarket-receip
 - Change the servings and all amounts and costs scale with them.
 - **Copy shopping list** copies the list with pack sizes and prices.
 
-The **Prices** tab lists all 310 ingredient prices. You can change any of them to match your store. Your changes and saved recipes are kept in your browser.
+The **Prices** tab lists all 304 ingredient prices. You can change any of them to match your store. Your changes and saved recipes are kept in your browser.
 
 ## Run it
 
