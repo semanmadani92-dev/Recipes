@@ -48,6 +48,7 @@ OVERRIDES = {
     "kofte": "Köfte", "kefta-tagine": "Tajine", "suya": "Suya", "kelewele": "Kelewele", "chakalaka": "Chakalaka",
     "sl-chicken-curry": "Chicken curry", "parippu": "Dal", "mchuzi-samaki": "Fish curry", "piri-piri": "Peri-peri",
     "sadza-nyama": "Sadza", "dal-bhat": "Dal bhat", "kimchi-jjigae": "Kimchi-jjigae",
+    "pepian": "Pepián", "empanadas-pino": "Empanada", "empanadas-arg": "Empanada", "buffalo-wings": "Buffalo wing",
 }
 
 
