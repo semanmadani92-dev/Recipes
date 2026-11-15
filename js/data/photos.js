@@ -3321,15 +3321,6 @@ window.PHOTOS = {
 "source": "https://commons.wikimedia.org/wiki/File:Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg",
 "src": "images/dishes/shoyu-ramen.jpg"
 },
-"shuwa": {
-"article": "National dish",
-"author": "Austin Keys",
-"file": "Traditional pizza from Napoli.jpg",
-"license": "CC BY-SA 2.0",
-"licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-"source": "https://commons.wikimedia.org/wiki/File:Traditional_pizza_from_Napoli.jpg",
-"src": "images/dishes/shuwa.jpg"
-},
 "silpancho": {
 "article": "Silpancho",
 "author": "No machine-readable author provided. Poshista2 assumed (based on copyright claim",

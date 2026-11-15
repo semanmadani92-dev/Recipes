@@ -38,7 +38,7 @@ FREE = re.compile(r"^(cc0|cc[ -]by|public domain|pd|gfdl|attribution|fal|free ar
 TARGET_W, TARGET_H = 640, 480
 
 # Recipes where no correct, freely licensed photo was found: show no photo rather than a misleading one.
-SKIP = {"dal-tadka", "parippu", "kelewele", "piri-piri", "agatogo", "egusi", "albondigas", "spargel", "philly-cheesesteak", "bbq-ribs", "kumara-fritters", "lechon-kawali", "kimchi-jjigae", "kartoffelsuppe", "kottbullar", "flammkuchen", "kapana", "gomen"}
+SKIP = {"dal-tadka", "parippu", "kelewele", "piri-piri", "agatogo", "egusi", "albondigas", "spargel", "philly-cheesesteak", "bbq-ribs", "kumara-fritters", "lechon-kawali", "kimchi-jjigae", "kartoffelsuppe", "kottbullar", "flammkuchen", "kapana", "gomen", "shuwa"}
 
 # Recipes whose automatic search picks the wrong article: use this Wikipedia title instead.
 OVERRIDES = {
