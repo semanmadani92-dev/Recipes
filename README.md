@@ -18,6 +18,8 @@ Every recipe shows **what it costs to cook in Germany**, as a supermarket-receip
 - Change the servings and all amounts and costs scale with them.
 - **Copy shopping list** copies the list with pack sizes and prices.
 
+Every recipe also has a **"Watch how to cook it"** video. It is an animated walkthrough generated from the recipe: the dish, the ingredients with amounts, then one illustrated kitchen scene per step (boiling pot, sizzling pan, chopping board, oven, grill, blender, rolling pin, resting bowl with a clock, plating), picked from the verbs in each step. Each scene has a caption, a timer when the step names a cooking time, and optional voice narration (browser speech synthesis). There are play/pause, previous/next and a clickable progress bar, plus a link to search for filmed videos of the dish on YouTube.
+
 The **Prices** tab lists all 345 ingredient prices. You can change any of them to match your store. Your changes and saved recipes are kept in your browser.
 
 ## Run it
@@ -44,6 +46,7 @@ node tools/build-single.mjs
 | `index.html` | App shell |
 | `css/style.css` | Styles, with light and dark themes |
 | `js/app.js` | Globe, search and filters, cost calculation, routing |
+| `js/player.js` | The animated recipe video player |
 | `js/data/recipes.js` | Core countries and recipes. Quantities use the units from the price list. |
 | `js/data/recipes-europe.js`, `recipes-mideast-africa.js`, `recipes-asia.js`, `recipes-americas-oceania.js`, `recipes-more-*.js` | More recipes and countries, by region |
 | `js/data/prices.js`, `prices-more.js`, `prices-extra.js` | German ingredient prices, pack sizes and diet flags |

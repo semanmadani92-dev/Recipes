@@ -156,6 +156,32 @@
   <div class="dialog-inner" id="recipe-body"></div>
 </dialog>
 
+<!-- ============ VIDEO PLAYER ============ -->
+<dialog id="video-dialog" class="video-dialog" aria-labelledby="v-title">
+  <div class="v-head">
+    <div class="v-head-text"><span class="v-eyebrow">How to cook</span><h2 id="v-title">Recipe</h2></div>
+    <button type="button" class="v-close" id="v-close" aria-label="Close video">×</button>
+  </div>
+  <div class="v-frame">
+    <div class="v-stage" id="v-stage">
+      <canvas id="v-canvas" aria-hidden="true"></canvas>
+      <div class="v-overlay" id="v-overlay"></div>
+      <span class="v-badge" id="v-badge"></span>
+      <span class="v-timer" id="v-timer" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v4l2.5 2.5M9.5 3h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span id="v-timer-text"></span></span>
+      <span class="v-paused" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+    </div>
+    <p class="v-caption" id="v-caption" aria-live="polite"></p>
+    <div class="v-progress" id="v-progress"></div>
+    <div class="v-controls">
+      <button type="button" class="v-btn" id="v-prev" aria-label="Previous step"></button>
+      <button type="button" class="v-btn v-play" id="v-play" aria-label="Pause"></button>
+      <button type="button" class="v-btn" id="v-next" aria-label="Next step"></button>
+      <button type="button" class="v-voice" id="v-voice" aria-pressed="true"></button>
+      <a class="v-yt" id="v-youtube" href="https://www.youtube.com" target="_blank" rel="noopener">Filmed videos on YouTube ↗</a>
+    </div>
+  </div>
+</dialog>
+
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 <!--APP-END-->
 
@@ -172,6 +198,7 @@
 <script src="js/data/recipes-more-europe-mideast.js"></script>
 <script src="js/data/recipes-more-africa-asia.js"></script>
 <script src="js/data/recipes-more-americas-oceania.js"></script>
+<script src="js/player.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

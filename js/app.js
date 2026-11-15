@@ -665,6 +665,7 @@
           <span aria-live="polite">${cost.servings} serving${cost.servings > 1 ? "s" : ""}</span>
           <button type="button" data-serv="1" aria-label="More servings">+</button>
         </div>
+        <button type="button" class="btn btn-video" data-action="video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Watch how to cook it</button>
         <button type="button" class="btn${saved ? " saved" : ""}" data-save="${r.id}">${saved ? "★ Saved" : "☆ Save recipe"}</button>
       </div>
       <div class="d-body">
@@ -700,6 +701,16 @@
           </div>
         </aside>
       </div>`;
+  }
+
+  function playVideo() {
+    const r = byId[state.openRecipe];
+    if (!r || !window.RecipePlayer) return;
+    const cost = costOf(r, state.servings, true);
+    window.RecipePlayer.open({
+      name: r.name, desc: r.desc, country: COUNTRIES[r.country].name, time: r.time, serves: cost.servings, steps: r.steps,
+      ingredients: cost.lines.map((l) => ({ name: l.name, qty: fmtQty(l.q, l.u) }))
+    });
   }
 
   function shoppingListText() {
@@ -752,6 +763,7 @@
     else if (act === "all-countries") { state.country = null; renderCountryPanel(); globeCtl.reset(); setHash("globe"); }
     else if (act === "clear") clearFilters();
     else if (act === "copy-list") copyList();
+    else if (act === "video") playVideo();
   });
 
   dialog.addEventListener("click", (e) => { if (e.target === dialog) closeDialog(); });
