@@ -49,6 +49,8 @@ OVERRIDES = {
     "sl-chicken-curry": "Chicken curry", "parippu": "Dal", "mchuzi-samaki": "Fish curry", "piri-piri": "Peri-peri",
     "sadza-nyama": "Sadza", "dal-bhat": "Dal bhat", "kimchi-jjigae": "Kimchi-jjigae",
     "pepian": "Pepián", "empanadas-pino": "Empanada", "empanadas-arg": "Empanada", "buffalo-wings": "Buffalo wing",
+    "gnocchi-pomodoro": "Gnocchi", "albondigas": "Albóndigas", "roast-lamb-nz": "Sunday roast", "victoria-sponge": "Victoria sponge",
+    "kartoffelsalat": "Potato salad", "spargel": "Spargel",
 }
 
 
