@@ -47,7 +47,7 @@ OVERRIDES = {
     "plokkfiskur": "Plokkfiskur", "brudet": "Brodetto",
     "kofte": "Köfte", "kefta-tagine": "Tajine", "suya": "Suya", "kelewele": "Kelewele", "chakalaka": "Chakalaka",
     "sl-chicken-curry": "Chicken curry", "parippu": "Dal", "mchuzi-samaki": "Fish curry", "piri-piri": "Peri-peri",
-    "sadza-nyama": "Sadza",
+    "sadza-nyama": "Sadza", "dal-bhat": "Dal bhat", "kimchi-jjigae": "Kimchi-jjigae",
 }
 
 
