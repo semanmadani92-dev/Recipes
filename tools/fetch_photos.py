@@ -43,6 +43,8 @@ OVERRIDES = {
     "kartoffelsuppe": "Potato soup", "kottbullar": "Swedish meatballs", "lasagne": "Lasagna",
     "linseneintopf": "Lentil soup", "pesto-genovese": "Pesto", "teriyaki": "Teriyaki", "tacos-pastor": "Al pastor",
     "sauerbraten": "Sauerbraten", "rotkohl": "Rotkohl", "flammkuchen": "Tarte flambée", "dal-tadka": "Dal",
+    "soda-bread": "Soda bread", "poffertjes": "Poffertjes", "tarator": "Tarator", "sarmale": "Sarma (food)",
+    "plokkfiskur": "Plokkfiskur", "brudet": "Brodetto",
 }
 
 
