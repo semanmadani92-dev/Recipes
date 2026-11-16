@@ -54,6 +54,18 @@ To build a single self-contained HTML file in `dist/`:
 node tools/build-single.mjs
 ```
 
+### One offline HTML file
+
+To build a single `.html` file that works without internet, with the photos and the 3D globe library inside it (about 20 MB):
+
+```bash
+npm install globe.gl@2.45.3   # once, anywhere, to get a local copy of the globe library
+python3 tools/build_standalone.py --globe node_modules/globe.gl/dist/globe.gl.min.js
+# writes dist/world-pantry.html
+```
+
+Without `--globe` the file still works, but loads the globe from the internet. Needs Pillow (`pip install pillow`).
+
 ## Files
 
 | Path | What it is |
