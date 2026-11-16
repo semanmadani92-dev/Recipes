@@ -21,6 +21,8 @@
     <nav class="tabs" aria-label="Main">
       <a class="tab" href="#globe" data-view="globe">Globe</a>
       <a class="tab" href="#find" data-view="find">Find recipes</a>
+      <a class="tab" href="#plan" data-view="plan">Week plan <span class="tab-count" id="plan-count" hidden>0</span></a>
+      <a class="tab" href="#pantry" data-view="pantry">Pantry <span class="tab-count soft" id="pantry-count" hidden>0</span></a>
       <a class="tab" href="#saved" data-view="saved">Saved <span class="tab-count" id="saved-count">0</span></a>
       <a class="tab" href="#prices" data-view="prices">Prices</a>
     </nav>
@@ -45,7 +47,8 @@
   <!-- ============ FIND ============ -->
   <section class="view" id="view-find" hidden aria-labelledby="find-title">
     <div class="find-head">
-      <h1 id="find-title" class="view-title">Find a recipe</h1>
+      <div class="find-title-row"><h1 id="find-title" class="view-title">Find a recipe</h1>
+        <button type="button" class="btn-ghost btn-dice" data-action="surprise"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>Surprise me</button></div>
       <div class="search-box">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         <input id="q" type="search" placeholder="Search dishes, countries or ingredients…" autocomplete="off" aria-label="Search recipes">
@@ -76,6 +79,10 @@
           <div class="suggest" id="exc-suggest" role="listbox" aria-label="Ingredient suggestions" hidden></div>
         </fieldset>
         <fieldset class="f-group">
+          <legend>Allergies and avoid</legend>
+          <div class="allergy-chips" id="allergy-chips"></div>
+        </fieldset>
+        <fieldset class="f-group">
           <legend>Diet</legend>
           <label class="check"><input type="checkbox" id="diet-veg" value="vegetarian"> Vegetarian</label>
           <label class="check"><input type="checkbox" id="diet-vegan" value="vegan"> Vegan</label>
@@ -89,6 +96,8 @@
             <select id="maxtime">
               <option value="">Any time</option><option value="20">20 min or less</option><option value="30">30 min or less</option><option value="45">45 min or less</option><option value="60">1 hour or less</option><option value="90">90 min or less</option>
             </select></label>
+          <label class="field"><span>Things to buy</span>
+            <select id="maxbuy"><option value="">Any number</option><option value="0">Nothing (all in my pantry)</option><option value="1">1 or fewer</option><option value="2">2 or fewer</option><option value="3">3 or fewer</option><option value="5">5 or fewer</option></select></label>
           <label class="field"><span>Difficulty</span>
             <select id="level"><option value="">Any</option><option>Easy</option><option>Medium</option><option>Hard</option></select></label>
         </fieldset>
@@ -110,6 +119,8 @@
               <option value="cost">Cheapest per serving</option>
               <option value="time">Quickest</option>
               <option value="match">Best ingredient match</option>
+              <option value="tobuy">Fewest things to buy</option>
+              <option value="kcal">Fewest calories</option>
               <option value="name">Name A–Z</option>
               <option value="country">Country</option>
             </select></label>
@@ -119,11 +130,58 @@
     </div>
   </section>
 
+  <!-- ============ WEEK PLAN ============ -->
+  <section class="view" id="view-plan" hidden aria-labelledby="plan-title">
+    <div class="plan-head">
+      <div>
+        <h1 id="plan-title" class="view-title">Week plan</h1>
+        <p class="lede">Add dishes to days from any recipe. The shopping list below combines everything you need for the week, leaves out what is already in your pantry and counts whole packs only once.</p>
+      </div>
+      <div class="plan-tools">
+        <button type="button" class="btn-ghost btn-dice" data-action="surprise-plan"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>Fill empty days</button>
+        <button type="button" class="btn-ghost" data-action="clear-plan">Clear week</button>
+      </div>
+    </div>
+    <div class="plan-summary" id="plan-summary"></div>
+    <div class="week" id="week"></div>
+    <section class="shop" aria-labelledby="shop-title">
+      <div class="shop-head">
+        <h2 id="shop-title">Shopping list</h2>
+        <div class="shop-tools">
+          <button type="button" class="btn-ghost" data-action="copy-shop">Copy list</button>
+          <button type="button" class="btn-ghost" data-action="untick-shop">Untick all</button>
+        </div>
+      </div>
+      <div id="shop-list"></div>
+    </section>
+  </section>
+
+  <!-- ============ PANTRY ============ -->
+  <section class="view" id="view-pantry" hidden aria-labelledby="pantry-title">
+    <div class="pantry-head">
+      <div>
+        <h1 id="pantry-title" class="view-title">My pantry</h1>
+        <p class="lede">Tick what you already have at home. Recipe costs then count only what you still need to buy, and the search can find dishes you can almost make right now.</p>
+      </div>
+      <div class="pantry-tools">
+        <input id="pantry-q" type="search" placeholder="Filter ingredients…" aria-label="Filter pantry ingredients">
+        <button type="button" class="btn-ghost" data-action="pantry-basics">Add the basics</button>
+        <button type="button" class="btn-ghost" data-action="pantry-clear">Clear pantry</button>
+      </div>
+    </div>
+    <p class="pantry-summary" id="pantry-summary"></p>
+    <div id="pantry-list" class="pantry-list"></div>
+  </section>
+
   <!-- ============ SAVED ============ -->
   <section class="view" id="view-saved" hidden aria-labelledby="saved-title">
     <h1 id="saved-title" class="view-title">Saved recipes</h1>
     <div id="saved-summary" class="saved-summary"></div>
     <div class="card-grid" id="saved-grid"></div>
+    <div id="cooked-block" hidden>
+      <h2 class="sub-title">Cooked before</h2>
+      <div class="card-grid" id="cooked-grid"></div>
+    </div>
   </section>
 
   <!-- ============ PRICES ============ -->
@@ -134,6 +192,7 @@
         <p class="lede">Every recipe cost is worked out from these prices. They are estimates based on typical discount supermarket and own-brand prices in Germany (Aldi, Lidl, Penny, Rewe, Edeka) for 2025–2026. Change any price to match your own store. Your changes stay in this browser.</p>
       </div>
       <div class="prices-tools">
+        <label class="field inline"><span>Shop at</span><select id="price-level"></select></label>
         <input id="price-q" type="search" placeholder="Filter ingredients…" aria-label="Filter ingredients">
         <button type="button" class="btn-ghost" id="price-reset">Reset all prices</button>
       </div>
@@ -154,6 +213,28 @@
 <!-- ============ RECIPE DIALOG ============ -->
 <dialog id="recipe-dialog" class="recipe-dialog" aria-labelledby="r-title">
   <div class="dialog-inner" id="recipe-body"></div>
+</dialog>
+
+<!-- ============ COOK MODE ============ -->
+<dialog id="cook-dialog" class="cook-dialog" aria-labelledby="ck-title">
+  <div class="ck-head">
+    <div class="ck-head-text"><span class="ck-eyebrow">Cooking mode</span><h2 id="ck-title">Recipe</h2></div>
+    <button type="button" class="ck-ings-btn" id="ck-ings-btn" aria-expanded="false" aria-controls="ck-ings">Ingredients</button>
+    <button type="button" class="v-close ck-close" id="ck-close" aria-label="Leave cooking mode">×</button>
+  </div>
+  <div class="ck-ings" id="ck-ings" hidden></div>
+  <div class="ck-main">
+    <div class="ck-count" id="ck-count"></div>
+    <p class="ck-step" id="ck-step" aria-live="polite"></p>
+    <div class="ck-timer-btns" id="ck-timer-btns"></div>
+  </div>
+  <div class="ck-timers" id="ck-timers" aria-live="polite"></div>
+  <div class="ck-nav">
+    <button type="button" class="ck-prev" id="ck-prev">← Back</button>
+    <div class="ck-dots" id="ck-dots"></div>
+    <button type="button" class="ck-next" id="ck-next">Next step →</button>
+  </div>
+  <p class="ck-note" id="ck-wake"></p>
 </dialog>
 
 <!-- ============ VIDEO PLAYER ============ -->
@@ -199,7 +280,9 @@
 <script src="js/data/recipes-more-africa-asia.js"></script>
 <script src="js/data/recipes-more-americas-oceania.js"></script>
 <script src="js/data/photos.js"></script>
+<script src="js/data/nutrition.js"></script>
 <script src="js/player.js"></script>
+<script src="js/cook.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

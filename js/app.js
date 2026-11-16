@@ -6,6 +6,7 @@
   const PHOTOS = window.PHOTOS || {};
   const RECIPES = window.RECIPES;
   const COUNTRIES = window.COUNTRIES;
+  const KCAL = window.KCAL || {};
 
   // ---------- storage (per-browser conveniences only) ----------
   const store = {
@@ -24,15 +25,49 @@
     inc: [],
     exc: [],
     openRecipe: null,
-    servings: null
+    servings: null,
+    pantry: new Set(store.get("pantry", [])),
+    plan: store.get("plan", []),            // [{ id, day: 0-6, servings }]
+    shopTicked: new Set(store.get("shopTicked", [])),
+    notes: store.get("notes", {}),          // id -> { rating, note, cooked: [ISO dates] }
+    priceLevel: store.get("priceLevel", "discount"),
+    allergies: new Set(store.get("allergies", [])),
+    planPicker: false
   };
+  state.plan = state.plan.filter((x) => RECIPES.some((r) => r.id === x.id));
+
+  // Store price levels: default prices are discounter prices; the others scale them.
+  const LEVELS = {
+    discount: { name: "Discounter (Aldi, Lidl, Penny)", short: "Discounter", f: 1 },
+    supermarket: { name: "Supermarket (Rewe, Edeka)", short: "Supermarket", f: 1.3 },
+    organic: { name: "Organic (Bio, Alnatura, Denns)", short: "Organic", f: 1.85 }
+  };
+  if (!LEVELS[state.priceLevel]) state.priceLevel = "discount";
+
+  const ALLERGENS = {
+    nuts: { name: "Nuts & peanuts", ids: ["almonds", "peanuts", "peanut_butter", "pine_nuts", "walnuts", "hazelnuts", "pistachios"] },
+    milk: { name: "Milk", flag: "dairy" },
+    eggs: { name: "Eggs", flag: "egg" },
+    fish: { name: "Fish & shellfish", flag: "fish" },
+    gluten: { name: "Gluten", flag: "gluten" },
+    sesame: { name: "Sesame", ids: ["sesame_seeds", "sesame_oil", "tahini", "hummus_ready", "zaatar"] },
+    soy: { name: "Soy", ids: ["soy_sauce", "dark_soy_sauce", "kecap_manis", "tofu", "miso", "doubanjiang", "hoisin", "gochujang", "oyster_sauce"] },
+    pork: { name: "Pork", ids: ["pork_shoulder", "pork_belly", "pork_schnitzel", "pork_mince", "pork_ribs", "mixed_mince", "bacon", "bacon_rashers", "pancetta", "prosciutto", "ham", "salami", "chorizo", "chorizo_fresh", "bratwurst", "smoked_sausage", "toulouse_sausage", "blood_sausage", "gelatin"] },
+    alcohol: { name: "Alcohol", ids: ["red_wine", "white_wine", "beer", "dark_beer", "kirsch", "shaoxing_wine", "mirin"] }
+  };
+  const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  const BASICS = ["salt", "black_pepper", "sugar", "flour", "vegetable_oil", "olive_oil", "white_vinegar", "rice", "pasta", "spaghetti",
+    "paprika", "cumin", "chili_flakes", "cinnamon", "oregano", "thyme", "bay_leaves", "nutmeg", "curry_powder", "vegetable_stock",
+    "soy_sauce", "mustard", "ketchup", "tomato_paste", "baking_powder", "onion", "garlic", "butter"];
+
 
   // ---------- helpers ----------
   const $ = (s, el = document) => el.querySelector(s);
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const eur = new Intl.NumberFormat("en-IE", { style: "currency", currency: "EUR" });
   const money = (n) => eur.format(n);
-  const priceOf = (id) => (state.priceOverrides[id] != null ? state.priceOverrides[id] : PRICES[id].p);
+  const basePrice = (id) => Math.round(PRICES[id].p * LEVELS[state.priceLevel].f * 100) / 100;
+  const priceOf = (id) => (state.priceOverrides[id] != null ? state.priceOverrides[id] : basePrice(id));
   const byId = Object.fromEntries(RECIPES.map((r) => [r.id, r]));
 
   const FRACTIONS = { 0.25: "¼", 0.5: "½", 0.75: "¾", 0.33: "⅓", 0.67: "⅔" };
@@ -83,6 +118,38 @@
     return recipe._diet;
   }
 
+  function allergensOf(recipe) {
+    if (recipe._allergens) return recipe._allergens;
+    const ids = new Set(recipe.ing.map(([id]) => id));
+    const flags = new Set();
+    recipe.ing.forEach(([id]) => (PRICES[id].d || []).forEach((f) => flags.add(f)));
+    recipe._allergens = Object.keys(ALLERGENS).filter((k) => {
+      const a = ALLERGENS[k];
+      return (a.flag && flags.has(a.flag)) || (a.ids && a.ids.some((i) => ids.has(i)));
+    });
+    return recipe._allergens;
+  }
+
+  // frying oil: only a part of it ends up in the food
+  const FRY_OILS = { vegetable_oil: 1, olive_oil: 1 };
+  function kcalOf(recipe) {
+    if (recipe._kcal != null) return recipe._kcal;
+    let k = 0;
+    recipe.ing.forEach(([id, q, note]) => {
+      const u = PRICES[id].u, v = KCAL[id] || 0;
+      let e = (u === "g" || u === "ml") ? (q / 100) * v : q * v;
+      if (FRY_OILS[id] && (/fry|reused/i.test(note || "") || q >= 250)) e *= 0.15;
+      k += e;
+    });
+    recipe._kcal = Math.round(k / recipe.serves / 10) * 10;
+    return recipe._kcal;
+  }
+
+  // what you still need to buy (staples count as "have" when the staples toggle is off)
+  function toBuy(recipe) {
+    return recipe.ing.filter(([id]) => !state.pantry.has(id) && !(PRICES[id].s && !state.includeStaples)).length;
+  }
+
   function costOf(recipe, servings, includeStaples) {
     const scale = (servings || recipe.serves) / recipe.serves;
     let used = 0, till = 0;
@@ -94,9 +161,10 @@
       const packs = Math.max(1, Math.ceil(q / p.q - 1e-6));
       const tillCost = packs * price;
       const staple = !!p.s;
-      const counted = includeStaples || !staple;
+      const have = state.pantry.has(id);
+      const counted = (includeStaples || !staple) && !have;
       if (counted) { used += usedCost; till += tillCost; }
-      return { id, name: p.n, q, u: p.u, note, usedCost, packs, tillCost, staple, counted };
+      return { id, name: p.n, q, u: p.u, note, usedCost, packs, tillCost, staple, have, counted };
     });
     const s = servings || recipe.serves;
     return { lines, used, till, perServing: used / s, servings: s };
@@ -126,15 +194,21 @@
       <span class="saved-dot" title="Saved"></span>
       <span class="r-where">${esc(c.name)} · ${esc(c.region)}</span>
       <span class="r-name">${esc(r.name)}</span>
-      <span class="r-cost">${money(perServing(r))}<small>per serving</small></span>
+      <span class="r-cost">${money(perServing(r))}<small>${state.pantry.size ? "to buy / serving" : "per serving"}</small></span>
       <span class="r-desc">${esc(r.desc)}</span>
       ${extra || ""}
-      <span class="r-tags"><span class="tag">${r.time} min</span><span class="tag">${r.level}</span>${dietTags(r)}</span>
+      <span class="r-tags"><span class="tag">${r.time} min</span><span class="tag">≈ ${kcalOf(r)} kcal</span>${dietTags(r)}${noteTags(r)}</span>
     </button>`;
+  }
+  function noteTags(r) {
+    const n = state.notes[r.id];
+    if (!n) return "";
+    return (n.rating ? `<span class="tag star" title="Your rating">★ ${n.rating}</span>` : "") +
+      (n.cooked && n.cooked.length ? `<span class="tag cooked">Cooked ${n.cooked.length}×</span>` : "");
   }
 
   // ---------- routing ----------
-  const VIEWS = ["globe", "find", "saved", "prices"];
+  const VIEWS = ["globe", "find", "plan", "pantry", "saved", "prices"];
   function route() {
     if (ignoreHash && location.hash === ignoreHash) { ignoreHash = null; return; }
     ignoreHash = null;
@@ -166,6 +240,8 @@
     if (v === "find") renderResults();
     if (v === "saved") renderSaved();
     if (v === "prices") renderPrices();
+    if (v === "plan") renderPlan();
+    if (v === "pantry") renderPantry();
   }
   let ignoreHash = null;
   function setHash(h) {
@@ -305,6 +381,7 @@
           <div class="panel-eyebrow">${RECIPES.length} recipes · ${Object.keys(recipeCountries).length} countries</div>
           <h1 class="panel-title" id="globe-title">Where do you want to eat tonight?</h1>
         </div>
+        <button type="button" class="btn btn-dice-big" data-action="surprise"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>Surprise me with a dish</button>
         <p class="lede" style="margin:0">Spin the globe and tap a green country to see its famous dishes. Every recipe shows what it costs to cook with ingredients from a German supermarket.</p>
         ${order.filter((r) => regions[r]).map((r) => `
           <div class="region-block"><h3>${r}</h3><div class="country-chips">
@@ -472,7 +549,7 @@
 
   function updateMoreCount() {
     const f = readFilters();
-    const n = state.exc.length + (f.veg ? 1 : 0) + (f.vegan ? 1 : 0) + (f.gf ? 1 : 0) + (f.region ? 1 : 0) + (f.maxtime ? 1 : 0) + (f.level ? 1 : 0) + (f.maxcost < 6 ? 1 : 0);
+    const n = state.exc.length + state.allergies.size + (f.maxbuy !== "" ? 1 : 0) + (f.veg ? 1 : 0) + (f.vegan ? 1 : 0) + (f.gf ? 1 : 0) + (f.region ? 1 : 0) + (f.maxtime ? 1 : 0) + (f.level ? 1 : 0) + (f.maxcost < 6 ? 1 : 0);
     const el = $("#more-count");
     el.hidden = !n; el.textContent = n;
   }
@@ -483,7 +560,7 @@
       match: $("#match-any").checked ? "any" : "all",
       veg: $("#diet-veg").checked, vegan: $("#diet-vegan").checked, gf: $("#diet-gf").checked,
       region: $("#region").value, maxtime: +$("#maxtime").value || 0, level: $("#level").value,
-      maxcost: +$("#maxcost").value, sort: $("#sort").value
+      maxcost: +$("#maxcost").value, sort: $("#sort").value, maxbuy: $("#maxbuy").value
     };
   }
 
@@ -511,19 +588,24 @@
       if (f.maxcost < 6 && cost > f.maxcost) return;
       const ids = new Set(r.ing.map(([id]) => id));
       if (state.exc.some((id) => ids.has(id))) return;
+      if (state.allergies.size && allergensOf(r).some((a) => state.allergies.has(a))) return;
+      const buy = toBuy(r);
+      if (f.maxbuy !== "" && buy > +f.maxbuy) return;
       const matched = state.inc.filter((id) => ids.has(id)).length;
       if (state.inc.length) {
         if (f.match === "all" && matched < state.inc.length) return;
         if (f.match === "any" && matched === 0) return;
       }
       if (terms.length) { const t = searchText(r); if (!terms.every((w) => t.includes(w))) return; }
-      out.push({ r, cost, matched });
+      out.push({ r, cost, matched, buy });
     });
     const sorters = {
       cost: (a, b) => a.cost - b.cost,
       time: (a, b) => a.r.time - b.r.time || a.cost - b.cost,
       match: (a, b) => b.matched - a.matched || a.r.ing.length - b.r.ing.length || a.cost - b.cost,
       name: (a, b) => a.r.name.localeCompare(b.r.name),
+      tobuy: (a, b) => a.buy - b.buy || a.cost - b.cost,
+      kcal: (a, b) => kcalOf(a.r) - kcalOf(b.r),
       country: (a, b) => COUNTRIES[a.r.country].name.localeCompare(COUNTRIES[b.r.country].name) || a.r.name.localeCompare(b.r.name)
     };
     out.sort(sorters[f.sort] || sorters.cost);
@@ -540,12 +622,14 @@
       $("#results").innerHTML = `<div class="empty"><h3>No recipes match</h3><p>Try removing an ingredient, raising the cost limit or switching to “Any of them”.</p><button type="button" class="btn-ghost" data-action="clear">Clear all filters</button></div>`;
       return;
     }
-    $("#results").innerHTML = list.map(({ r, matched }) => {
+    $("#results").innerHTML = list.map(({ r, matched, buy }) => {
       let extra = "";
       if (state.inc.length) {
         const missing = r.ing.length - matched;
         const yours = state.inc.length === 1 ? "your ingredient" : `${matched} of your ${state.inc.length} ingredients`;
         extra = `<span class="r-match">Uses ${yours} · ${missing} more to buy</span>`;
+      } else if (state.pantry.size) {
+        extra = `<span class="r-match">${buy === 0 ? "You have everything" : `You have ${r.ing.length - buy} of ${r.ing.length} · ${buy} to buy`}</span>`;
       }
       return card(r, extra);
     }).join("");
@@ -555,6 +639,7 @@
     $("#filters").reset();
     $("#q").value = "";
     state.inc = []; state.exc = [];
+    state.allergies.clear(); store.set("allergies", []); renderAllergyChips();
     $("#sort").value = "cost";
     renderChips(); updateMoreCount(); renderResults();
   }
@@ -564,13 +649,21 @@
     const list = RECIPES.filter((r) => state.saved.has(r.id));
     $("#saved-count").textContent = state.saved.size;
     if (!list.length) {
+      renderCooked();
       $("#saved-summary").innerHTML = "";
       $("#saved-grid").innerHTML = `<div class="empty"><h3>Nothing saved yet</h3><p>Open any recipe and press “Save recipe” to keep it here for later.</p><a class="btn" href="#find">Browse recipes</a></div>`;
       return;
     }
+    renderCooked();
     const week = list.reduce((s, r) => s + costOf(r, r.serves, state.includeStaples).used, 0);
     $("#saved-summary").innerHTML = `<span><b>${list.length}</b> recipe${list.length > 1 ? "s" : ""} saved</span><span>Cooking all of them costs about <b>${money(week)}</b> in Germany</span>`;
     $("#saved-grid").innerHTML = list.map((r) => card(r)).join("");
+  }
+  function renderCooked() {
+    const cooked = RECIPES.filter((r) => state.notes[r.id] && ((state.notes[r.id].cooked || []).length || state.notes[r.id].rating))
+      .sort((a, b) => ((state.notes[b.id].cooked || []).slice(-1)[0] || "").localeCompare((state.notes[a.id].cooked || []).slice(-1)[0] || ""));
+    $("#cooked-block").hidden = !cooked.length;
+    $("#cooked-grid").innerHTML = cooked.map((r) => card(r)).join("");
   }
   function toggleSave(id) {
     if (state.saved.has(id)) { state.saved.delete(id); toast("Removed from saved"); }
@@ -610,7 +703,7 @@
     const id = input.dataset.price;
     const v = parseFloat(input.value.replace(",", "."));
     if (!isFinite(v) || v < 0) return;
-    if (Math.abs(v - PRICES[id].p) < 0.001) delete state.priceOverrides[id];
+    if (Math.abs(v - basePrice(id)) < 0.001) delete state.priceOverrides[id];
     else state.priceOverrides[id] = v;
     store.set("prices", state.priceOverrides);
     input.classList.toggle("changed", state.priceOverrides[id] != null);
@@ -620,13 +713,25 @@
   function pricesChanged() {
     renderCountryPanel();
     globeCtl.refresh();
+    if (state.view === "find") renderResults();
+    if (state.view === "saved") renderSaved();
+    if (state.view === "plan") renderPlan();
+    if (state.view === "prices") renderPrices();
+    if (state.openRecipe) renderRecipe();
+  }
+  function setPriceLevel(level) {
+    if (!LEVELS[level]) return;
+    state.priceLevel = level; store.set("priceLevel", level);
+    $("#price-level").value = level;
+    pricesChanged();
+    toast("Prices now for: " + LEVELS[level].short);
   }
 
   // ---------- recipe dialog ----------
   const dialog = $("#recipe-dialog");
   function openRecipe(id, fromRoute) {
     const r = byId[id]; if (!r) return;
-    if (state.openRecipe !== id) state.servings = r.serves;
+    if (state.openRecipe !== id) { state.servings = r.serves; state.planPicker = false; }
     state.openRecipe = id;
     renderRecipe();
     if (!dialog.open) { try { dialog.showModal(); } catch (e) { dialog.setAttribute("open", ""); } }
@@ -651,6 +756,10 @@
     const saved = state.saved.has(r.id);
     const skipped = cost.lines.filter((l) => !l.counted);
     const ph = PHOTOS[r.id];
+    const planned = state.plan.some((x) => x.id === r.id);
+    const note = state.notes[r.id] || {};
+    const cookedN = (note.cooked || []).length;
+    const lastCooked = cookedN ? new Date(note.cooked[cookedN - 1]).toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "";
     $("#recipe-body").innerHTML = `
       ${ph ? `<figure class="d-photo">
         <img src="${esc(ph.src)}" alt="${esc(r.name)}" onerror="this.closest('figure').remove()">
@@ -665,8 +774,9 @@
         <button type="button" class="d-close" data-action="close" aria-label="Close recipe">×</button>
       </div>
       <div class="d-meta">
-        <span class="tag">${r.time} min</span><span class="tag">${r.level}</span>${dietTags(r)}
+        <span class="tag">${r.time} min</span><span class="tag">${r.level}</span><span class="tag" title="Estimate">≈ ${kcalOf(r)} kcal per serving</span>${dietTags(r)}${noteTags(r)}
       </div>
+      ${allergensOf(r).length ? `<p class="d-contains"><b>Contains:</b> ${allergensOf(r).map((a) => ALLERGENS[a].name).join(", ")}</p>` : ""}
       <div class="d-actions">
         <div class="stepper" role="group" aria-label="Servings">
           <button type="button" data-serv="-1" aria-label="Fewer servings">−</button>
@@ -674,34 +784,47 @@
           <button type="button" data-serv="1" aria-label="More servings">+</button>
         </div>
         <button type="button" class="btn btn-video" data-action="video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Watch how to cook it</button>
+        <button type="button" class="btn btn-cook" data-action="cook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11h16v2a7 7 0 0 1-7 7h-2a7 7 0 0 1-7-7z M2 11h20 M8 7c0-1.5 1-2 1-3.5 M12 7c0-1.5 1-2 1-3.5 M16 7c0-1.5 1-2 1-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Cooking mode</button>
+        <button type="button" class="btn btn-plan${planned ? " saved" : ""}" data-action="plan-pick" aria-expanded="${state.planPicker}">${planned ? "✓ In week plan" : "+ Add to week plan"}</button>
         <button type="button" class="btn${saved ? " saved" : ""}" data-save="${r.id}">${saved ? "★ Saved" : "☆ Save recipe"}</button>
       </div>
+      ${state.planPicker ? `<div class="day-picker" role="group" aria-label="Choose a day"><span>Add ${cost.servings} serving${cost.servings > 1 ? "s" : ""} to:</span>${DAYS.map((d, i) => `<button type="button" class="day-chip${state.plan.some((x) => x.id === r.id && x.day === i) ? " on" : ""}" data-plan-day="${i}">${d.slice(0, 3)}</button>`).join("")}</div>` : ""}
       <div class="d-body">
         <div class="d-col" style="display:flex;flex-direction:column;gap:28px;min-width:0">
           <section class="d-section">
             <h2>Ingredients</h2>
             <ul class="ing-list">
-              ${cost.lines.map((l) => `<li><span class="qty">${fmtQty(l.q, l.u)}</span><span>${esc(l.name)}${l.note ? ` <span class="note">(${esc(l.note)})</span>` : ""}</span></li>`).join("")}
+              ${cost.lines.map((l) => `<li class="${l.have ? "have" : ""}"><span class="qty">${fmtQty(l.q, l.u)}</span><span>${esc(l.name)}${l.note ? ` <span class="note">(${esc(l.note)})</span>` : ""}</span><button type="button" class="have-btn" data-have="${l.id}" aria-pressed="${l.have}" title="${l.have ? "In your pantry" : "Mark as in your pantry"}">${l.have ? "✓ Have" : "Have it?"}</button></li>`).join("")}
             </ul>
           </section>
           <section class="d-section">
             <h2>Method</h2>
             <ol class="steps">${r.steps.map((s) => `<li><span>${esc(s)}</span></li>`).join("")}</ol>
           </section>
+          <section class="d-section notes">
+            <h2>Your notes</h2>
+            <div class="notes-row">
+              <div class="stars" role="radiogroup" aria-label="Your rating">${[1, 2, 3, 4, 5].map((n) => `<button type="button" class="star-btn${note.rating >= n ? " on" : ""}" data-rate="${n}" role="radio" aria-checked="${note.rating === n}" aria-label="${n} star${n > 1 ? "s" : ""}">★</button>`).join("")}</div>
+              <button type="button" class="btn-ghost" data-action="cooked">I cooked this</button>
+              <span class="cooked-info">${cookedN ? `Cooked ${cookedN}× · last on ${esc(lastCooked)}` : "Not cooked yet"}${cookedN ? ` <button type="button" class="link-btn" data-action="uncook">undo</button>` : ""}</span>
+            </div>
+            <textarea id="note-text" class="note-text" rows="3" placeholder="What would you change next time? Where did you buy the ingredients?" aria-label="Your notes on this recipe">${esc(note.note || "")}</textarea>
+          </section>
         </div>
         <aside class="receipt" aria-label="Cost in Germany">
-          <div class="rc-head"><strong>COST IN GERMANY</strong><span>${cost.servings} servings · estimated supermarket prices</span></div>
+          <div class="rc-head"><strong>COST IN GERMANY</strong><span>${cost.servings} servings · ${esc(LEVELS[state.priceLevel].short.toLowerCase())} prices</span></div>
+          <label class="rc-level"><span>Shop at</span><select id="rc-level">${Object.entries(LEVELS).map(([k, v]) => `<option value="${k}"${k === state.priceLevel ? " selected" : ""}>${esc(v.name)}</option>`).join("")}</select></label>
           ${cost.lines.map((l) => `
             <div class="rc-line${l.counted ? "" : " dim"}">
               <span>${esc(l.name)}</span><span>${money(l.usedCost)}</span>
-              <span class="rc-sub">${l.packs} × ${esc(packLabel(l.id))} @ ${money(priceOf(l.id))}${l.staple ? " · staple" : ""}</span>
+              <span class="rc-sub">${l.have ? "in your pantry" : `${l.packs} × ${esc(packLabel(l.id))} @ ${money(priceOf(l.id))}${l.staple ? " · staple" : ""}`}</span>
             </div>`).join("")}
           <div class="rc-rule"></div>
           <div class="rc-total"><span>Ingredients used</span><span>${money(cost.used)}</span></div>
           <div class="rc-total big"><span>Per serving</span><span>${money(cost.perServing)}</span></div>
           <div class="rc-rule"></div>
           <div class="rc-total"><span>At the till (whole packs)</span><span>${money(cost.till)}</span></div>
-          <div class="rc-note">“At the till” is what you pay buying full packs. Leftovers go back in the cupboard.${skipped.length ? ` ${skipped.length} pantry staple${skipped.length > 1 ? "s" : ""} not counted.` : ""}</div>
+          <div class="rc-note">“At the till” is what you pay buying full packs. Leftovers go back in the cupboard.${skipped.length ? ` ${skipped.length} item${skipped.length > 1 ? "s" : ""} not counted (${cost.lines.some((l) => l.have) ? "in your pantry" : ""}${cost.lines.some((l) => l.have) && cost.lines.some((l) => !l.have && l.staple && !l.counted) ? " or " : ""}${cost.lines.some((l) => !l.have && l.staple && !l.counted) ? "pantry staples" : ""}).` : ""}</div>
           <label class="rc-toggle"><input type="checkbox" id="staples-toggle" ${state.includeStaples ? "checked" : ""}> Count pantry staples (salt, oil, spices)</label>
           <div class="rc-actions">
             <button type="button" class="btn-ghost" data-action="copy-list">Copy shopping list</button>
@@ -709,6 +832,158 @@
           </div>
         </aside>
       </div>`;
+  }
+
+  function cookMode() {
+    const r = byId[state.openRecipe];
+    if (!r || !window.CookMode) return;
+    const cost = costOf(r, state.servings, true);
+    window.CookMode.open({ name: r.name, steps: r.steps, ingredients: cost.lines.map((l) => ({ name: l.name, qty: fmtQty(l.q, l.u), note: l.note })) });
+  }
+
+  // ---------- notes, ratings, cooked ----------
+  function noteFor(id) { return (state.notes[id] = state.notes[id] || {}); }
+  function saveNotes() {
+    Object.keys(state.notes).forEach((k) => { const n = state.notes[k]; if (!n.rating && !n.note && !(n.cooked || []).length) delete state.notes[k]; });
+    store.set("notes", state.notes);
+  }
+
+  // ---------- pantry ----------
+  function togglePantry(id, on) {
+    const has = state.pantry.has(id);
+    if (on === undefined) on = !has;
+    if (on) state.pantry.add(id); else state.pantry.delete(id);
+    store.set("pantry", [...state.pantry]);
+    updateCounts();
+  }
+  function renderPantry() {
+    const q = $("#pantry-q").value.trim().toLowerCase();
+    const groups = {};
+    ingIndex.forEach((x) => {
+      if (q && !x.hay.includes(q)) return;
+      (groups[x.cat] = groups[x.cat] || []).push(x);
+    });
+    const order = Object.keys(groups).sort();
+    $("#pantry-summary").innerHTML = state.pantry.size
+      ? (() => { const n0 = RECIPES.filter((r) => toBuy(r) === 0).length, n2 = RECIPES.filter((r) => toBuy(r) <= 2).length;
+          return `You have <b>${state.pantry.size}</b> ingredient${state.pantry.size > 1 ? "s" : ""}. <b>${n0}</b> recipe${n0 === 1 ? " needs" : "s need"} nothing else, and <b>${n2}</b> need 2 things or fewer. <a href="#find" data-action="show-makeable">Show them</a>`; })()
+      : "Nothing ticked yet. Start with “Add the basics” for salt, oil, spices, rice and pasta.";
+    $("#pantry-list").innerHTML = order.length ? order.map((cat) => `<section class="pantry-group"><h3>${esc(cat)}</h3><div class="pantry-chips">${
+      groups[cat].sort((a, b) => a.name.localeCompare(b.name)).map((x) => `<button type="button" class="p-chip${state.pantry.has(x.id) ? " on" : ""}" data-pantry="${x.id}" aria-pressed="${state.pantry.has(x.id)}">${esc(x.name)}</button>`).join("")
+    }</div></section>`).join("") : `<p class="empty-line">No ingredient matches “${esc(q)}”.</p>`;
+  }
+
+  // ---------- week plan + combined shopping list ----------
+  function savePlan() { store.set("plan", state.plan); updateCounts(); }
+  function addToPlan(id, day, servings) {
+    const existing = state.plan.find((x) => x.id === id && x.day === day);
+    if (existing) { state.plan = state.plan.filter((x) => x !== existing); toast("Removed from " + DAYS[day]); }
+    else { state.plan.push({ id, day, servings }); toast("Added to " + DAYS[day]); }
+    savePlan();
+  }
+  function combinedShopping() {
+    const need = {}; // id -> total qty
+    let separateTill = 0;
+    state.plan.forEach((item) => {
+      const r = byId[item.id]; if (!r) return;
+      const scale = item.servings / r.serves;
+      r.ing.forEach(([id, qty]) => { need[id] = (need[id] || 0) + qty * scale; });
+      separateTill += costOf(r, item.servings, state.includeStaples).till;
+    });
+    const lines = Object.entries(need).map(([id, q]) => {
+      const p = PRICES[id];
+      const packs = Math.max(1, Math.ceil(q / p.q - 1e-6));
+      const have = state.pantry.has(id);
+      const counted = !have && (state.includeStaples || !p.s);
+      return { id, name: p.n, cat: p.c, q, u: p.u, packs, cost: packs * priceOf(id), used: (q / p.q) * priceOf(id), have, staple: !!p.s, counted };
+    });
+    const till = lines.filter((l) => l.counted).reduce((s, l) => s + l.cost, 0);
+    const used = lines.filter((l) => l.counted).reduce((s, l) => s + l.used, 0);
+    return { lines, till, used, separateTill };
+  }
+  function renderPlan() {
+    const shop = combinedShopping();
+    const servings = state.plan.reduce((s, x) => s + x.servings, 0);
+    const kcalDay = state.plan.length ? Math.round(state.plan.reduce((s, x) => s + kcalOf(byId[x.id]) * x.servings, 0) / Math.max(1, servings) / 10) * 10 : 0;
+    const saved = shop.separateTill - shop.till;
+    $("#plan-summary").innerHTML = state.plan.length ? `
+      <div class="ps-item"><span>Dishes</span><b>${state.plan.length}</b></div>
+      <div class="ps-item"><span>Servings</span><b>${servings}</b></div>
+      <div class="ps-item"><span>Shopping total</span><b>${money(shop.till)}</b></div>
+      <div class="ps-item"><span>Per serving</span><b>${money(shop.used / Math.max(1, servings))}</b></div>
+      <div class="ps-item"><span>Average</span><b>≈ ${kcalDay} kcal</b></div>
+      ${saved > 0.5 ? `<p class="ps-save">Shopping for the whole week at once saves about <b>${money(saved)}</b>, because packs are shared between dishes.</p>` : ""}` :
+      `<p class="ps-empty">Your week is empty. Open any recipe and press <b>+ Add to week plan</b>, or let us <button type="button" class="link-btn" data-action="surprise-plan">fill the week for you</button>.</p>`;
+    $("#week").innerHTML = DAYS.map((d, i) => {
+      const items = state.plan.map((x, k) => ({ ...x, k })).filter((x) => x.day === i);
+      return `<section class="day"><h3>${d}</h3>${items.length ? items.map((x) => {
+        const r = byId[x.id]; const ph = PHOTOS[r.id];
+        return `<div class="plan-item">
+          <button type="button" class="pi-open" data-recipe="${r.id}">${ph ? `<img src="${esc(ph.src)}" alt="" loading="lazy">` : `<span class="pi-ph"></span>`}<span class="pi-name">${esc(r.name)}<small>${esc(COUNTRIES[r.country].name)} · ${money(costOf(r, x.servings, state.includeStaples).used)}</small></span></button>
+          <div class="pi-ctl"><button type="button" data-plan-serv="${x.k}" data-d="-1" aria-label="Fewer servings">−</button><span>${x.servings}</span><button type="button" data-plan-serv="${x.k}" data-d="1" aria-label="More servings">+</button><button type="button" class="pi-del" data-plan-del="${x.k}" aria-label="Remove ${esc(r.name)}">×</button></div>
+        </div>`;
+      }).join("") : `<p class="day-empty">Nothing planned</p>`}</section>`;
+    }).join("");
+    // shopping list grouped by shelf
+    if (!shop.lines.length) { $("#shop-list").innerHTML = `<p class="empty-line">Add dishes to your week to build the shopping list.</p>`; return; }
+    const buy = shop.lines.filter((l) => l.counted);
+    const have = shop.lines.filter((l) => !l.counted);
+    const groups = {};
+    buy.forEach((l) => (groups[l.cat] = groups[l.cat] || []).push(l));
+    const ticked = buy.filter((l) => state.shopTicked.has(l.id)).length;
+    $("#shop-list").innerHTML = `<p class="shop-progress">${ticked} of ${buy.length} items in the basket · ${money(buy.filter((l) => !state.shopTicked.has(l.id)).reduce((s, l) => s + l.cost, 0))} left to buy</p>` +
+      Object.keys(groups).sort().map((cat) => `<div class="shop-group"><h3>${esc(cat)}</h3><ul>${groups[cat].sort((a, b) => a.name.localeCompare(b.name)).map((l) => `
+        <li class="${state.shopTicked.has(l.id) ? "ticked" : ""}"><label><input type="checkbox" data-tick="${l.id}" ${state.shopTicked.has(l.id) ? "checked" : ""}><span class="sh-name">${esc(l.name)}<small>${fmtQty(l.q, l.u)} needed · ${l.packs} × ${esc(packLabel(l.id))}</small></span><span class="sh-cost">${money(l.cost)}</span></label></li>`).join("")}</ul></div>`).join("") +
+      (have.length ? `<details class="shop-have"><summary>${have.length} item${have.length > 1 ? "s" : ""} you already have or left out</summary><p>${have.map((l) => esc(l.name)).join(", ")}</p></details>` : "");
+  }
+  function shopText() {
+    const shop = combinedShopping();
+    const buy = shop.lines.filter((l) => l.counted).sort((a, b) => a.cat.localeCompare(b.cat) || a.name.localeCompare(b.name));
+    let cat = "", out = "World Pantry shopping list (" + LEVELS[state.priceLevel].short + " prices)\n";
+    buy.forEach((l) => { if (l.cat !== cat) { cat = l.cat; out += "\n" + cat.toUpperCase() + "\n"; } out += `[ ] ${l.name}: ${l.packs} × ${packLabel(l.id)} (${money(l.cost)})\n`; });
+    return out + `\nTotal: ${money(shop.till)}\nDishes: ${state.plan.map((x) => DAYS[x.day].slice(0, 3) + " " + byId[x.id].name).join(", ")}`;
+  }
+  function copyText(text, okMsg) {
+    const fallback = () => {
+      const ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
+      let ok = false; try { ok = document.execCommand("copy"); } catch (e) { /* ignore */ }
+      ta.remove();
+      toast(ok ? okMsg : "Copy is blocked here. Select the list text instead.");
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => toast(okMsg), fallback);
+    else fallback();
+  }
+  function fillWeek() {
+    const used = new Set(state.plan.map((x) => x.id));
+    const pool = RECIPES.filter((r) => !used.has(r.id) && !(state.allergies.size && allergensOf(r).some((a) => state.allergies.has(a))) && r.time <= 90);
+    let added = 0;
+    DAYS.forEach((d, i) => {
+      if (state.plan.some((x) => x.day === i) || !pool.length) return;
+      const r = pool.splice(Math.floor(Math.random() * pool.length), 1)[0];
+      state.plan.push({ id: r.id, day: i, servings: r.serves > 6 ? 4 : r.serves }); added++;
+    });
+    savePlan(); renderPlan();
+    toast(added ? `Added ${added} dish${added > 1 ? "es" : ""} to empty days` : "Every day already has a dish");
+  }
+
+  // ---------- surprise me ----------
+  function surprise() {
+    const pool = RECIPES.filter((r) => !(state.allergies.size && allergensOf(r).some((a) => state.allergies.has(a))));
+    const r = pool[Math.floor(Math.random() * pool.length)];
+    if (!r) return;
+    showView("globe"); selectCountry(r.country);
+    setTimeout(() => openRecipe(r.id), window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 100 : 1300);
+  }
+
+  function renderAllergyChips() {
+    $("#allergy-chips").innerHTML = Object.entries(ALLERGENS).map(([k, a]) =>
+      `<button type="button" class="al-chip${state.allergies.has(k) ? " on" : ""}" data-allergy="${k}" aria-pressed="${state.allergies.has(k)}">${state.allergies.has(k) ? "✕ " : ""}${esc(a.name)}</button>`).join("");
+  }
+  function updateCounts() {
+    const pc = $("#plan-count"); pc.hidden = !state.plan.length; pc.textContent = state.plan.length;
+    const pa = $("#pantry-count"); pa.hidden = !state.pantry.size; pa.textContent = state.pantry.size;
   }
 
   function playVideo() {
@@ -761,6 +1036,20 @@
     if (sv) { toggleSave(sv.dataset.save); renderRecipe(); return; }
     const st = t.closest("[data-serv]");
     if (st) { state.servings = Math.min(24, Math.max(1, state.servings + +st.dataset.serv)); renderRecipe(); return; }
+    const pd = t.closest("[data-plan-day]");
+    if (pd) { addToPlan(state.openRecipe, +pd.dataset.planDay, state.servings); renderRecipe(); return; }
+    const hv = t.closest("[data-have]");
+    if (hv) { togglePantry(hv.dataset.have); renderRecipe(); pricesChanged(); return; }
+    const rt = t.closest("[data-rate]");
+    if (rt) { const n = noteFor(state.openRecipe); n.rating = n.rating === +rt.dataset.rate ? 0 : +rt.dataset.rate; saveNotes(); renderRecipe(); return; }
+    const pn = t.closest("[data-pantry]");
+    if (pn) { togglePantry(pn.dataset.pantry); pn.classList.toggle("on", state.pantry.has(pn.dataset.pantry)); pn.setAttribute("aria-pressed", state.pantry.has(pn.dataset.pantry)); clearTimeout(renderPantry._t); renderPantry._t = setTimeout(renderPantry, 400); return; }
+    const al = t.closest("[data-allergy]");
+    if (al) { const k = al.dataset.allergy; if (state.allergies.has(k)) state.allergies.delete(k); else state.allergies.add(k); store.set("allergies", [...state.allergies]); renderAllergyChips(); updateMoreCount(); renderResults(); return; }
+    const ps = t.closest("[data-plan-serv]");
+    if (ps) { const x = state.plan[+ps.dataset.planServ]; if (x) { x.servings = Math.min(24, Math.max(1, x.servings + +ps.dataset.d)); savePlan(); renderPlan(); } return; }
+    const pdel = t.closest("[data-plan-del]");
+    if (pdel) { state.plan.splice(+pdel.dataset.planDel, 1); savePlan(); renderPlan(); return; }
     const ri = t.closest("[data-remove-inc]");
     if (ri) { state.inc = state.inc.filter((x) => x !== ri.dataset.removeInc); renderChips(); renderResults(); return; }
     const re = t.closest("[data-remove-exc]");
@@ -773,11 +1062,38 @@
     else if (act === "clear") clearFilters();
     else if (act === "copy-list") copyList();
     else if (act === "video") playVideo();
+    else if (act === "cook") cookMode();
+    else if (act === "plan-pick") { state.planPicker = !state.planPicker; renderRecipe(); }
+    else if (act === "cooked") { const n = noteFor(state.openRecipe); (n.cooked = n.cooked || []).push(new Date().toISOString()); saveNotes(); renderRecipe(); toast("Nice! Marked as cooked"); }
+    else if (act === "uncook") { const n = noteFor(state.openRecipe); (n.cooked || []).pop(); saveNotes(); renderRecipe(); }
+    else if (act === "surprise") surprise();
+    else if (act === "surprise-plan") fillWeek();
+    else if (act === "clear-plan") {
+      if (!state.plan.length) return;
+      if (a.dataset.confirm !== "1") { a.dataset.confirm = "1"; a.textContent = "Tap again to clear"; setTimeout(() => { a.dataset.confirm = ""; a.textContent = "Clear week"; }, 3000); return; }
+      state.plan = []; state.shopTicked.clear(); store.set("shopTicked", []); savePlan(); renderPlan(); a.dataset.confirm = ""; a.textContent = "Clear week"; toast("Week cleared");
+    }
+    else if (act === "copy-shop") { if (state.plan.length) copyText(shopText(), "Shopping list copied"); else toast("Add dishes to your week first"); }
+    else if (act === "untick-shop") { state.shopTicked.clear(); store.set("shopTicked", []); renderPlan(); }
+    else if (act === "pantry-basics") { BASICS.forEach((id) => { if (PRICES[id]) state.pantry.add(id); }); store.set("pantry", [...state.pantry]); updateCounts(); renderPantry(); pricesChanged(); toast("Added " + BASICS.length + " basics"); }
+    else if (act === "pantry-clear") {
+      if (!state.pantry.size) return;
+      if (a.dataset.confirm !== "1") { a.dataset.confirm = "1"; a.textContent = "Tap again to clear"; setTimeout(() => { a.dataset.confirm = ""; a.textContent = "Clear pantry"; }, 3000); return; }
+      state.pantry.clear(); store.set("pantry", []); updateCounts(); renderPantry(); pricesChanged(); a.dataset.confirm = ""; a.textContent = "Clear pantry";
+    }
+    else if (act === "show-makeable") { e.preventDefault(); $("#sort").value = "tobuy"; setHash("find"); showView("find"); }
   });
 
   dialog.addEventListener("click", (e) => { if (e.target === dialog) closeDialog(); });
   dialog.addEventListener("cancel", (e) => { e.preventDefault(); closeDialog(); });
+  dialog.addEventListener("input", (e) => {
+    if (e.target.id === "note-text") {
+      const id = state.openRecipe, v = e.target.value;
+      clearTimeout(dialog._nt); dialog._nt = setTimeout(() => { noteFor(id).note = v; saveNotes(); }, 400);
+    }
+  });
   dialog.addEventListener("change", (e) => {
+    if (e.target.id === "rc-level") { setPriceLevel(e.target.value); return; }
     if (e.target.id === "staples-toggle") {
       state.includeStaples = e.target.checked;
       store.set("staples", state.includeStaples);
@@ -813,6 +1129,15 @@
   $("#sort").addEventListener("change", renderResults);
 
   $("#price-q").addEventListener("input", renderPrices);
+  $("#price-level").innerHTML = Object.entries(LEVELS).map(([k, v]) => `<option value="${k}">${esc(v.name)}</option>`).join("");
+  $("#price-level").value = state.priceLevel;
+  $("#price-level").addEventListener("change", (e) => setPriceLevel(e.target.value));
+  $("#pantry-q").addEventListener("input", renderPantry);
+  $("#shop-list").addEventListener("change", (e) => {
+    const id = e.target.dataset.tick; if (!id) return;
+    if (e.target.checked) state.shopTicked.add(id); else state.shopTicked.delete(id);
+    store.set("shopTicked", [...state.shopTicked]); renderPlan();
+  });
   $("#price-body").addEventListener("change", (e) => { if (e.target.matches("[data-price]")) onPriceChange(e.target); });
   $("#price-body").addEventListener("keydown", (e) => { if (e.key === "Enter" && e.target.matches("[data-price]")) e.target.blur(); });
   $("#price-reset").addEventListener("click", (e) => {
@@ -834,6 +1159,9 @@
   const regions = [...new Set(Object.values(COUNTRIES).map((c) => c.region))];
   $("#region").innerHTML += ["Europe", "Middle East", "Africa", "Asia", "Americas", "Oceania"].filter((r) => regions.includes(r)).map((r) => `<option>${r}</option>`).join("");
   $("#saved-count").textContent = state.saved.size;
+  renderAllergyChips();
+  updateCounts();
+  updateMoreCount();
   renderCountryPanel();
   route();
 })();

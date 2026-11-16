@@ -79,7 +79,7 @@ window.PRICES = {
   corn_tortillas:  { n: "Small corn tortillas",    q: 12,   u: "pc", p: 2.49, c: "Bakery" },
   puff_pastry:     { n: "Puff pastry (chilled)",   q: 275,  u: "g",  p: 1.29, c: "Chilled", d: ["gluten"] },
   filo_pastry:     { n: "Filo pastry",             q: 250,  u: "g",  p: 2.49, c: "Chilled", d: ["gluten"] },
-  stale_bread:     { n: "White toast bread",       q: 500,  u: "g",  p: 0.99, c: "Bakery", d: ["gluten"] },
+  stale_bread:     { n: "Stale white bread",       q: 500,  u: "g",  p: 0.99, c: "Bakery", d: ["gluten"] },
 
   // ---- Legumes, cans, jars ----
   chickpeas_can:   { n: "Chickpeas (400 g can)",   q: 1, u: "can", p: 0.79, c: "Cans & jars" },
