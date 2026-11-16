@@ -5,7 +5,7 @@ app code, recipe and price data, dish photos (as embedded JPEGs) and,
 if available, the 3D globe library are all inside the file.
 
 Usage:
-  python3 tools/build_standalone.py [--globe path/to/globe.gl.min.js] [--out dist/world-pantry.html] [--width 480]
+  python3 tools/build_standalone.py [--globe path/to/globe.gl.min.js] [--out dist/world-pantry.html] [--width 480] [--quality 72] [--format jpeg|webp]
 
 Without --globe the page loads the globe library from the jsDelivr CDN
 (everything else still works offline). Photos are re-encoded smaller
@@ -30,6 +30,8 @@ def main():
     ap.add_argument("--out", default=os.path.join(ROOT, "dist", "world-pantry.html"))
     ap.add_argument("--width", type=int, default=480)
     ap.add_argument("--quality", type=int, default=72)
+    ap.add_argument("--format", choices=["jpeg", "webp"], default="jpeg",
+                    help="webp makes much smaller files (use it to stay under app size limits)")
     a = ap.parse_args()
 
     tmp = os.path.join(ROOT, "dist", ".tmp-full.html")
@@ -48,9 +50,12 @@ def main():
         h = round(im.height * a.width / im.width)
         im = im.resize((a.width, h), Image.LANCZOS)
         buf = io.BytesIO()
-        im.save(buf, "JPEG", quality=a.quality, optimize=True, progressive=True)
+        if a.format == "webp":
+            im.save(buf, "WEBP", quality=a.quality, method=6)
+        else:
+            im.save(buf, "JPEG", quality=a.quality, optimize=True, progressive=True)
         total += buf.tell()
-        ph["src"] = "data:image/jpeg;base64," + base64.b64encode(buf.getvalue()).decode("ascii")
+        ph["src"] = f"data:image/{a.format};base64," + base64.b64encode(buf.getvalue()).decode("ascii")
     html = html[:m.start(1)] + json.dumps(photos, ensure_ascii=False, separators=(",", ":")) + html[m.end(1):]
 
     # 2) inline the globe library if a local copy is given
@@ -62,7 +67,7 @@ def main():
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
     with open(a.out, "w", encoding="utf8") as f:
         f.write(html)
-    print(f"wrote {a.out}: {os.path.getsize(a.out) / 1e6:.1f} MB ({len(photos)} photos, {total / 1e6:.1f} MB of JPEG)")
+    print(f"wrote {a.out}: {os.path.getsize(a.out) / 1e6:.1f} MB ({len(photos)} photos, {total / 1e6:.1f} MB of {a.format.upper()})")
 
 
 if __name__ == "__main__":
