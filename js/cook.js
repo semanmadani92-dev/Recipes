@@ -9,6 +9,7 @@
 
   const $ = (s) => document.querySelector(s);
   const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const t = (k, v) => (window.I18N ? window.I18N.t(k, v) : k.replace(/\{(\w+)\}/g, (m, x) => (v && v[x] != null ? v[x] : m)));
   const el = {};
   let recipe = null, idx = 0, wakeLock = null, tick = 0, audio = null;
   let timers = []; // { id, label, total, left, running, done }
@@ -26,7 +27,8 @@
       const mult = unit.startsWith("h") ? 3600 : unit.startsWith("s") ? 1 : 60;
       const secs = Math.round(a * mult);
       if (secs < 10 || secs > 8 * 3600) continue;
-      const label = (m[2] ? m[1] + "–" + m[2] : m[1]) + (mult === 3600 ? " h" : mult === 1 ? " s" : " min");
+      const num = m[2] ? m[1] + "–" + m[2] : m[1];
+      const label = t(mult === 3600 ? "{n} h" : mult === 1 ? "{n} s" : "{n} min", { n: num });
       if (!out.some((o) => o.secs === secs)) out.push({ secs, label });
     }
     return out.slice(0, 3);
@@ -40,28 +42,28 @@
   function render() {
     const steps = recipe.steps;
     const s = steps[idx];
-    el.count.textContent = "Step " + (idx + 1) + " of " + steps.length;
+    el.count.textContent = t("Step {a} of {b}", { a: idx + 1, b: steps.length });
     el.step.textContent = s;
     const found = timesIn(s);
-    el.timerBtns.innerHTML = found.map((t) =>
-      `<button type="button" class="ck-start" data-secs="${t.secs}" data-label="${esc(t.label)}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v4l2.5 2.5M9.5 3h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Start ${esc(t.label)} timer</button>`).join("");
-    el.dots.innerHTML = steps.map((_, i) => `<button type="button" class="ck-dot${i === idx ? " now" : i < idx ? " done" : ""}" data-go="${i}" aria-label="Step ${i + 1}"></button>`).join("");
+    el.timerBtns.innerHTML = found.map((x) =>
+      `<button type="button" class="ck-start" data-secs="${x.secs}" data-label="${esc(x.label)}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 9v4l2.5 2.5M9.5 3h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>${esc(t("Start {time} timer", { time: x.label }))}</button>`).join("");
+    el.dots.innerHTML = steps.map((_, i) => `<button type="button" class="ck-dot${i === idx ? " now" : i < idx ? " done" : ""}" data-go="${i}" aria-label="${esc(t("Step {n}", { n: i + 1 }))}"></button>`).join("");
     el.prev.disabled = idx === 0;
-    el.next.textContent = idx === steps.length - 1 ? "Finish ✓" : "Next step →";
+    el.next.innerHTML = idx === steps.length - 1 ? esc(t("Finish")) + " ✓" : esc(t("Next step")) + ' <span class="flip">→</span>';
   }
 
   function renderTimers() {
-    el.timers.innerHTML = timers.map((t) => `
-      <div class="ck-t${t.done ? " done" : ""}${t.running ? "" : " paused"}">
-        <span class="ck-t-label">${esc(t.label)}</span>
-        <strong class="ck-t-time">${t.done ? "Done!" : fmt(t.left)}</strong>
-        ${t.done ? "" : `<button type="button" data-toggle="${t.id}">${t.running ? "Pause" : "Resume"}</button>`}
-        <button type="button" data-remove="${t.id}" aria-label="Remove timer">×</button>
+    el.timers.innerHTML = timers.map((x) => `
+      <div class="ck-t${x.done ? " done" : ""}${x.running ? "" : " paused"}">
+        <span class="ck-t-label">${esc(t("Step {n}", { n: x.step }))} · ${esc(x.label)}</span>
+        <strong class="ck-t-time">${x.done ? esc(t("Done!")) : fmt(x.left)}</strong>
+        ${x.done ? "" : `<button type="button" data-toggle="${x.id}">${esc(x.running ? t("Pause") : t("Resume"))}</button>`}
+        <button type="button" data-remove="${x.id}" aria-label="${esc(t("Remove timer"))}">×</button>
       </div>`).join("");
   }
 
   function startTimer(secs, label) {
-    timers.push({ id: nextId++, label: "Step " + (idx + 1) + " · " + label, total: secs, left: secs, running: true, done: false, end: Date.now() + secs * 1000 });
+    timers.push({ id: nextId++, step: idx + 1, label, total: secs, left: secs, running: true, done: false, end: Date.now() + secs * 1000 });
     unlockAudio();
     renderTimers();
   }
@@ -69,10 +71,10 @@
   function onTick() {
     let changed = false;
     const now = Date.now();
-    timers.forEach((t) => {
-      if (t.running && !t.done) {
-        t.left = (t.end - now) / 1000;
-        if (t.left <= 0) { t.left = 0; t.done = true; t.running = false; ring(t); }
+    timers.forEach((x) => {
+      if (x.running && !x.done) {
+        x.left = (x.end - now) / 1000;
+        if (x.left <= 0) { x.left = 0; x.done = true; x.running = false; ring(x); }
         changed = true;
       }
     });
@@ -106,7 +108,7 @@
     try {
       if ("wakeLock" in navigator) {
         wakeLock = await navigator.wakeLock.request("screen");
-        el.wake.textContent = "Your screen will stay on while cooking mode is open.";
+        el.wake.textContent = t("Your screen will stay on while cooking mode is open.");
         return;
       }
     } catch (e) { /* refused */ }
@@ -124,7 +126,9 @@
     if (!el.root) init();
     recipe = r; idx = 0;
     el.title.textContent = r.name;
-    el.ings.innerHTML = '<ul>' + r.ingredients.map((x) => `<li><b>${esc(x.qty)}</b> ${esc(x.name)}${x.note ? ` <span>(${esc(x.note)})</span>` : ""}</li>`).join("") + "</ul>";
+    el.ings.innerHTML = '<ul>' + r.ingredients.map((x) => `<li><b>${esc(x.qty)}</b> ${esc(x.name)}${x.note ? ` <span lang="en">(${esc(x.note)})</span>` : ""}</li>`).join("") + "</ul>";
+    el.tr.hidden = !r.translateUrl;
+    if (r.translateUrl) el.tr.href = r.translateUrl;
     el.ings.hidden = true; el.ingsBtn.setAttribute("aria-expanded", "false");
     render(); renderTimers();
     try { el.root.showModal(); } catch (e) { el.root.setAttribute("open", ""); }
@@ -142,6 +146,7 @@
     el.root = $("#cook-dialog");
     el.title = $("#ck-title"); el.count = $("#ck-count"); el.step = $("#ck-step");
     el.timerBtns = $("#ck-timer-btns"); el.timers = $("#ck-timers"); el.dots = $("#ck-dots");
+    el.tr = $("#ck-translate");
     el.prev = $("#ck-prev"); el.next = $("#ck-next"); el.ings = $("#ck-ings"); el.ingsBtn = $("#ck-ings-btn"); el.wake = $("#ck-wake");
     el.prev.addEventListener("click", () => go(idx - 1));
     el.next.addEventListener("click", () => go(idx + 1));
@@ -167,8 +172,10 @@
     });
     el.root.addEventListener("keydown", (e) => {
       if (e.target.closest("button") && (e.key === " " || e.key === "Enter")) return;
-      if (e.key === "ArrowRight") { e.preventDefault(); go(idx + 1); }
-      else if (e.key === "ArrowLeft") { e.preventDefault(); go(idx - 1); }
+      const fwd = document.documentElement.dir === "rtl" ? "ArrowLeft" : "ArrowRight";
+      const back = fwd === "ArrowLeft" ? "ArrowRight" : "ArrowLeft";
+      if (e.key === fwd) { e.preventDefault(); go(idx + 1); }
+      else if (e.key === back) { e.preventDefault(); go(idx - 1); }
     });
     // swipe left/right to change step on phones
     let sx = null;
@@ -176,7 +183,8 @@
     el.root.addEventListener("touchend", (e) => {
       if (sx == null) return;
       const dx = e.changedTouches[0].clientX - sx; sx = null;
-      if (Math.abs(dx) > 70 && !e.target.closest(".ck-timers, .ck-ings")) go(idx + (dx < 0 ? 1 : -1));
+      const rtl = document.documentElement.dir === "rtl";
+      if (Math.abs(dx) > 70 && !e.target.closest(".ck-timers, .ck-ings")) go(idx + ((dx < 0) !== rtl ? 1 : -1));
     });
     document.addEventListener("visibilitychange", onVisible);
   }

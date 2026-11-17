@@ -1,6 +1,6 @@
 # World Pantry
 
-A recipe app in English with two ways to find food:
+A recipe app in 16 languages with two ways to find food:
 
 - **Globe**: spin a 3D globe, tap a highlighted country and see its famous dishes (446 recipes from 154 countries).
 - **Find recipes**: search by name, country or ingredient, then filter by the options below. Ingredient boxes suggest matches as you type (including common alternative names such as "cilantro" or "shrimp") and offer one-tap popular picks. On phones, the less-used filters fold away under "More filters".
@@ -10,13 +10,31 @@ A recipe app in English with two ways to find food:
   - region, cooking time and difficulty
   - maximum cost per serving
 
-Every recipe shows **what it costs to cook in Germany**, as a supermarket-receipt breakdown:
+Every recipe shows **what it costs to cook where you shop**: 37 countries, each with its own stores (for example Aldi, Rewe or a Turkish grocer in Germany, Walmart or Whole Foods in the US, D-Mart or a sabzi market in India), in local money. The cost appears as a supermarket-receipt breakdown:
 
 - **Ingredients used**: the share of each pack the recipe needs, in total and per serving.
 - **At the till**: what you pay if you buy whole packs.
 - Pantry staples (salt, oil, spices) can be counted or left out.
 - Change the servings and all amounts and costs scale with them.
 - **Copy shopping list** copies the list with pack sizes and prices.
+- **Compare prices** shows the same dish in every store of your country and in every other country (converted to your currency, with the local price underneath). Tap a row to switch.
+
+## Languages
+
+The app speaks English, 中文, हिन्दी, Español, العربية, Français, বাংলা, Português, Русский, اردو, Bahasa Indonesia, Deutsch, 日本語, Türkçe, Tiếng Việt and 한국어. It picks your browser's language on the first visit; change it with the globe button at the top right.
+
+- Every button, label, message, ingredient name (all 345), shelf, region, store type and unit is translated. Country names, weekdays, numbers, dates and money come from the browser's own language data, so they are local too (for example "0,06 €", "¥10", "ر.س.").
+- Arabic and Urdu switch the whole layout to right-to-left.
+- Recipe names, descriptions and cooking steps stay in English (446 recipes is a lot of text). Each recipe has a **Translate recipe** button and cooking mode has **Translate steps**, which open the text in Google Translate in your language. Ingredient search works in your language and in English.
+- Translations live in `js/i18n/<code>.js` with the English text as the key. `python3 tools/i18n_keys.py --check` lists any missing or extra strings and broken `{placeholders}` per language.
+
+## Countries and stores
+
+The globe button also sets **where you shop**: a country and one of its stores. German prices are the base (typical discounter prices). Every other country and store is estimated from them:
+
+> German price × country food price level × shelf factor (rice, fish, spices, meat … differ by country) × store factor × store-type factor (markets are cheap for produce, Asian/Turkish grocers for spices and sauces) × exchange rate
+
+The country data is in `js/data/markets.js`. Exchange rates are approximate (late 2025); you can type the current rate on the Prices page. Any price you change is saved for that country only. The Prices page also compares the average cost per serving across the stores of your country and across all countries.
 
 Most recipes (422 of 446) show a **photo of the dish** on its card, at the top of the recipe and in the video intro. The photos come from Wikimedia Commons under free licenses (CC BY, CC BY-SA, CC0, GFDL or public domain), and each one is credited with its author, license and a link to the source. `tools/fetch_photos.py` finds and downloads them (see the overrides and skip list at the top of the script); the credits are in `js/data/photos.js`. Dishes without a correct free photo show none rather than a wrong one.
 
@@ -28,14 +46,14 @@ More tools for cooking at home:
 - **Pantry**: tick what you already have ("Add the basics" ticks salt, oil, spices, rice, pasta and so on). Costs then count only what you need to buy, recipes show "You have 5 of 8", and search can sort by **fewest things to buy** or filter to "2 or fewer to buy". You can also tick ingredients straight from a recipe.
 - **Cooking mode**: one step at a time in large type, the screen kept awake where the browser allows, and one-tap timers for every time mentioned in a step. Timers ring when done and keep running between steps.
 - **Allergies and avoid**: leave out nuts & peanuts, milk, eggs, fish & shellfish, gluten, sesame, soy, pork or alcohol. Each recipe lists what it contains.
-- **Shop at**: switch prices between discounter (Aldi, Lidl), supermarket (Rewe, Edeka, about +30 %) and organic (about +85 %).
+- **Where you shop**: pick your country and store; costs, the week plan and shopping lists follow it.
 - **Surprise me**: spins the globe to a random dish (respecting your allergy filters).
 - **Your notes**: star ratings, "I cooked this" with dates, and private notes per recipe. Cooked dishes appear on the Saved page.
 - **Calories**: an estimated kcal per serving on every recipe (from `js/data/nutrition.js`), plus a "Fewest calories" sort. Frying oil counts only the part the food absorbs.
 
 Your plan, pantry, notes and settings are stored in your browser only.
 
-The **Prices** tab lists all 345 ingredient prices. You can change any of them to match your store. Your changes and saved recipes are kept in your browser.
+The **Prices** tab lists all 345 ingredient prices for your country and store. You can change any of them to match your store. Your changes and saved recipes are kept in your browser.
 
 ## Run it
 
@@ -66,13 +84,23 @@ python3 tools/build_standalone.py --globe node_modules/globe.gl/dist/globe.gl.mi
 
 Without `--globe` the file still works, but loads the globe from the internet. Needs Pillow (`pip install pillow`).
 
+Smaller versions, for chat apps with a 10 MB limit:
+
+```bash
+python3 tools/build_standalone.py --globe … --format webp --width 340 --quality 55 --out dist/world-pantry-phone.html   # about 9 MB, all photos
+python3 tools/build_standalone.py --globe … --no-photos --out dist/world-pantry-lite.html                               # about 3 MB, no photos
+```
+
 ## Files
 
 | Path | What it is |
 | --- | --- |
 | `index.html` | App shell |
 | `css/style.css` | Styles, with light and dark themes |
-| `js/app.js` | Globe, search and filters, cost calculation, routing |
+| `js/app.js` | Globe, search and filters, cost calculation, price comparison, routing |
+| `js/i18n.js`, `js/i18n/*.js` | Language switching and the 15 translations |
+| `js/data/markets.js` | Countries, currencies, price levels and stores |
+| `tools/i18n_keys.py` | Lists the translatable strings and checks the language files |
 | `js/player.js` | The animated recipe video player |
 | `js/cook.js` | Cooking mode with step timers |
 | `js/data/nutrition.js` | Approximate kcal per ingredient |
@@ -80,7 +108,7 @@ Without `--globe` the file still works, but loads the globe from the internet. N
 | `tools/fetch_photos.py` | Finds and downloads the freely licensed dish photos |
 | `js/data/recipes.js` | Core countries and recipes. Quantities use the units from the price list. |
 | `js/data/recipes-europe.js`, `recipes-mideast-africa.js`, `recipes-asia.js`, `recipes-americas-oceania.js`, `recipes-more-*.js` | More recipes and countries, by region |
-| `js/data/prices.js`, `prices-more.js`, `prices-extra.js` | German ingredient prices, pack sizes and diet flags |
+| `js/data/prices.js`, `prices-more.js`, `prices-extra.js` | Base (German) ingredient prices, pack sizes and diet flags |
 | `js/data/world.js` | Country outlines (Natural Earth 1:110m, public domain) |
 
 ### Adding a recipe
@@ -100,4 +128,4 @@ Add an entry to `RECIPES` in `js/data/recipes.js`, or push it from one of the re
 
 ## About the prices
 
-Prices are estimates in euros. They are based on typical discounter and own-brand prices in Germany (Aldi, Lidl, Penny, Rewe, Edeka) for 2025–2026. Real prices vary by store, region, season and offers. Use the Prices tab to adjust them.
+The base prices are estimates in euros, based on typical discounter and own-brand prices in Germany (Aldi, Lidl, Penny, Rewe, Edeka) for 2025–2026. Other countries and stores are estimated from them (see "Countries and stores" above), using rounded food price level comparisons (Eurostat, World Bank ICP) and approximate exchange rates. They are good for comparing, not exact quotes: real prices vary by store, region, season and offers. Use the Prices tab to adjust them. Pack sizes are the German ones everywhere.

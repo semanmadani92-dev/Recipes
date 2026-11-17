@@ -60,8 +60,10 @@
   function timeIn(text) {
     const m = text.match(/(\d+(?:[.,]\d+)?)(?:\s*(?:–|-|to)\s*(\d+(?:[.,]\d+)?))?\s*(minutes?|mins?|hours?|days?)\b/i);
     if (!m) return null;
-    const unit = /^h/i.test(m[3]) ? "h" : /^d/i.test(m[3]) ? (m[1] === "1" && !m[2] ? " day" : " days") : " min";
-    return (m[2] ? m[1] + "–" + m[2] : m[1]) + unit;
+    const n = m[2] ? m[1] + "–" + m[2] : m[1];
+    if (/^h/i.test(m[3])) return tr("{n} h", { n });
+    if (/^d/i.test(m[3])) return m[1] === "1" && !m[2] ? tr("{n} day", { n }) : tr("{n} days", { n });
+    return tr("{n} min", { n });
   }
 
   // ---------- drawing helpers ----------
@@ -419,18 +421,19 @@
   let speechDone = true, speechToken = 0, recipeName = "";
 
   function $(s) { return document.querySelector(s); }
+  const tr = (k, v) => (window.I18N ? window.I18N.t(k, v) : k.replace(/\{(\w+)\}/g, (m, x) => (v && v[x] != null ? v[x] : m)));
   function escHtml(s) { return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])); }
 
   function build(r) {
     const main = foodColor(r.name + " " + r.desc + " " + r.ingredients.slice(0, 3).map((x) => x.name).join(" "), "#d98b3a");
     const list = [];
     list.push({ kind: "intro", text: r.desc, say: "Let's cook " + r.name + ", from " + r.country + ". " + r.desc, color: main, dur: 5 });
-    list.push({ kind: "ingredients", text: "You will need " + r.ingredients.length + " ingredients.", say: "You will need: " + r.ingredients.map((x) => x.name.replace(/\(.*?\)/g, "")).join(", ") + ".", color: main, dur: Math.max(6, r.ingredients.length * 0.6) });
+    list.push({ kind: "ingredients", text: tr("You will need {n} ingredients.", { n: r.ingredients.length }), say: "You will need: " + r.ingredients.map((x) => (x.en || x.name).replace(/\(.*?\)/g, "")).join(", ") + ".", color: main, dur: Math.max(6, r.ingredients.length * 0.6) });
     r.steps.forEach((s, i) => {
       const kind = classify(s);
       list.push({ kind, step: i + 1, total: r.steps.length, text: s, say: "Step " + (i + 1) + ". " + s, timer: timeIn(s), color: foodColor(s, main), dur: Math.max(5, s.split(/\s+/).length * 0.42) });
     });
-    list.push({ kind: "outro", text: "Ready to eat. Enjoy your " + r.name + "!", say: "And that's it. Enjoy your " + r.name + "!", color: main, dur: 4.5 });
+    list.push({ kind: "outro", text: tr("Ready to eat. Enjoy your {dish}!", { dish: r.name }), say: "And that's it. Enjoy your " + r.name + "!", color: main, dur: 4.5 });
     return list;
   }
 
@@ -463,23 +466,23 @@
       seg.firstChild.style.width = i < idx ? "100%" : "0%";
       seg.classList.toggle("now", i === idx);
     });
-    el.badge.textContent = sc.step ? "Step " + sc.step + " of " + sc.total : sc.kind === "ingredients" ? "Ingredients" : sc.kind === "intro" ? recipeName : "Done";
+    el.badge.textContent = sc.step ? tr("Step {a} of {b}", { a: sc.step, b: sc.total }) : sc.kind === "ingredients" ? tr("Ingredients") : sc.kind === "intro" ? recipeName : tr("Done");
     el.timer.hidden = !sc.timer;
     if (sc.timer) el.timerText.textContent = sc.timer;
     el.caption.textContent = sc.text;
     el.overlay.innerHTML = "";
     if (sc.kind === "intro") {
       el.overlay.innerHTML = (current.photo ? '<img class="v-photo" src="' + escHtml(current.photo) + '" alt="" onerror="this.remove()">' : "") +
-        '<div class="v-title"><span class="v-kicker">' + escHtml(current.country) + " · " + current.time + " min · serves " + current.serves + '</span><strong>' + escHtml(recipeName) + "</strong></div>";
+        '<div class="v-title"><span class="v-kicker">' + escHtml(current.countryName || current.country) + " · " + escHtml(tr("{n} min", { n: current.time })) + " · " + escHtml(tr("serves {n}", { n: current.serves })) + '</span><strong>' + escHtml(recipeName) + "</strong></div>";
     } else if (sc.kind === "ingredients") {
       const max = el.stage.clientWidth < 520 ? 8 : 16;
       const shown = current.ingredients.slice(0, max);
       const more = current.ingredients.length - shown.length;
       el.overlay.innerHTML = '<ul class="v-ings">' + shown.map((x, i) =>
         '<li style="animation-delay:' + (reduce ? 0 : Math.min(i * 0.35, 6)) + 's"><b>' + escHtml(x.qty) + "</b> " + escHtml(x.name) + "</li>").join("") +
-        (more > 0 ? '<li class="v-more" style="animation-delay:' + (reduce ? 0 : Math.min(shown.length * 0.35, 6)) + 's">+ ' + more + " more</li>" : "") + "</ul>";
+        (more > 0 ? '<li class="v-more" style="animation-delay:' + (reduce ? 0 : Math.min(shown.length * 0.35, 6)) + 's">+ ' + escHtml(tr("{n} more", { n: more })) + "</li>" : "") + "</ul>";
     } else if (sc.kind === "outro") {
-      el.overlay.innerHTML = (current.photo ? '<img class="v-photo" src="' + escHtml(current.photo) + '" alt="" onerror="this.remove()">' : "") + '<div class="v-title v-end"><strong>Enjoy!</strong><span class="v-kicker">' + escHtml(recipeName) + "</span></div>";
+      el.overlay.innerHTML = (current.photo ? '<img class="v-photo" src="' + escHtml(current.photo) + '" alt="" onerror="this.remove()">' : "") + '<div class="v-title v-end"><strong>' + escHtml(tr("Enjoy!")) + '</strong><span class="v-kicker">' + escHtml(recipeName) + "</span></div>";
     }
     el.prev.disabled = idx === 0;
     el.next.disabled = idx === scenes.length - 1;
@@ -524,7 +527,7 @@
 
   function setPlaying(on) {
     playing = on;
-    el.play.setAttribute("aria-label", on ? "Pause" : "Play");
+    el.play.setAttribute("aria-label", on ? tr("Pause") : tr("Play"));
     el.play.innerHTML = on ? ICON.pause : ICON.play;
     el.root.classList.toggle("paused", !on);
     if (on) {
@@ -549,7 +552,7 @@
   };
 
   function setVoiceButton() {
-    el.voice.innerHTML = (voiceOn ? ICON.voiceOn : ICON.voiceOff) + "<span>" + (voiceOn ? "Voice on" : "Voice off") + "</span>";
+    el.voice.innerHTML = (voiceOn ? ICON.voiceOn : ICON.voiceOff) + "<span>" + escHtml(voiceOn ? tr("Voice on") : tr("Voice off")) + "</span>";
     el.voice.setAttribute("aria-pressed", voiceOn ? "true" : "false");
   }
 
@@ -561,7 +564,7 @@
     scenes = build(r);
     el.title.textContent = r.name;
     el.yt.href = "https://www.youtube.com/results?search_query=" + encodeURIComponent(r.name + " " + r.country + " recipe");
-    el.progress.innerHTML = scenes.map((s, i) => '<button type="button" class="v-seg" data-seg="' + i + '" aria-label="' + (s.step ? "Step " + s.step : s.kind) + '"><span></span></button>').join("");
+    el.progress.innerHTML = scenes.map((s, i) => '<button type="button" class="v-seg" data-seg="' + i + '" aria-label="' + escHtml(s.step ? tr("Step {n}", { n: s.step }) : tr(s.kind === "intro" ? "Intro" : s.kind === "ingredients" ? "Ingredients" : "Done")) + '"><span></span></button>').join("");
     try { el.root.showModal(); } catch (e) { el.root.setAttribute("open", ""); }
     sizeCanvas();
     idx = 0; elapsed = 0;

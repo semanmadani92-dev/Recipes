@@ -5,7 +5,7 @@ app code, recipe and price data, dish photos (as embedded JPEGs) and,
 if available, the 3D globe library are all inside the file.
 
 Usage:
-  python3 tools/build_standalone.py [--globe path/to/globe.gl.min.js] [--out dist/world-pantry.html] [--width 480] [--quality 72] [--format jpeg|webp]
+  python3 tools/build_standalone.py [--globe path/to/globe.gl.min.js] [--out dist/world-pantry.html] [--width 480] [--quality 72] [--format jpeg|webp] [--no-photos]
 
 Without --globe the page loads the globe library from the jsDelivr CDN
 (everything else still works offline). Photos are re-encoded smaller
@@ -32,6 +32,7 @@ def main():
     ap.add_argument("--quality", type=int, default=72)
     ap.add_argument("--format", choices=["jpeg", "webp"], default="jpeg",
                     help="webp makes much smaller files (use it to stay under app size limits)")
+    ap.add_argument("--no-photos", action="store_true", help="leave the dish photos out (smallest file)")
     a = ap.parse_args()
 
     tmp = os.path.join(ROOT, "dist", ".tmp-full.html")
@@ -42,7 +43,7 @@ def main():
 
     # 1) embed the photos as data URIs inside the PHOTOS manifest
     m = re.search(r"window\.PHOTOS\s*=\s*(\{.*?\});\n", html, re.S)
-    photos = json.loads(m.group(1))
+    photos = {} if a.no_photos else json.loads(m.group(1))
     total = 0
     for rid, ph in photos.items():
         path = os.path.join(ROOT, ph["src"])
