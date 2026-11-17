@@ -146,6 +146,20 @@ module.exports = (T) => {
     assert.deepStrictEqual(bad, []);
   });
 
+  T.test("auto-detect time-zone table points only at existing markets and valid IANA zones", async ({ data, ROOT, assert, pending }) => {
+    const { w } = data();
+    const src = fs.readFileSync(path.join(ROOT, "js/app.js"), "utf8");
+    const m = src.match(/const TZ_COUNTRY = (\{[\s\S]*?\});/);
+    if (!m) pending("no TZ_COUNTRY table in js/app.js");
+    const tz = Function("return " + m[1])(); // eslint-disable-line no-new-func
+    const bad = [];
+    for (const [zone, cc] of Object.entries(tz)) {
+      if (!w.MARKETS[cc]) bad.push(`${zone} -> ${cc}: no such market`);
+      try { new Intl.DateTimeFormat("en", { timeZone: zone }); } catch (e) { bad.push(`${zone}: not a time zone`); }
+    }
+    assert.deepStrictEqual(bad, []);
+  });
+
   T.test("python3 tools/i18n_keys.py --check passes", async ({ ROOT, assert }) => {
     let out = "", code = 0;
     try { out = execFileSync("python3", ["tools/i18n_keys.py", "--check"], { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }); }
