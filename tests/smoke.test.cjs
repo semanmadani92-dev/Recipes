@@ -71,7 +71,7 @@ module.exports = (T) => {
         }
       });
       const bad = out.filter(Boolean);
-      slow.splice(0).forEach((s) => ctx.log("slow: " + s));
+      slow.splice(0); // timings under parallel load are noise; see perf.test.cjs
       ctx.assert.deepStrictEqual(bad, [], bad.length + " languages with problems");
     }, { timeout: 300000, tags: ["browser", "i18n"] });
   }

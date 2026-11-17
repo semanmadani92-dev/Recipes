@@ -40,6 +40,16 @@ module.exports = (T) => {
     } finally { await P.close(); }
   }, { tags: ["browser", "feature", "detect"] });
 
+  T.test("returning user from the Germany-only version (saved prices/store, no wp.market) is not moved to another country", async (ctx) => {
+    const P = await ctx.newPage({ device: "desktop", fresh: true, locale: "en-US", timezoneId: "America/New_York", globe: false,
+      storage: { lang: "en", saved: ["carbonara"], prices2: { DE: { rice: 1.29 } }, stores: { DE: "de_rewe" } } });
+    try {
+      await P.goto("find");
+      const mk = await P.page.$eval("#settings-btn", (b) => (b.querySelector(".sb-mk") || b).textContent);
+      ctx.assert.ok(mk.includes("DE"), "auto-detection should run on the first visit only, but a returning user with German prices and Rewe chosen now sees: " + mk);
+    } finally { await P.close(); }
+  }, { tags: ["browser", "feature", "detect"] });
+
   T.test("US market: US units in ingredients and °F in every oven step; Metric toggle restores °C and persists", async (ctx) => {
     const P = await ctx.newPage({ device: "desktop", market: "US", globe: false });
     const { page, assert } = { page: P.page, assert: ctx.assert };
@@ -252,7 +262,22 @@ module.exports = (T) => {
         await P.page.click("#settings-btn");
         await P.page.waitForSelector("#settings-dialog[open]", { state: "attached" });
         const txt = await P.page.evaluate(() => document.getElementById("settings-dialog").innerText + " " + [...document.querySelectorAll("#settings-dialog [placeholder]")].map((e) => e.placeholder).join(" ") + " " + document.getElementById("view-prices").innerText);
-        const left = NEW.filter((s) => txt.includes(s));
+        // a recipe receipt in a market with real prices
+        await P.page.evaluate(() => { const d = document.getElementById("settings-dialog"); if (d.open) d.close(); });
+        const rtxt = await P.page.evaluate(() => {
+          const L = window.LOCAL_PRICES || {}; const cc = Object.keys(L).sort((a, b) => Object.keys(L[b].items).length - Object.keys(L[a].items).length)[0];
+          if (!cc) return "";
+          localStorage.setItem("wp.market", JSON.stringify(cc));
+          return cc;
+        });
+        let rec = "";
+        if (rtxt) {
+          await P.reload();
+          await P.page.evaluate(() => { const ids = new Set(Object.keys(window.LOCAL_PRICES[JSON.parse(localStorage.getItem("wp.market"))].items)); location.hash = "recipe-" + window.RECIPES.find((r) => r.ing.some(([i]) => ids.has(i))).id; });
+          await P.page.waitForSelector("#recipe-dialog[open] .receipt", { state: "attached" });
+          rec = await P.page.$eval("#recipe-dialog", (e) => e.innerText);
+        }
+        const left = NEW.concat(["ingredients from real store prices", "All prices are estimates for", "real shelf prices"]).filter((s) => (txt + " " + rec).includes(s));
         if (left.length) bad.push(`${lang}: ${left.join(" | ")}`);
       } finally { await P.close(); }
     }

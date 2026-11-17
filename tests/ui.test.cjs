@@ -117,8 +117,11 @@ module.exports = (T) => {
         const val = (id) => (id ? +document.querySelector(`#price-body input[data-price="${id}"]`).value : null);
         return { est, loc, e0: val(est), l0: val(loc), rate: +document.querySelector("#pr-rate input[data-rate]").value };
       });
-      await page.fill("#pr-rate input[data-rate]", String(pick.rate * 2));
-      await page.dispatchEvent("#pr-rate input[data-rate]", "change");
+      // like a person: tap the field, type, leave it
+      await page.click("#pr-rate input[data-rate]");
+      await page.keyboard.press("Control+A");
+      await page.keyboard.type(String(pick.rate * 2));
+      await page.keyboard.press("Tab");
       await page.waitForTimeout(200);
       const val = (id) => page.$eval(`#price-body input[data-price="${id}"]`, (e) => +e.value);
       const e1 = await val(pick.est);
@@ -132,9 +135,46 @@ module.exports = (T) => {
       await page.click("#price-reset"); await page.click("#price-reset");
       await page.waitForTimeout(200);
       assert.strictEqual(await val(pick.est), pick.e0, "reset did not restore the default rate");
+      const notes = (await ls(page))["wp.notes"] || {};
+      assert.ok(!("null" in notes), "clicking the exchange-rate field wrote a star rating into wp.notes.null");
       assert.deepStrictEqual([...new Set(P.errors)], []);
     } finally { await P.close(); }
   }, { tags: ["browser", "prices"] });
+
+  T.test("week plan: fill the week, shopping list money is valid in US and IN, copy works; video opens", async (ctx) => {
+    const P = await ctx.newPage({ device: "phone", market: "US", globe: false });
+    const { page, assert } = { page: P.page, assert: ctx.assert };
+    try {
+      await P.context.grantPermissions(["clipboard-read", "clipboard-write"]).catch(() => {});
+      await P.goto("plan");
+      await page.$eval('[data-action="surprise-plan"]', (b) => b.click());
+      await page.waitForTimeout(300);
+      const readShop = () => page.$$eval("#shop-list .sh-cost", (e) => e.map((x) => x.textContent));
+      for (const cc of ["US", "IN"]) {
+        if (cc !== "US") await page.evaluate((cc) => { const s = document.querySelector("#pr-market"); s.value = cc; s.dispatchEvent(new Event("change", { bubbles: true })); }, cc);
+        await page.waitForTimeout(200);
+        const costs = await readShop();
+        assert.ok(costs.length > 5, `${cc}: shopping list has ${costs.length} lines`);
+        const sym = await page.evaluate((cc) => new Intl.NumberFormat(window.I18N.locale, { style: "currency", currency: window.MARKETS[cc].cur }).formatToParts(1).find((p) => p.type === "currency").value, cc);
+        const bad = costs.filter((c) => !(parseMoney(c) > 0) || !c.includes(sym));
+        assert.deepStrictEqual(bad.slice(0, 5), [], `${cc}: shopping list amounts`);
+        assert.deepStrictEqual(await badText(page, "#view-plan"), [], cc + " plan text");
+      }
+      await page.$eval('[data-action="copy-shop"]', (b) => b.click());
+      await page.waitForTimeout(200);
+      // video walkthrough
+      await page.evaluate(() => { location.hash = "recipe-" + window.RECIPES.find((r) => r.steps.some((s) => /°C/.test(s))).id; });
+      await page.waitForSelector('#recipe-dialog[open] [data-action="video"]', { state: "attached" });
+      await page.$eval('#recipe-dialog [data-action="video"]', (b) => b.click());
+      await page.waitForSelector("#video-dialog[open]", { state: "attached", timeout: 5000 });
+      await page.waitForTimeout(800);
+      await page.$eval("#v-next", (b) => b.click());
+      await page.waitForTimeout(300);
+      assert.deepStrictEqual(await badText(page, "#video-dialog"), []);
+      await page.$eval("#v-close", (b) => b.click());
+      assert.deepStrictEqual([...new Set(P.errors)], []);
+    } finally { await P.close(); }
+  }, { tags: ["browser", "plan"] });
 
   T.test("cooking mode opens, shows steps and moves forward", async (ctx) => {
     const P = await ctx.newPage({ device: "phone", globe: false });
