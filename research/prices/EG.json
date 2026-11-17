@@ -1,0 +1,251 @@
+{
+ "country": "EG",
+ "currency": "EGP",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 49.33,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk (regular) 1 L, New Cairo",
+   "source": "https://www.numbeo.com/cost-of-living/in/New-Cairo-Egypt",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 17,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 lb, New Cairo",
+   "source": "https://www.numbeo.com/cost-of-living/in/New-Cairo-Egypt",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 77.28,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large, New Cairo",
+   "source": "https://www.numbeo.com/cost-of-living/in/New-Cairo-Egypt",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 9,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 lb, New Cairo",
+   "source": "https://www.numbeo.com/cost-of-living/in/New-Cairo-Egypt",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 10,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 lb, New Cairo",
+   "source": "https://www.numbeo.com/cost-of-living/in/New-Cairo-Egypt",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 13,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 lb, New Cairo",
+   "source": "https://www.numbeo.com/cost-of-living/in/New-Cairo-Egypt",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 70,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://k2.expatarrivals.com/node/1280",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 50,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://k2.expatarrivals.com/node/1280",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 40,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://k2.expatarrivals.com/node/1280",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 250,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://k2.expatarrivals.com/node/1280",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 69.78,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://www.mylifeelsewhere.com:443/cost-of-living/egypt",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 90.55,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Boneless chicken breast 1 lb",
+   "source": "https://www.mylifeelsewhere.com:443/cost-of-living/egypt",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 13.71,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 lb",
+   "source": "https://www.mylifeelsewhere.com:443/cost-of-living/egypt",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 34.7,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (IDSC national average)",
+   "source": "https://www.arabfinance.com/en/news/newdetails/basic-commodities-and-vegetables-mixed-on-november-9 (IDSC daily prices, 2026-11-09)",
+   "date": "2026-11-09",
+   "kind": "average"
+  },
+  {
+   "id": "flour",
+   "price": 27.2,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Packaged flour 1 kg (IDSC)",
+   "source": "https://www.arabfinance.com/en/news/newdetails/basic-commodities-and-vegetables-mixed-on-november-9 (IDSC daily prices, 2026-11-09)",
+   "date": "2026-11-09",
+   "kind": "average"
+  },
+  {
+   "id": "sugar",
+   "price": 33.2,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Packaged sugar 1 kg (IDSC)",
+   "source": "https://www.arabfinance.com/en/news/newdetails/basic-commodities-and-vegetables-mixed-on-november-9 (IDSC daily prices, 2026-11-09)",
+   "date": "2026-11-09",
+   "kind": "average"
+  },
+  {
+   "id": "vegetable_oil",
+   "price": 108.9,
+   "qty": 1090,
+   "unit": "ml",
+   "store": null,
+   "product": "Sunflower oil 1 kg (~1.09 L) (IDSC)",
+   "source": "https://www.arabfinance.com/en/news/newdetails/basic-commodities-and-vegetables-mixed-on-november-9 (IDSC daily prices, 2026-11-09)",
+   "date": "2026-11-09",
+   "kind": "average",
+   "note": "priced per kg"
+  },
+  {
+   "id": "tomatoes",
+   "price": 23.9,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (IDSC)",
+   "source": "https://www.arabfinance.com/en/news/newdetails/basic-commodities-and-vegetables-mixed-on-november-9 (IDSC daily prices, 2026-11-09)",
+   "date": "2026-11-09",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 19.9,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 kg (IDSC)",
+   "source": "https://www.arabfinance.com/en/news/newdetails/basic-commodities-and-vegetables-mixed-on-november-9 (IDSC daily prices, 2026-11-09)",
+   "date": "2026-11-09",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 19.6,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg (IDSC)",
+   "source": "https://arabfinance.com/en/news/newdetails/food-commodities-and-vegetables-prices-disclosed-on-july-12th",
+   "date": "2026-07-12",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_thighs",
+   "price": 89.7,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White poultry (whole chicken) 1 kg (IDSC)",
+   "source": "https://arabfinance.com/en/news/newdetails/idsc-records-rise-in-prices-on-poultry-meat-fish-on-october-14",
+   "date": "2026-10-14",
+   "kind": "average",
+   "note": "whole broiler, not fillet"
+  },
+  {
+   "id": "beef_stew",
+   "price": 445.6,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Meat (beef) 1 kg (IDSC)",
+   "source": "https://www.zawya.com/en/economy/egypt-meat-poultry-fish-prices-unveiled-on-october-13-1626419",
+   "date": "2026-10-13",
+   "kind": "average"
+  }
+ ]
+}

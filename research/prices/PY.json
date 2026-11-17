@@ -1,0 +1,18 @@
+{
+ "country": "PY",
+ "currency": "PYG",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 12847.7679,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (USD 1.81)",
+   "source": "https://mylifeelsewhere.com/cost-of-living/uruguay/paraguay",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

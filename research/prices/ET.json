@@ -1,0 +1,96 @@
+{
+ "country": "ET",
+ "currency": "ETB",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 80,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (ETB 60-100)",
+   "source": "https://africarrieres.com/ethiopia/en/guide/decouvrir/cost-of-living (Feb 2026; midpoint of range)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 45,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (ETB 30-60)",
+   "source": "https://africarrieres.com/ethiopia/en/guide/decouvrir/cost-of-living (Feb 2026; midpoint of range)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 60,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Local rice 1 kg (ETB 40-80)",
+   "source": "https://africarrieres.com/ethiopia/en/guide/decouvrir/cost-of-living (Feb 2026; midpoint of range)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 200,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken 1 kg (ETB 150-250)",
+   "source": "https://africarrieres.com/ethiopia/en/guide/decouvrir/cost-of-living (Feb 2026; midpoint of range)",
+   "date": "2026-02",
+   "kind": "average",
+   "note": "whole chicken; market price"
+  },
+  {
+   "id": "eggs",
+   "price": 285,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Addis Ababa, supermarket)",
+   "source": "https://www.whereandwhen.net/budget/ethiopia/addis-ababa/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 174,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Addis Ababa, supermarket)",
+   "source": "https://www.whereandwhen.net/budget/ethiopia/addis-ababa/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 347,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Addis Ababa, supermarket)",
+   "source": "https://www.whereandwhen.net/budget/ethiopia/addis-ababa/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 1626,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Addis Ababa, supermarket)",
+   "source": "https://www.whereandwhen.net/budget/ethiopia/addis-ababa/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

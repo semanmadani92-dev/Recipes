@@ -1,0 +1,84 @@
+{
+ "country": "SN",
+ "currency": "XOF",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "rice",
+   "price": 856,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Dakar)",
+   "source": "https://lesafriques.com/en/2026/11/cost-of-living-in-senegal-2026-what-a-monthly-budget-in-dakar-actually-looks-like/ (from Numbeo, Nov 2026)",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 1454,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Dakar)",
+   "source": "https://lesafriques.com/en/2026/11/cost-of-living-in-senegal-2026-what-a-monthly-budget-in-dakar-actually-looks-like/ (from Numbeo, Nov 2026)",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5275,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken 1 kg (Dakar)",
+   "source": "https://lesafriques.com/en/2026/11/cost-of-living-in-senegal-2026-what-a-monthly-budget-in-dakar-actually-looks-like/ (from Numbeo, Nov 2026)",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 1352,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Dakar)",
+   "source": "https://www.whereandwhen.net/budget/senegal/dakar/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1522,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Dakar)",
+   "source": "https://www.whereandwhen.net/budget/senegal/dakar/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 984,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Dakar)",
+   "source": "https://www.whereandwhen.net/budget/senegal/dakar/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5282,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Dakar)",
+   "source": "https://www.whereandwhen.net/budget/senegal/dakar/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

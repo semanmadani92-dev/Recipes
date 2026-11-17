@@ -1,0 +1,117 @@
+{
+ "country": "ZA",
+ "currency": "ZAR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 21.31,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Johannesburg)",
+   "source": "https://www.expatica.com/za/cost-of-living/johannesburg/ (Numbeo snapshot 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 38.2,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Johannesburg)",
+   "source": "https://www.expatica.com/za/cost-of-living/johannesburg/ (Numbeo snapshot 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 90.83,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg (Johannesburg)",
+   "source": "https://www.expatica.com/za/cost-of-living/johannesburg/ (Numbeo snapshot 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 20.49,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Pretoria)",
+   "source": "https://www.expatica.com/za/cost-of-living/pretoria/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 40.0,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Pretoria)",
+   "source": "https://www.expatica.com/za/cost-of-living/pretoria/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 46.89,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Cape Town)",
+   "source": "https://www.expatica.com/za/cost-of-living/cape-town/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 97.88,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg (Cape Town)",
+   "source": "https://www.expatica.com/za/cost-of-living/cape-town/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 33,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (R20-46)",
+   "source": "https://www.expatica.com/za/moving/about/cost-of-living-in-south-africa-1167470 (midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 27.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (R15-40)",
+   "source": "https://www.expatica.com/za/moving/about/cost-of-living-in-south-africa-1167470 (midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 25,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg (R10-40)",
+   "source": "https://www.expatica.com/za/moving/about/cost-of-living-in-south-africa-1167470 (midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

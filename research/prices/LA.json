@@ -1,0 +1,51 @@
+{
+ "country": "LA",
+ "currency": "LAK",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 42000,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Vientiane)",
+   "source": "https://expatarrivals.com/asia-pacific/laos/cost-living-laos (Vientiane, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 45000,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Vientiane)",
+   "source": "https://expatarrivals.com/asia-pacific/laos/cost-living-laos (Vientiane, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 23000,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Vientiane)",
+   "source": "https://expatarrivals.com/asia-pacific/laos/cost-living-laos (Vientiane, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 139000,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Vientiane)",
+   "source": "https://expatarrivals.com/asia-pacific/laos/cost-living-laos (Vientiane, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

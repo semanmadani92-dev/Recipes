@@ -1,0 +1,29 @@
+{
+ "country": "CZ",
+ "currency": "CZK",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 28,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://expatarrivals.com/czech-republic/cost-of-living-in-czech-republic",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 200,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg",
+   "source": "https://expatarrivals.com/czech-republic/cost-of-living-in-czech-republic",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

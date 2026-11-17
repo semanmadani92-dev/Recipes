@@ -1,0 +1,84 @@
+{
+ "country": "IT",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 3.38,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12",
+   "source": "https://www.foyerglobalhealth.com/?p=24302 (Italy averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 10.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg",
+   "source": "https://www.foyerglobalhealth.com/?p=24302 (Italy averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 2.8,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg",
+   "source": "https://www.foyerglobalhealth.com/?p=24302 (Italy averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 1.55,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 kg",
+   "source": "https://www.foyerglobalhealth.com/?p=24302 (Italy averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 1.6,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg",
+   "source": "https://www.foyerglobalhealth.com/?p=24302 (Italy averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "apples",
+   "price": 2.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Apples 1 kg",
+   "source": "https://www.foyerglobalhealth.com/?p=24302 (Italy averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.45,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.foyerglobalhealth.com/?p=24302 (Italy averages)",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

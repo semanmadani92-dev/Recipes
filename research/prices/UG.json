@@ -1,0 +1,95 @@
+{
+ "country": "UG",
+ "currency": "UGX",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 6799,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Kampala)",
+   "source": "https://citycost.org/compare/kampala-vs-jinja/ (Kampala, updated 2026-07-25)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 2799,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Kampala)",
+   "source": "https://citycost.org/compare/kampala-vs-jinja/ (Kampala, updated 2026-07-25)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 5215,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Kampala)",
+   "source": "https://citycost.org/compare/kampala-vs-jinja/ (Kampala, updated 2026-07-25)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 18300,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Kampala)",
+   "source": "https://citycost.org/compare/kampala-vs-jinja/ (Kampala, updated 2026-07-25)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 5448,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Kampala)",
+   "source": "https://www.whereandwhen.net/budget/uganda/kampala/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 3090,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Kampala)",
+   "source": "https://www.whereandwhen.net/budget/uganda/kampala/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 4976,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Kampala)",
+   "source": "https://www.whereandwhen.net/budget/uganda/kampala/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 18144,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Kampala)",
+   "source": "https://www.whereandwhen.net/budget/uganda/kampala/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "country": "TH",
+ "currency": "THB",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 63.18,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.expatica.com/th/cost-of-living/bangkok/ (Bangkok averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 88.05,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large",
+   "source": "https://www.expatica.com/th/cost-of-living/bangkok/ (Bangkok averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 109,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg",
+   "source": "https://www.expatica.com/th/cost-of-living/bangkok/ (Bangkok averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 47.38,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg",
+   "source": "https://www.expatica.com/th/cost-of-living/bangkok/ (Bangkok averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 70.91,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg",
+   "source": "https://www.expatica.com/th/cost-of-living/bangkok/ (Bangkok averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 55.11,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg",
+   "source": "https://www.expatica.com/th/cost-of-living/bangkok/ (Bangkok averages)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 49.06,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 kg",
+   "source": "https://www.expatica.com/th/cost-of-living/bangkok/ (Bangkok averages)",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "country": "IQ",
+ "currency": "IQD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 1650.375,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.26 converted at 1310/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/iraq/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2069.5179,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 1.58 converted at 1310/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/iraq/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2318.3839,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 1.77 converted at 1310/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/iraq/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5553.6429,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 4.24 converted at 1310/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/iraq/",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

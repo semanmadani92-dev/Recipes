@@ -1,0 +1,29 @@
+{
+ "country": "AM",
+ "currency": "AMD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 1053.0,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Yerevan, USD 2.73)",
+   "source": "https://livingcost.org/cost/vientiane/yerevan",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 871.7143,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Yerevan, USD 2.26)",
+   "source": "https://livingcost.org/cost/vientiane/yerevan",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "country": "AR",
+ "currency": "ARS",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 4450,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://expatarrivals.com/americas/argentina/cost-living-argentina",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 2200,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://expatarrivals.com/americas/argentina/cost-living-argentina",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2350,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://expatarrivals.com/americas/argentina/cost-living-argentina",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 14400,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://expatarrivals.com/americas/argentina/cost-living-argentina",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 3827,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Buenos Aires)",
+   "source": "https://expatistan.com/price/eggs/buenos-aires",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2243,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (Buenos Aires)",
+   "source": "https://expatistan.com/price/rice/buenos-aires/EUR",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 7387,
+   "qty": 500,
+   "unit": "g",
+   "store": null,
+   "product": "Boneless chicken breast 500 g (Buenos Aires)",
+   "source": "https://expatistan.com/price/chicken/buenos-aires",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

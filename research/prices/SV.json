@@ -1,0 +1,51 @@
+{
+ "country": "SV",
+ "currency": "USD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 2.61,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://www.bearsavings.com/cost-of-living/el-salvador/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.88,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.bearsavings.com/cost-of-living/el-salvador/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1.6,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://www.bearsavings.com/cost-of-living/el-salvador/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5.74,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://www.bearsavings.com/cost-of-living/el-salvador/",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "country": "KH",
+ "currency": "KHR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 6817.0,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Phnom Penh)",
+   "source": "https://www.whereandwhen.net/budget/cambodia/phnom-penh/ (USD converted at 4,010 KHR/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 8421.0,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Phnom Penh)",
+   "source": "https://www.whereandwhen.net/budget/cambodia/phnom-penh/ (USD converted at 4,010 KHR/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 16842.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Phnom Penh)",
+   "source": "https://www.whereandwhen.net/budget/cambodia/phnom-penh/ (USD converted at 4,010 KHR/USD)",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

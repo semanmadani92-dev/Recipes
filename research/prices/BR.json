@@ -1,0 +1,51 @@
+{
+ "country": "BR",
+ "currency": "BRL",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 5.2973,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 0.96 converted at 5.518/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/brazil/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 6.4561,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 1.17 converted at 5.518/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/brazil/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 11.1464,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 2.02 converted at 5.518/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/brazil/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 20.0855,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 3.64 converted at 5.518/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/brazil/",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

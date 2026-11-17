@@ -1,0 +1,140 @@
+{
+ "country": "ES",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 1.1,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (range 0.85-1.35)",
+   "source": "https://www.expatica.com/es/about/basics/cost-of-living-1159118/ (Numbeo 2026-01-14; midpoint of range)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2.9,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (range 1.80-4.00)",
+   "source": "https://www.expatica.com/es/about/basics/cost-of-living-1159118/ (Numbeo 2026-01-14; midpoint of range)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1.6,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (range 1.00-2.20)",
+   "source": "https://www.expatica.com/es/about/basics/cost-of-living-1159118/ (Numbeo 2026-01-14; midpoint of range)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 2.15,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (range 1.30-3.00)",
+   "source": "https://www.expatica.com/es/about/basics/cost-of-living-1159118/ (Numbeo 2026-01-14; midpoint of range)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 1.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg (range 0.80-2.20)",
+   "source": "https://www.expatica.com/es/about/basics/cost-of-living-1159118/ (Numbeo 2026-01-14; midpoint of range)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "apples",
+   "price": 2.1,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Apples 1 kg (range 1.20-3.00)",
+   "source": "https://www.expatica.com/es/about/basics/cost-of-living-1159118/ (Numbeo 2026-01-14; midpoint of range)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "cheddar",
+   "price": 15.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Cheese 1 kg (local) (range 7.00-24.00)",
+   "source": "https://www.expatica.com/es/about/basics/cost-of-living-1159118/ (Numbeo 2026-01-14; midpoint of range)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 7.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken 1 kg (range 4.00-10.00)",
+   "source": "https://www.expatica.com/es/about/basics/cost-of-living-1159118/ (Numbeo 2026-01-14; midpoint of range)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 0.96,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "es_mercadona",
+   "product": "Leche entera Hacendado 1 L",
+   "source": "https://www.merca2.es/2026/10/20/hacendado-mercadona-rebaja-2477050/",
+   "date": "2026-10",
+   "kind": "shelf"
+  },
+  {
+   "id": "olive_oil",
+   "price": 3.95,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "es_mercadona",
+   "product": "Aceite de oliva Hacendado 1 L (refined olive oil, not extra virgin)",
+   "source": "https://www.merca2.es/2026/10/20/hacendado-mercadona-rebaja-2477050/",
+   "date": "2026-10",
+   "kind": "shelf",
+   "note": "ordinary olive oil, not EV"
+  },
+  {
+   "id": "olive_oil",
+   "price": 4.85,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "es_mercadona",
+   "product": "Aceite de oliva virgen extra Hacendado 1 L",
+   "source": "https://www.moncloa.com/2026/03/02/mercadona-cena-no-engordar-3364087/",
+   "date": "2026-03",
+   "kind": "shelf"
+  },
+  {
+   "id": "olive_oil",
+   "price": 4.95,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "es_mercadona",
+   "product": "Aceite de oliva virgen extra Hacendado 1 L",
+   "source": "https://www.52spain.com/d/142953-Spanish-Olive-Oil-Prices-Continue-to-Fall-Extra-Virgin-AOVE-Now-Below-5",
+   "date": "2026-05",
+   "kind": "shelf"
+  }
+ ]
+}

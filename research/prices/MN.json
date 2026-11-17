@@ -1,0 +1,29 @@
+{
+ "country": "MN",
+ "currency": "MNT",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 7912.5893,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Ulaanbaatar, USD 2.21)",
+   "source": "https://mylifeelsewhere.com/cost-of-living/ulaanbaatar-c4711/vientiane-c4659",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 7303.9286,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Boneless chicken breast 1 lb (Ulaanbaatar, USD 2.04)",
+   "source": "https://mylifeelsewhere.com/cost-of-living/ulaanbaatar-c4711/vientiane-c4659",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

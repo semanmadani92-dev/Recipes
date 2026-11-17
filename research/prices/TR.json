@@ -1,0 +1,199 @@
+{
+ "country": "TR",
+ "currency": "TRY",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 49.54,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://citycost.org/turkey/ (last update 2026-09-06)",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 108,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg",
+   "source": "https://citycost.org/turkey/ (last update 2026-09-06)",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 90,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Istanbul)",
+   "source": "https://expatarrivals.com/europe/turkey/istanbul/cost-living-istanbul (Istanbul, Nov 2025)",
+   "date": "2025-11",
+   "kind": "average",
+   "note": "a year old; Turkish food inflation ~30%/yr"
+  },
+  {
+   "id": "milk",
+   "price": 45,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Istanbul)",
+   "source": "https://expatarrivals.com/europe/turkey/istanbul/cost-living-istanbul (Istanbul, Nov 2025)",
+   "date": "2025-11",
+   "kind": "average",
+   "note": "a year old"
+  },
+  {
+   "id": "rice",
+   "price": 85,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Istanbul)",
+   "source": "https://expatarrivals.com/europe/turkey/istanbul/cost-living-istanbul (Istanbul, Nov 2025)",
+   "date": "2025-11",
+   "kind": "average",
+   "note": "a year old"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 240,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Istanbul)",
+   "source": "https://expatarrivals.com/europe/turkey/istanbul/cost-living-istanbul (Istanbul, Nov 2025)",
+   "date": "2025-11",
+   "kind": "average",
+   "note": "a year old"
+  },
+  {
+   "id": "cheddar",
+   "price": 220,
+   "qty": 500,
+   "unit": "g",
+   "store": null,
+   "product": "Cheese 500 g (Istanbul; beyaz peynir/kaşar)",
+   "source": "https://expatarrivals.com/europe/turkey/istanbul/cost-living-istanbul (Istanbul, Nov 2025)",
+   "date": "2025-11",
+   "kind": "average",
+   "note": "local cheese; a year old"
+  },
+  {
+   "id": "milk",
+   "price": 47,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L, supermarket average (min/max USD 0.7-1.4)",
+   "source": "https://www.whereandwhen.net/budget/turkey/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "vegetable_oil",
+   "price": 509,
+   "qty": 5000,
+   "unit": "ml",
+   "store": "tr_disc",
+   "product": "Komili Ayçiçek Yağı 5 L (A101)",
+   "source": "https://www.timeturk.com/a101-5-eylul-aktuel-katalogu-komili-aycicek-yagi-caykur-cay-toz-seker-ucuzladi ; https://www.habergazetesi.com.tr/a101-1-eylul-2026-aktuel-katalogu-yayimlandi-sut-urunlerinden-temizlige-buyuk-eylul-firsatlari-basladi (A101 catalogues, Sept 2026)",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "vegetable_oil",
+   "price": 395,
+   "qty": 5000,
+   "unit": "ml",
+   "store": "tr_disc",
+   "product": "Komili Ayçiçek Yağı 5 L (A101 catalogue price)",
+   "source": "https://www.timeturk.com/a101-5-eylul-aktuel-katalogu-komili-aycicek-yagi-caykur-cay-toz-seker-ucuzladi ; https://www.habergazetesi.com.tr/a101-1-eylul-2026-aktuel-katalogu-yayimlandi-sut-urunlerinden-temizlige-buyuk-eylul-firsatlari-basladi (A101 catalogues, Sept 2026)",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "sugar",
+   "price": 52.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": "tr_disc",
+   "product": "Toz şeker 1 kg (Irmak/Bal Küpü/Nar/Bor/Doğuş, A101)",
+   "source": "https://www.timeturk.com/a101-5-eylul-aktuel-katalogu-komili-aycicek-yagi-caykur-cay-toz-seker-ucuzladi ; https://www.habergazetesi.com.tr/a101-1-eylul-2026-aktuel-katalogu-yayimlandi-sut-urunlerinden-temizlige-buyuk-eylul-firsatlari-basladi (A101 catalogues, Sept 2026)",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "rice",
+   "price": 73.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": "tr_disc",
+   "product": "Ovadan Baldo pirinç 1 kg (A101)",
+   "source": "https://www.timeturk.com/a101-5-eylul-aktuel-katalogu-komili-aycicek-yagi-caykur-cay-toz-seker-ucuzladi ; https://www.habergazetesi.com.tr/a101-1-eylul-2026-aktuel-katalogu-yayimlandi-sut-urunlerinden-temizlige-buyuk-eylul-firsatlari-basladi (A101 catalogues, Sept 2026)",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "rice",
+   "price": 159.5,
+   "qty": 2500,
+   "unit": "g",
+   "store": "tr_disc",
+   "product": "Ovadan Osmancık pirinç 2.5 kg (A101)",
+   "source": "https://www.habergazetesi.com.tr/a101-20-eylul-2026-aktuel-katalog-a101de-bugun-neler-var-haftanin-yildizlari-indirimli-urunler-ve-fiyat-listesi",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "milk",
+   "price": 24.5,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "tr_disc",
+   "product": "Birşah yarım yağlı süt 1 L (A101)",
+   "source": "https://www.habergazetesi.com.tr/a101-30-agustos-5-eylul-indirim-katalogu-yayinlandi-mutfak-ve-temizlik-urunlerinde-buyuk-firsat",
+   "date": "2026-08",
+   "kind": "shelf"
+  },
+  {
+   "id": "tomatoes",
+   "price": 44.7589,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (Istanbul, USD 0.90)",
+   "source": "https://www.globalcitizensolutions.com/cost-of-living-istanbul/ (2026, USD converted at 49.7 TRY/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 149.1964,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg (Istanbul, USD 3.00)",
+   "source": "https://www.globalcitizensolutions.com/cost-of-living-istanbul/ (2026, USD converted at 49.7 TRY/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 74.5982,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Istanbul, USD 1.50)",
+   "source": "https://www.globalcitizensolutions.com/cost-of-living-istanbul/ (2026, USD converted at 49.7 TRY/USD)",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

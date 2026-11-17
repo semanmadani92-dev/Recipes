@@ -1,0 +1,139 @@
+{
+ "country": "VN",
+ "currency": "VND",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 38000,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Hanoi)",
+   "source": "https://expatarrivals.com/asia-pacific/vietnam/hanoi/cost-living-hanoi (Hanoi averages, June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 38000,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Hanoi)",
+   "source": "https://expatarrivals.com/asia-pacific/vietnam/hanoi/cost-living-hanoi (Hanoi averages, June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 22000,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Hanoi)",
+   "source": "https://expatarrivals.com/asia-pacific/vietnam/hanoi/cost-living-hanoi (Hanoi averages, June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 100000,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Hanoi)",
+   "source": "https://expatarrivals.com/asia-pacific/vietnam/hanoi/cost-living-hanoi (Hanoi averages, June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 42500,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (33,000-52,000)",
+   "source": "https://vietnamspot.ru/en/blog/ho-chi-minh-prices (HCMC, April 2026; midpoint of range)",
+   "date": "2026-04",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 27500,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (20,000-35,000)",
+   "source": "https://vietnamspot.ru/en/blog/ho-chi-minh-prices (HCMC, April 2026; midpoint of range)",
+   "date": "2026-04",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 39000,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (30,000-48,000)",
+   "source": "https://vietnamspot.ru/en/blog/ho-chi-minh-prices (HCMC, April 2026; midpoint of range)",
+   "date": "2026-04",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 80000,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (50,000-110,000)",
+   "source": "https://vietnamspot.ru/en/blog/ho-chi-minh-prices (HCMC, April 2026; midpoint of range)",
+   "date": "2026-04",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 34000,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "vn_winmart",
+   "product": "Milk 1 L (30,000-38,000)",
+   "source": "https://vietnamspot.ru/en/blog/vietnam-prices (Big C / WinMart / Co.opmart, 2026; midpoint of range)",
+   "date": "2026",
+   "kind": "shelf"
+  },
+  {
+   "id": "rice",
+   "price": 22500,
+   "qty": 1000,
+   "unit": "g",
+   "store": "vn_winmart",
+   "product": "Rice 1 kg (15,000-30,000)",
+   "source": "https://vietnamspot.ru/en/blog/vietnam-prices (Big C / WinMart / Co.opmart, 2026; midpoint of range)",
+   "date": "2026",
+   "kind": "shelf"
+  },
+  {
+   "id": "eggs",
+   "price": 26000,
+   "qty": 10,
+   "unit": "pc",
+   "store": "vn_winmart",
+   "product": "Eggs, 10 (22,000-30,000)",
+   "source": "https://vietnamspot.ru/en/blog/vietnam-prices (Big C / WinMart / Co.opmart, 2026; midpoint of range)",
+   "date": "2026",
+   "kind": "shelf"
+  },
+  {
+   "id": "rice",
+   "price": 15700,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Gạo tẻ thường 1 kg (VND 14,600-16,800, national, Sep 2026)",
+   "source": "https://www.nso.gov.vn/wp-content/uploads/2026/10/Tong-quan-CPI-chi-so-gia-vang-do-la-My-thang-9-QIII-va-9-thang-nam-2026.pdf",
+   "date": "2026-09",
+   "kind": "average"
+  }
+ ]
+}

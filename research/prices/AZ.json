@@ -1,0 +1,51 @@
+{
+ "country": "AZ",
+ "currency": "AZN",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 3.06,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://openvan.camp/en/tools/vanbasket/azerbaijan (Nov 2026, USD converted at 1.70 AZN/USD)",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 2.601,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://openvan.camp/en/tools/vanbasket/azerbaijan (Nov 2026, USD converted at 1.70 AZN/USD)",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 3.094,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://openvan.camp/en/tools/vanbasket/azerbaijan (Nov 2026, USD converted at 1.70 AZN/USD)",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 7.004,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://openvan.camp/en/tools/vanbasket/azerbaijan (Nov 2026, USD converted at 1.70 AZN/USD)",
+   "date": "2026-11",
+   "kind": "average"
+  }
+ ]
+}

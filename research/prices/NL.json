@@ -1,0 +1,51 @@
+{
+ "country": "NL",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 1.85,
+   "qty": 1500,
+   "unit": "ml",
+   "store": "nl_ah",
+   "product": "AH Halfvolle melk 1.5 L",
+   "source": "https://www.ah.nl/?merk=Spa",
+   "date": "undated listing",
+   "kind": "shelf"
+  },
+  {
+   "id": "milk",
+   "price": 1.3304,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (USD 1.49)",
+   "source": "https://openvan.camp/en/tools/vanbasket/netherlands (Open Food Facts data, updated 2026-01-01; USD converted at 1.12/EUR)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 3.0357,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (USD 3.40)",
+   "source": "https://openvan.camp/en/tools/vanbasket/netherlands (Open Food Facts data, updated 2026-01-01; USD converted at 1.12/EUR)",
+   "date": "2026-01",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 10,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillet ~1 kg (Amsterdam supermarkets, checked May-June 2026)",
+   "source": "https://amsterdam-explorer.com/prices-in-amsterdam/",
+   "date": "2026-06",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "country": "UA",
+ "currency": "UAH",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 94,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Kyiv)",
+   "source": "https://www.whereandwhen.net/budget/ukraine/kiev/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 59,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Kyiv)",
+   "source": "https://www.whereandwhen.net/budget/ukraine/kiev/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 67,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Kyiv)",
+   "source": "https://www.whereandwhen.net/budget/ukraine/kiev/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 244,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Fresh chicken fillet 1 kg, national average (Institute of Agrarian Economics)",
+   "source": "https://ukranews.com/en/news/1123224-budget-version-of-new-year-s-table-2026-will-cost-ukrainians-uah-3-980-institute-of-agrarian",
+   "date": "2025-12",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 76.17,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg",
+   "source": "https://trek.zone/en/ukraine/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 52.75,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://trek.zone/en/ukraine/prices",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

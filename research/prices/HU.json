@@ -1,0 +1,29 @@
+{
+ "country": "HU",
+ "currency": "HUF",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 400,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Budapest, Apr 2026)",
+   "source": "https://www.expatarrivals.com/hungary/cost-of-living-in-hungary",
+   "date": "2026-04",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 2400,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (Budapest, Apr 2026)",
+   "source": "https://www.expatarrivals.com/hungary/cost-of-living-in-hungary",
+   "date": "2026-04",
+   "kind": "average"
+  }
+ ]
+}

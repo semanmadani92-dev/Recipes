@@ -1,0 +1,207 @@
+{
+ "country": "AU",
+ "currency": "AUD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 8,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://www.expatarrivals.com/australia/cost-of-living-in-australia",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 2.6,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.expatarrivals.com/australia/cost-of-living-in-australia",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 3.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://www.expatarrivals.com/australia/cost-of-living-in-australia",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 13.7,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://www.expatarrivals.com/australia/cost-of-living-in-australia",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 2.72,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Sydney)",
+   "source": "https://www.expatica.com/au/cost-of-living/sydney/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 8.25,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Sydney)",
+   "source": "https://www.expatica.com/au/cost-of-living/sydney/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 14.01,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg (Sydney)",
+   "source": "https://www.expatica.com/au/cost-of-living/sydney/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 9,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Sydney)",
+   "source": "https://expatistan.com/price/eggs/sydney/EUR",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 5.75,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Cage-free eggs, dozen ($5.70-5.80 through 2026)",
+   "source": "https://www.thenewdaily.com.au/finance/consumer/2026/06/11/supermarket-prices-inflation",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 4.65,
+   "qty": 2000,
+   "unit": "ml",
+   "store": "au_coles",
+   "product": "Woolworths own-brand milk 2 L (after May 2026 rise)",
+   "source": "https://www.thenewdaily.com.au/finance/consumer/2026/06/11/supermarket-prices-inflation",
+   "date": "2026-06",
+   "kind": "shelf"
+  },
+  {
+   "id": "eggs",
+   "price": 8.5,
+   "qty": 12,
+   "unit": "pc",
+   "store": "au_coles",
+   "product": "Coles free-range eggs 12",
+   "source": "https://www.shopback.com.au/blog/savings/au-woolworths-vs-coles-vs-aldi-2026-weekly-grocery-family-of-4",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "milk",
+   "price": 3.7,
+   "qty": 2000,
+   "unit": "ml",
+   "store": "au_coles",
+   "product": "Coles milk 2 L (3 x 2 L for $11.10)",
+   "source": "https://www.shopback.com.au/blog/savings/au-woolworths-vs-coles-vs-aldi-2026-weekly-grocery-family-of-4",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "rice",
+   "price": 4.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": "au_coles",
+   "product": "Coles home-brand rice 1 kg",
+   "source": "https://www.canstar.com.au/budgeting/which-supermarket-is-really-the-cheapest/",
+   "date": "undated",
+   "kind": "shelf"
+  },
+  {
+   "id": "milk",
+   "price": 3.2,
+   "qty": 2000,
+   "unit": "ml",
+   "store": "au_coles",
+   "product": "Coles home-brand milk 2 L",
+   "source": "https://www.canstar.com.au/budgeting/which-supermarket-is-really-the-cheapest/",
+   "date": "undated",
+   "kind": "shelf"
+  },
+  {
+   "id": "onion",
+   "price": 2.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": "au_coles",
+   "product": "Coles brown onions 1 kg",
+   "source": "https://www.savings.com.au/statistics/grocery-price-index (July 2026)",
+   "date": "2026-07",
+   "kind": "shelf"
+  },
+  {
+   "id": "onion",
+   "price": 2.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": "au_coles",
+   "product": "Woolworths brown onions 1 kg",
+   "source": "https://www.savings.com.au/statistics/grocery-price-index (July 2026)",
+   "date": "2026-07",
+   "kind": "shelf"
+  },
+  {
+   "id": "bananas",
+   "price": 4.9,
+   "qty": 1000,
+   "unit": "g",
+   "store": "au_coles",
+   "product": "Coles bananas per kg",
+   "source": "https://www.savings.com.au/statistics/grocery-price-index (July 2026)",
+   "date": "2026-07",
+   "kind": "shelf",
+   "pc_weight_g": 120
+  },
+  {
+   "id": "bananas",
+   "price": 5.35,
+   "qty": 1000,
+   "unit": "g",
+   "store": "au_coles",
+   "product": "Woolworths bananas per kg",
+   "source": "https://www.savings.com.au/statistics/grocery-price-index (July 2026)",
+   "date": "2026-07",
+   "kind": "shelf",
+   "pc_weight_g": 120
+  }
+ ]
+}

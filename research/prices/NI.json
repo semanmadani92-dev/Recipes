@@ -1,0 +1,51 @@
+{
+ "country": "NI",
+ "currency": "NIO",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 66.2589,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://foodtravelexplore.com/central-america/nicaragua/cost-of-living-guide-nicaragua/ (USD converted at 36.6 NIO/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 43.9286,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://foodtravelexplore.com/central-america/nicaragua/cost-of-living-guide-nicaragua/ (USD converted at 36.6 NIO/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 50.1518,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://foodtravelexplore.com/central-america/nicaragua/cost-of-living-guide-nicaragua/ (USD converted at 36.6 NIO/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 139.1071,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://foodtravelexplore.com/central-america/nicaragua/cost-of-living-guide-nicaragua/ (USD converted at 36.6 NIO/USD)",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

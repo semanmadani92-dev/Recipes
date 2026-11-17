@@ -1,0 +1,40 @@
+{
+ "country": "BG",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 4.0903,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Sofia, BGN 8)",
+   "source": "https://expatistan.com/cost-of-living/comparison/belgrade/sofia (Sofia; BGN converted at 1.95583/EUR)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.5901,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Whole milk 1 L (Sofia, BGN 3.11)",
+   "source": "https://expatistan.com/cost-of-living/comparison/belgrade/sofia (Sofia; BGN converted at 1.95583/EUR)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5.1129,
+   "qty": 500,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 500 g (Sofia, BGN 10)",
+   "source": "https://expatistan.com/cost-of-living/comparison/belgrade/sofia (Sofia; BGN converted at 1.95583/EUR)",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

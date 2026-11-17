@@ -1,0 +1,74 @@
+{
+ "country": "SA",
+ "currency": "SAR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 6.19,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Riyadh)",
+   "source": "https://www.expatica.com/sa/cost-of-living/riyadh/ (Numbeo snapshot 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 10.73,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Riyadh)",
+   "source": "https://www.expatica.com/sa/cost-of-living/riyadh/ (Numbeo snapshot 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 38.22,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg (Riyadh)",
+   "source": "https://www.expatica.com/sa/cost-of-living/riyadh/ (Numbeo snapshot 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_legs",
+   "price": 21.75,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Fresh chicken 1 kg (SAR 20.50-22.99 across chains)",
+   "source": "https://www.argaam.com/en/article/articledetail/id/1887066 (retail chain survey, Feb-Mar 2026; midpoint across chains)",
+   "date": "2026-03",
+   "kind": "average",
+   "note": "whole fresh chicken"
+  },
+  {
+   "id": "eggs",
+   "price": 22.7,
+   "qty": 30,
+   "unit": "pc",
+   "store": null,
+   "product": "Al Wataniya eggs 30 pcs (SAR 21.50-23.95)",
+   "source": "https://www.argaam.com/en/article/articledetail/id/1887066 (retail chain survey, Feb-Mar 2026; midpoint across chains)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "basmati_rice",
+   "price": 56,
+   "qty": 5000,
+   "unit": "g",
+   "store": null,
+   "product": "AlWalimah rice 5 kg (SAR 50.65-61.40)",
+   "source": "https://www.argaam.com/en/article/articledetail/id/1887066 (retail chain survey, Feb-Mar 2026; midpoint across chains)",
+   "date": "2026-03",
+   "kind": "average"
+  }
+ ]
+}

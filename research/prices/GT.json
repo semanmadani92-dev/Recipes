@@ -1,0 +1,73 @@
+{
+ "country": "GT",
+ "currency": "GTQ",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 18,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Q18)",
+   "source": "https://livinginguatemala.com/food-prices/ (Numbeo-based, Feb 2026)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 19.11,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Q19.11)",
+   "source": "https://livinginguatemala.com/food-prices/ (Numbeo-based, Feb 2026)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 17.8143,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://www.bearsavings.com/cost-of-living/guatemala/ (USD converted at 7.68 GTQ/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 15.2036,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.bearsavings.com/cost-of-living/guatemala/ (USD converted at 7.68 GTQ/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 14.2054,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://www.bearsavings.com/cost-of-living/guatemala/ (USD converted at 7.68 GTQ/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 61.1214,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://www.bearsavings.com/cost-of-living/guatemala/ (USD converted at 7.68 GTQ/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

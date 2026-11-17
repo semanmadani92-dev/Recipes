@@ -1,0 +1,150 @@
+{
+ "country": "CL",
+ "currency": "CLP",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 4000,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Santiago)",
+   "source": "https://expatarrivals.com/americas/chile/cost-living-chile",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1200,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Santiago)",
+   "source": "https://expatarrivals.com/americas/chile/cost-living-chile",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1900,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Santiago)",
+   "source": "https://expatarrivals.com/americas/chile/cost-living-chile",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6800,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Santiago)",
+   "source": "https://expatarrivals.com/americas/chile/cost-living-chile",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "white_loaf",
+   "price": 1600,
+   "qty": 1,
+   "unit": "pc",
+   "store": null,
+   "product": "White bread, loaf (Santiago)",
+   "source": "https://expatarrivals.com/americas/chile/cost-living-chile",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 4000,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Santiago)",
+   "source": "https://www.whereandwhen.net/budget/chile/santiago/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1256,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Santiago)",
+   "source": "https://www.whereandwhen.net/budget/chile/santiago/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1678,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Santiago)",
+   "source": "https://www.whereandwhen.net/budget/chile/santiago/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6522,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Santiago)",
+   "source": "https://www.whereandwhen.net/budget/chile/santiago/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 4231,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Santiago)",
+   "source": "https://citycost.org/compare/santiago-vs-curico/ (updated 2026-09-28)",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1266,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Santiago)",
+   "source": "https://citycost.org/compare/santiago-vs-curico/ (updated 2026-09-28)",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1623,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Santiago)",
+   "source": "https://citycost.org/compare/santiago-vs-curico/ (updated 2026-09-28)",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6545,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Santiago)",
+   "source": "https://citycost.org/compare/santiago-vs-curico/ (updated 2026-09-28)",
+   "date": "2026-09",
+   "kind": "average"
+  }
+ ]
+}

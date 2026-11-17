@@ -1,0 +1,139 @@
+{
+ "country": "SE",
+ "currency": "SEK",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 50,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Stockholm)",
+   "source": "https://k2.expatarrivals.com/node/18088 (Stockholm, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 17,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Stockholm)",
+   "source": "https://k2.expatarrivals.com/node/18088 (Stockholm, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 38,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Stockholm)",
+   "source": "https://k2.expatarrivals.com/node/18088 (Stockholm, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 130,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Stockholm)",
+   "source": "https://k2.expatarrivals.com/node/18088 (Stockholm, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 50,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Stockholm)",
+   "source": "https://citycost.org/stockholm/ (Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 17,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Stockholm)",
+   "source": "https://citycost.org/stockholm/ (Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 39,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Stockholm)",
+   "source": "https://citycost.org/stockholm/ (Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 129,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Stockholm)",
+   "source": "https://citycost.org/stockholm/ (Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 49,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Stockholm)",
+   "source": "https://www.whereandwhen.net/budget/sweden/stockholm/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 17,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Stockholm)",
+   "source": "https://www.whereandwhen.net/budget/sweden/stockholm/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 38,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Stockholm)",
+   "source": "https://www.whereandwhen.net/budget/sweden/stockholm/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 134,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Stockholm)",
+   "source": "https://www.whereandwhen.net/budget/sweden/stockholm/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,40 @@
+{
+ "country": "LB",
+ "currency": "LBP",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "rice",
+   "price": 138331.2,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (EUR 1.38)",
+   "source": "https://trek.zone/en/lebanon/prices (EUR, converted at 100,240 LBP/EUR)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 236566.4,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (EUR 2.36)",
+   "source": "https://trek.zone/en/lebanon/prices (EUR, converted at 100,240 LBP/EUR)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 728744.8,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg (EUR 7.27)",
+   "source": "https://trek.zone/en/lebanon/prices (EUR, converted at 100,240 LBP/EUR)",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

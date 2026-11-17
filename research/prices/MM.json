@@ -1,0 +1,51 @@
+{
+ "country": "MM",
+ "currency": "MMK",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 3800,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Yangon)",
+   "source": "https://k2.expatarrivals.com/node/25550 (Expat Arrivals Yangon list, June 2026; URL as shown in search results)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 3800,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Yangon)",
+   "source": "https://k2.expatarrivals.com/node/25550 (Expat Arrivals Yangon list, June 2026; URL as shown in search results)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 5100,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Yangon)",
+   "source": "https://k2.expatarrivals.com/node/25550 (Expat Arrivals Yangon list, June 2026; URL as shown in search results)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 9400,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Yangon)",
+   "source": "https://k2.expatarrivals.com/node/25550 (Expat Arrivals Yangon list, June 2026; URL as shown in search results)",
+   "date": "2026-06",
+   "kind": "average"
+  }
+ ]
+}

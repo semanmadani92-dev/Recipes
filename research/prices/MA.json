@@ -1,0 +1,84 @@
+{
+ "country": "MA",
+ "currency": "MAD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 17.76,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Casablanca)",
+   "source": "https://www.riotimesonline.com/cost-of-living-casablanca-expats-2026/",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 18.03,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Casablanca)",
+   "source": "https://www.riotimesonline.com/cost-of-living-casablanca-expats-2026/",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 70.28,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Casablanca)",
+   "source": "https://www.riotimesonline.com/cost-of-living-casablanca-expats-2026/",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 20,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (MAD 18-22)",
+   "source": "https://africarrieres.com/maroc/pt/guide/decouvrir/cout-de-la-vie (Aug 2026; midpoint of range)",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 6.5,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (MAD 6-7)",
+   "source": "https://africarrieres.com/maroc/pt/guide/decouvrir/cout-de-la-vie (Aug 2026; midpoint of range)",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 10,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (MAD 8-12)",
+   "source": "https://africarrieres.com/maroc/pt/guide/decouvrir/cout-de-la-vie (Aug 2026; midpoint of range)",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 14.23,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Rabat)",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/rabat-c1716",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

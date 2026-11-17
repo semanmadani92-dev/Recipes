@@ -1,0 +1,195 @@
+{
+ "country": "MX",
+ "currency": "MXN",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 27.2538,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.47 converted at 18.54/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/mexico/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 31.7034,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 1.71 converted at 18.54/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/mexico/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 44.1252,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 2.38 converted at 18.54/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/mexico/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 139.6062,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 7.53 converted at 18.54/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/mexico/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 33.1866,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (avg, USD 1.79 converted at 18.54/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/mexico/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 35,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Mexico City)",
+   "source": "https://www.expatarrivals.com/node/1282 (Mexico City list, June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 35,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Mexico City)",
+   "source": "https://www.expatarrivals.com/node/1282 (Mexico City list, June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 55,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Mexico City)",
+   "source": "https://www.expatarrivals.com/node/1282 (Mexico City list, June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 170,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken 1 kg (Mexico City)",
+   "source": "https://www.expatarrivals.com/node/1282 (Mexico City list, June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "carrots",
+   "price": 13.98,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Zanahoria 1 kg (Profeco average)",
+   "source": "https://www.poresto.com/mexico/2026/10/12/profeco-revela-donde-canasta-basica-barata-gasolineras-venden-diesel-caro.amp.html (Profeco monitoring, 2026-10-12)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 24.92,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Jitomate 1 kg (Profeco average)",
+   "source": "https://www.poresto.com/mexico/2026/10/12/profeco-revela-donde-canasta-basica-barata-gasolineras-venden-diesel-caro.amp.html (Profeco monitoring, 2026-10-12)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 48.57,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Cebolla 1 kg (Profeco average)",
+   "source": "https://www.poresto.com/mexico/2026/10/12/profeco-revela-donde-canasta-basica-barata-gasolineras-venden-diesel-caro.amp.html (Profeco monitoring, 2026-10-12)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 47.4,
+   "qty": 18,
+   "unit": "pc",
+   "store": null,
+   "product": "Huevo, paquete de 18 (Profeco average)",
+   "source": "https://www.poresto.com/mexico/2026/5/14/profeco-revela-donde-comprar-mas-barata-la-canasta-basica-y-pide-buscar-identificadores-en-supermercados.html",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 15.64,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 lb (Mexico City)",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/mexico/mexico-city-c3585 (Feb 2026)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 16.55,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 lb (Mexico City)",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/mexico/mexico-city-c3585 (Feb 2026)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 17.16,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 lb (Mexico City)",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/mexico/mexico-city-c3585 (Feb 2026)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "cheddar",
+   "price": 73.56,
+   "qty": 226.8,
+   "unit": "g",
+   "store": null,
+   "product": "Local cheese 8 oz (Mexico average)",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/mexico/mexico-city-c3585 (Feb 2026)",
+   "date": "2026-02",
+   "kind": "average",
+   "note": "local cheese (queso)"
+  }
+ ]
+}

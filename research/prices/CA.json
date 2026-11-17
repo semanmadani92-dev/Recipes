@@ -1,0 +1,152 @@
+{
+ "country": "CA",
+ "currency": "CAD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 3.95,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Toronto)",
+   "source": "https://www.expatica.com/ca/cost-of-living/toronto/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 5.11,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Toronto)",
+   "source": "https://www.expatica.com/ca/cost-of-living/toronto/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 14.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (Toronto)",
+   "source": "https://wealthvieu.com/ca/cost-of-living-toronto/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 5.49,
+   "qty": 2000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 2 L, national average (Statistics Canada, scanner data)",
+   "source": "https://www.statcan.gc.ca/en/topics-start/food-price",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "butter",
+   "price": 5.68,
+   "qty": 454,
+   "unit": "g",
+   "store": null,
+   "product": "Butter 454 g, national average",
+   "source": "https://www.statcan.gc.ca/en/topics-start/food-price (Statistics Canada Food Price Data Hub)",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "beef_mince",
+   "price": 16.75,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Ground beef per kg, national average",
+   "source": "https://www.statcan.gc.ca/en/topics-start/food-price (Statistics Canada Food Price Data Hub)",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 14.41,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts per kg, national average",
+   "source": "https://www.statcan.gc.ca/en/topics-start/food-price (Statistics Canada Food Price Data Hub)",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 4.83,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 1 dozen, national average",
+   "source": "https://www.statcan.gc.ca/en/topics-start/food-price (Statistics Canada Food Price Data Hub)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "white_loaf",
+   "price": 3.6,
+   "qty": 1,
+   "unit": "pc",
+   "store": null,
+   "product": "White bread 675 g, national average",
+   "source": "https://renardocuisine.pages.dev/reports/cost-of-cooking-2026 (Statistics Canada averages, July 2026)",
+   "date": "2026-07",
+   "kind": "average",
+   "note": "675 g loaf"
+  },
+  {
+   "id": "butter",
+   "price": 5.92,
+   "qty": 454,
+   "unit": "g",
+   "store": null,
+   "product": "Butter 454 g, national average",
+   "source": "https://renardocuisine.pages.dev/reports/cost-of-cooking-2026 (Statistics Canada averages, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "bananas",
+   "price": 1.88,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Bananas per kg, national average",
+   "source": "https://renardocuisine.pages.dev/reports/cost-of-cooking-2026 (Statistics Canada averages, July 2026)",
+   "date": "2026-07",
+   "kind": "average",
+   "pc_weight_g": 120
+  },
+  {
+   "id": "potatoes",
+   "price": 5.23,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes per kg, national average",
+   "source": "https://renardocuisine.pages.dev/reports/cost-of-cooking-2026 (Statistics Canada averages, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "beef_mince",
+   "price": 15.4102,
+   "qty": 1000,
+   "unit": "g",
+   "store": "ca_nofrills",
+   "product": "No Frills fresh ground beef ($6.99/lb flyer)",
+   "source": "https://www.shopping-canada.com/flyers/no-frills/no-frills-weeklyflyer-from-september-3-to-september-9-2026",
+   "date": "2026-09",
+   "kind": "promo"
+  }
+ ]
+}

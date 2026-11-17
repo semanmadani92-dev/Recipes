@@ -1,0 +1,77 @@
+{
+ "country": "RU",
+ "currency": "RUB",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 132,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "ru_disc",
+   "product": "Milk 1 L at Pyaterochka (Moscow Times survey)",
+   "source": "https://www.pravda.com.ua/eng/news/2026/02/10/8020310",
+   "date": "2026-02",
+   "kind": "shelf"
+  },
+  {
+   "id": "milk",
+   "price": 98,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L, Rosstat national average",
+   "source": "https://www.pravda.com.ua/eng/news/2026/02/10/8020310",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 469,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillet 1 kg (Moscow)",
+   "source": "https://trek.zone/en/russia/prices",
+   "date": "2025-07",
+   "kind": "average",
+   "note": "a year old"
+  },
+  {
+   "id": "rice",
+   "price": 134,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (Moscow)",
+   "source": "https://trek.zone/en/russia/prices (Moscow data, last updated July 2025)",
+   "date": "2025-07",
+   "kind": "average",
+   "note": "pre-2026 VAT rise; a year old"
+  },
+  {
+   "id": "eggs",
+   "price": 146,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (Moscow)",
+   "source": "https://trek.zone/en/russia/prices (Moscow data, last updated July 2025)",
+   "date": "2025-07",
+   "kind": "average",
+   "note": "a year old"
+  },
+  {
+   "id": "milk",
+   "price": 103,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Moscow)",
+   "source": "https://trek.zone/en/russia/prices (Moscow data, last updated July 2025)",
+   "date": "2025-07",
+   "kind": "average",
+   "note": "a year old"
+  }
+ ]
+}

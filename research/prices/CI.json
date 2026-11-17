@@ -1,0 +1,62 @@
+{
+ "country": "CI",
+ "currency": "XOF",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 1333,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Abidjan)",
+   "source": "https://www.whereandwhen.net/budget/ivory-coast/abidjan/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1064,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Abidjan)",
+   "source": "https://www.whereandwhen.net/budget/ivory-coast/abidjan/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 696,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Abidjan)",
+   "source": "https://www.whereandwhen.net/budget/ivory-coast/abidjan/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 3704,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Abidjan)",
+   "source": "https://www.whereandwhen.net/budget/ivory-coast/abidjan/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 1449,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Abidjan)",
+   "source": "https://expatistan.com/price/eggs/abidjan/EUR",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

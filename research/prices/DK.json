@@ -1,0 +1,51 @@
+{
+ "country": "DK",
+ "currency": "DKK",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 32.3716,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://openvan.camp/en/tools/vanbasket/denmark (Nov 2026; USD converted at 6.675 DKK/USD)",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 12.9486,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://openvan.camp/en/tools/vanbasket/denmark (Nov 2026; USD converted at 6.675 DKK/USD)",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 12.3479,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://openvan.camp/en/tools/vanbasket/denmark (Nov 2026; USD converted at 6.675 DKK/USD)",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 88.0374,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://openvan.camp/en/tools/vanbasket/denmark (Nov 2026; USD converted at 6.675 DKK/USD)",
+   "date": "2026-11",
+   "kind": "average"
+  }
+ ]
+}

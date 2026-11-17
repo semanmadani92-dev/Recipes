@@ -1,0 +1,51 @@
+{
+ "country": "ZW",
+ "currency": "USD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 1.56,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.56 converted at 1/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/zimbabwe/",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1.87,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 1.87 converted at 1/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/zimbabwe/",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2.11,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 2.11 converted at 1/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/zimbabwe/",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5.65,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 5.65 converted at 1/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/zimbabwe/",
+   "date": "2026-08",
+   "kind": "average"
+  }
+ ]
+}

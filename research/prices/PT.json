@@ -1,0 +1,161 @@
+{
+ "country": "PT",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 3.5,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Lisbon)",
+   "source": "https://expatarrivals.com/europe/portugal/cost-living-portugal",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.0,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Lisbon)",
+   "source": "https://expatarrivals.com/europe/portugal/cost-living-portugal",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Lisbon)",
+   "source": "https://expatarrivals.com/europe/portugal/cost-living-portugal",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6.8,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Lisbon)",
+   "source": "https://expatarrivals.com/europe/portugal/cost-living-portugal",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 3.65,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Lisbon)",
+   "source": "https://www.expatica.com/pt/cost-of-living/lisbon/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.1,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Lisbon)",
+   "source": "https://www.expatica.com/pt/cost-of-living/lisbon/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1.45,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Lisbon)",
+   "source": "https://www.expatica.com/pt/cost-of-living/lisbon/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 7.16,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Lisbon)",
+   "source": "https://www.expatica.com/pt/cost-of-living/lisbon/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2.4,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Lisbon)",
+   "source": "https://everycity-guide.pages.dev/journal/cost-of-living-lisbon-2026 (supermarket baselines May 2026)",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 0.85,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Lisbon)",
+   "source": "https://everycity-guide.pages.dev/journal/cost-of-living-lisbon-2026 (supermarket baselines May 2026)",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1.4,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Lisbon)",
+   "source": "https://everycity-guide.pages.dev/journal/cost-of-living-lisbon-2026 (supermarket baselines May 2026)",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6.2,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Lisbon)",
+   "source": "https://everycity-guide.pages.dev/journal/cost-of-living-lisbon-2026 (supermarket baselines May 2026)",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 4.69,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Lisbon)",
+   "source": "https://expatistan.com/price/eggs/lisbon/EUR",
+   "date": "2026-05",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 3.85,
+   "qty": 500,
+   "unit": "g",
+   "store": null,
+   "product": "Boneless chicken breast 500 g (Lisbon)",
+   "source": "https://expatistan.com/price/chicken/lisbon/EUR",
+   "date": "2026-05",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,151 @@
+{
+ "country": "PK",
+ "currency": "PKR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 224.992,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 0.79 converted at 284.8/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/pakistan/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 338.912,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 1.19 converted at 284.8/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/pakistan/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 336.064,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 1.18 converted at 284.8/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/pakistan/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 828.768,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 2.91 converted at 284.8/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/pakistan/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 148.096,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (avg, USD 0.52 converted at 284.8/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/pakistan/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 241,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.nsave.com/pakistan/cost-of-living (June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 333,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://www.nsave.com/pakistan/cost-of-living (June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 331,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12",
+   "source": "https://www.nsave.com/pakistan/cost-of-living (June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 786,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg",
+   "source": "https://www.nsave.com/pakistan/cost-of-living (June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 143,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg",
+   "source": "https://www.nsave.com/pakistan/cost-of-living (June 2026)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 193.81,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg, SPI national average (PBS), week ended 2026-11-05",
+   "source": "https://www.techjuice.pk/?p=261567",
+   "date": "2026-11-05",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 325,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg, Lahore retail (Rs300-350; official Rs180-215)",
+   "source": "https://tribune.com.pk/story/2639387/overcharging-nullifies-food-price-cuts",
+   "date": "2026-11",
+   "kind": "average"
+  },
+  {
+   "id": "garlic",
+   "price": 310,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Garlic 1 kg, Lahore retail (Rs300-320)",
+   "source": "https://tribune.com.pk/story/2639387/overcharging-nullifies-food-price-cuts",
+   "date": "2026-11",
+   "kind": "average",
+   "pc_weight_g": 5
+  }
+ ]
+}

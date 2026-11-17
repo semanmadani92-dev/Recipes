@@ -1,0 +1,84 @@
+{
+ "country": "BW",
+ "currency": "BWP",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 33,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Gaborone)",
+   "source": "https://expatarrivals.com/africa/botswana/cost-living-botswana (Gaborone, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 20,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Gaborone)",
+   "source": "https://expatarrivals.com/africa/botswana/cost-living-botswana (Gaborone, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 27,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Gaborone)",
+   "source": "https://expatarrivals.com/africa/botswana/cost-living-botswana (Gaborone, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 67,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Gaborone)",
+   "source": "https://expatarrivals.com/africa/botswana/cost-living-botswana (Gaborone, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 34.28,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://www.riotimesonline.com/botswana-cost-of-living-2026/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 20.66,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.riotimesonline.com/botswana-cost-of-living-2026/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 62.42,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://www.riotimesonline.com/botswana-cost-of-living-2026/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

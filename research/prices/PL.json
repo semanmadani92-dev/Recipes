@@ -1,0 +1,128 @@
+{
+ "country": "PL",
+ "currency": "PLN",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 4,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Warsaw)",
+   "source": "https://www.expatarrivals.com/node/2143 (Warsaw averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 7,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Warsaw)",
+   "source": "https://www.expatarrivals.com/node/2143 (Warsaw averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 28,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (Warsaw)",
+   "source": "https://www.expatarrivals.com/node/2143 (Warsaw averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 10,
+   "qty": 10,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 10 (8-12 PLN)",
+   "source": "https://freenance-landing.pages.dev/cost-of-living/cost-of-living-warsaw-2026/ (midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 3,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg (2-4 PLN)",
+   "source": "https://freenance-landing.pages.dev/cost-of-living/cost-of-living-warsaw-2026/ (midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 9,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (6-12 PLN)",
+   "source": "https://freenance-landing.pages.dev/cost-of-living/cost-of-living-warsaw-2026/ (midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 4.25,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (3.50-5 PLN)",
+   "source": "https://freenance-landing.pages.dev/cost-of-living/cost-of-living-warsaw-2026/ (midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 13.5,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (12-15 PLN)",
+   "source": "https://www.navthemes.com/?p=57444 (2026; midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 28.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (25-32 PLN)",
+   "source": "https://www.navthemes.com/?p=57444 (2026; midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 4,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg (3-5 PLN)",
+   "source": "https://www.navthemes.com/?p=57444 (2026; midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 7,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Whole-fat milk 1 L (Warsaw, 8 price points)",
+   "source": "https://expatistan.com/price/milk/warsaw",
+   "date": "2026-05",
+   "kind": "average"
+  }
+ ]
+}

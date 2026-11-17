@@ -1,0 +1,84 @@
+{
+ "country": "UY",
+ "currency": "UYU",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 100.0,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://costliving.pages.dev/uruguay/ (2026; USD converted at 40 UYU/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 44.0,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://costliving.pages.dev/uruguay/ (2026; USD converted at 40 UYU/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 240.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://costliving.pages.dev/uruguay/ (2026; USD converted at 40 UYU/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 168.0,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://www.bearsavings.com/cost-of-living/uruguay/ (mid-2026; USD converted at 40 UYU/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 46.0,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.bearsavings.com/cost-of-living/uruguay/ (mid-2026; USD converted at 40 UYU/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 63.6,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://www.bearsavings.com/cost-of-living/uruguay/ (mid-2026; USD converted at 40 UYU/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 418.8,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://www.bearsavings.com/cost-of-living/uruguay/ (mid-2026; USD converted at 40 UYU/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "country": "OM",
+ "currency": "OMR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 1.05,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Muscat)",
+   "source": "https://expatarrivals.com/middle-east/oman/cost-living-oman",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 0.8,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Muscat)",
+   "source": "https://expatarrivals.com/middle-east/oman/cost-living-oman",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 0.65,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Muscat)",
+   "source": "https://expatarrivals.com/middle-east/oman/cost-living-oman",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 2.8,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Muscat)",
+   "source": "https://expatarrivals.com/middle-east/oman/cost-living-oman",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 0.93,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Muscat)",
+   "source": "https://citycost.org/compare/muscat-vs--ibri/ (Muscat, updated Jul 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 0.76,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Muscat)",
+   "source": "https://citycost.org/compare/muscat-vs--ibri/ (Muscat, updated Jul 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 0.66,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Muscat)",
+   "source": "https://citycost.org/compare/muscat-vs--ibri/ (Muscat, updated Jul 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 1.88,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Muscat)",
+   "source": "https://citycost.org/compare/muscat-vs--ibri/ (Muscat, updated Jul 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

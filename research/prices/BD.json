@@ -1,0 +1,150 @@
+{
+ "country": "BD",
+ "currency": "BDT",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 90.51,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.nsave.com/bangladesh/cost-of-living (Numbeo averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 73.56,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg",
+   "source": "https://www.nsave.com/bangladesh/cost-of-living (Numbeo averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 142.28,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large",
+   "source": "https://www.nsave.com/bangladesh/cost-of-living (Numbeo averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 319.31,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg",
+   "source": "https://www.nsave.com/bangladesh/cost-of-living (Numbeo averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 69.8,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg",
+   "source": "https://www.nsave.com/bangladesh/cost-of-living (Numbeo averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 39.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg",
+   "source": "https://www.nsave.com/bangladesh/cost-of-living (Numbeo averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 66.77,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 kg",
+   "source": "https://www.nsave.com/bangladesh/cost-of-living (Numbeo averages, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 150,
+   "qty": 12,
+   "unit": "pc",
+   "store": "bd_market",
+   "product": "Eggs, dozen (Dhaka kitchen market)",
+   "source": "https://en.ittefaq.com.bd/17982/high-food-prices-keep-rising (Dhaka markets)",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "onion",
+   "price": 52.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": "bd_market",
+   "product": "Onions 1 kg (Tk 50-55)",
+   "source": "https://en.ittefaq.com.bd/17982/high-food-prices-keep-rising (Dhaka markets)",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "potatoes",
+   "price": 27.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": "bd_market",
+   "product": "Potatoes 1 kg (Tk 25-30)",
+   "source": "https://en.ittefaq.com.bd/17982/high-food-prices-keep-rising (Dhaka markets)",
+   "date": "2026-09",
+   "kind": "shelf"
+  },
+  {
+   "id": "eggs",
+   "price": 132.5,
+   "qty": 12,
+   "unit": "pc",
+   "store": "bd_market",
+   "product": "Brown eggs, dozen (Tk 130-135, Shewrapara/Kazipara)",
+   "source": "https://www.daily-sun.com/business/909039 (Dhaka kitchen markets, 2026-11-13)",
+   "date": "2026-11-13",
+   "kind": "shelf"
+  },
+  {
+   "id": "beef_stew",
+   "price": 800,
+   "qty": 1000,
+   "unit": "g",
+   "store": "bd_market",
+   "product": "Beef 1 kg (Dhaka)",
+   "source": "https://www.daily-sun.com/business/909039 (Dhaka kitchen markets, 2026-11-13)",
+   "date": "2026-11-13",
+   "kind": "shelf"
+  },
+  {
+   "id": "eggs",
+   "price": 137.5,
+   "qty": 12,
+   "unit": "pc",
+   "store": "bd_market",
+   "product": "Brown eggs, dozen (Tk 135-140, Town Hall Market)",
+   "source": "https://bdnews24.com/business/13snrxyj4f",
+   "date": "2026-11-13",
+   "kind": "shelf"
+  }
+ ]
+}

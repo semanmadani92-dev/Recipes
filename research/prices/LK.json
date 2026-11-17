@@ -1,0 +1,106 @@
+{
+ "country": "LK",
+ "currency": "LKR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 731,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Colombo)",
+   "source": "https://citycost.org/compare/colombo-vs-kolonnawa/ (Colombo, updated 2026-07)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 595,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Colombo)",
+   "source": "https://citycost.org/compare/colombo-vs-kolonnawa/ (Colombo, updated 2026-07)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 293,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Colombo)",
+   "source": "https://citycost.org/compare/colombo-vs-kolonnawa/ (Colombo, updated 2026-07)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 1579,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Colombo)",
+   "source": "https://citycost.org/compare/colombo-vs-kolonnawa/ (Colombo, updated 2026-07)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 649,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://trek.zone/en/sri-lanka/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 526,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://trek.zone/en/sri-lanka/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 254,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://trek.zone/en/sri-lanka/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 1430,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://trek.zone/en/sri-lanka/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 724,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Colombo, 8 price points)",
+   "source": "https://expatistan.com/price/eggs/colombo/USD",
+   "date": "2026-06",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "country": "AO",
+ "currency": "AOA",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 1986.4286,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Luanda, USD 2.16)",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/luanda-c66/kinshasa-c8188",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 2492.2321,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Boneless chicken breast 1 lb (Luanda, USD 2.71)",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/luanda-c66/kinshasa-c8188",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

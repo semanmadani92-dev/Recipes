@@ -1,0 +1,73 @@
+{
+ "country": "FI",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 1.1429,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.28 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/finland/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2.4375,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 2.73 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/finland/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 3.0,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 3.36 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/finland/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 12.5804,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 14.09 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/finland/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 12.25,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg",
+   "source": "https://www.expatarrivals.com/europe/finland/cost-living-finland",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.35,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://www.expatarrivals.com/europe/finland/cost-living-finland",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

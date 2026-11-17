@@ -1,0 +1,62 @@
+{
+ "country": "TW",
+ "currency": "TWD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 90,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Taipei)",
+   "source": "https://expatarrivals.com/asia-pacific/taiwan/taipei/cost-living-taipei",
+   "date": "2025-11",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 95,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Taipei)",
+   "source": "https://expatarrivals.com/asia-pacific/taiwan/taipei/cost-living-taipei",
+   "date": "2025-11",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 93,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Taipei)",
+   "source": "https://expatarrivals.com/asia-pacific/taiwan/taipei/cost-living-taipei",
+   "date": "2025-11",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 300,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Taipei)",
+   "source": "https://expatarrivals.com/asia-pacific/taiwan/taipei/cost-living-taipei",
+   "date": "2025-11",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 110,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Taipei)",
+   "source": "https://expatistan.com/price/eggs/taipei",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

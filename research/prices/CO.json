@@ -1,0 +1,139 @@
+{
+ "country": "CO",
+ "currency": "COP",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 5284,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Bogota)",
+   "source": "https://citycost.org/bogota/ (last update Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 5436,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Bogota)",
+   "source": "https://citycost.org/bogota/ (last update Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 10900,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (Bogota)",
+   "source": "https://citycost.org/bogota/ (last update Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 23200,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg (Bogota)",
+   "source": "https://citycost.org/bogota/ (last update Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 5299,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Bogota)",
+   "source": "https://www.whereandwhen.net/budget/colombia/bogota/ (2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 4820,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Bogota)",
+   "source": "https://www.whereandwhen.net/budget/colombia/bogota/ (2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 10671,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Bogota)",
+   "source": "https://www.whereandwhen.net/budget/colombia/bogota/ (2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 22152,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken 1 kg (Bogota)",
+   "source": "https://www.whereandwhen.net/budget/colombia/bogota/ (2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 10500,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Bogota)",
+   "source": "https://demosite1.expatarrivals.com/node/13405 (Bogota)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 5300,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Bogota)",
+   "source": "https://demosite1.expatarrivals.com/node/13405 (Bogota)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 4800,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Bogota)",
+   "source": "https://demosite1.expatarrivals.com/node/13405 (Bogota)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 22000,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (Bogota)",
+   "source": "https://demosite1.expatarrivals.com/node/13405 (Bogota)",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

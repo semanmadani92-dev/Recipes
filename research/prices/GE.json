@@ -1,0 +1,51 @@
+{
+ "country": "GE",
+ "currency": "GEL",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 7.2804,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Tbilisi)",
+   "source": "https://www.whereandwhen.net/budget/georgia/tbilisi/ (USD converted at 2.70 GEL/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 5.6625,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Tbilisi)",
+   "source": "https://www.whereandwhen.net/budget/georgia/tbilisi/ (USD converted at 2.70 GEL/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 4.3143,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Tbilisi)",
+   "source": "https://www.whereandwhen.net/budget/georgia/tbilisi/ (USD converted at 2.70 GEL/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 18.0661,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (USD 6.70)",
+   "source": "https://pbservices.ge/blog/cost-of-living-georgia-2026",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

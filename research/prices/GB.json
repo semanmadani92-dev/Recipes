@@ -1,0 +1,272 @@
+{
+ "country": "GB",
+ "currency": "GBP",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "potatoes",
+   "price": 0.53,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 lb",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/united-kingdom (average of 191 UK cities)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 0.53,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 lb",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/united-kingdom (average of 191 UK cities)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "apples",
+   "price": 0.98,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Apples 1 lb",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/united-kingdom (average of 191 UK cities)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "bananas",
+   "price": 0.54,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Bananas 1 lb",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/united-kingdom (average of 191 UK cities)",
+   "date": "undated",
+   "kind": "average",
+   "pc_weight_g": 120
+  },
+  {
+   "id": "tomatoes",
+   "price": 1.11,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 lb",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/united-kingdom (average of 191 UK cities)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2.87,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/united-kingdom (average of 191 UK cities)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 2.87,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Boneless chicken breast 1 lb",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/united-kingdom (average of 191 UK cities)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 4.59,
+   "qty": 3785,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 gallon",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/united-kingdom (average of 191 UK cities)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "cheddar",
+   "price": 3.49,
+   "qty": 226.8,
+   "unit": "g",
+   "store": null,
+   "product": "Local cheese 8 oz",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/united-kingdom (average of 191 UK cities)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5.45,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast fillets 1 kg",
+   "source": "https://uk.finance.yahoo.com/news/bread-milk-iphones-retail-prices-rising-uk-050011594.html",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 1.76,
+   "qty": 2500,
+   "unit": "g",
+   "store": "gb_disc",
+   "product": "Aldi bag of potatoes 2.5 kg",
+   "source": "https://www.aldipresscentre.co.uk/?p=2016",
+   "date": "undated",
+   "kind": "shelf"
+  },
+  {
+   "id": "olive_oil",
+   "price": 7.0,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "gb_tesco",
+   "product": "Tesco Extra Virgin Olive Oil 1 L",
+   "source": "https://www.tesco.com/groceries/en-GB/products/254516076",
+   "date": "2026 (undated listing)",
+   "kind": "shelf"
+  },
+  {
+   "id": "olive_oil",
+   "price": 6.75,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "gb_tesco",
+   "product": "Tesco Olive Oil 1 L (not extra virgin)",
+   "source": "https://www.tesco.com/shop/en-GB/products/254918424",
+   "date": "2026 (undated listing)",
+   "kind": "shelf"
+  },
+  {
+   "id": "olive_oil",
+   "price": 11.5,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "gb_tesco",
+   "product": "Napolina Extra Virgin Olive Oil 1 L",
+   "source": "https://www.tesco.com/groceries/en-GB/products/255592838",
+   "date": "2026 (undated listing)",
+   "kind": "shelf"
+  },
+  {
+   "id": "olive_oil",
+   "price": 12.5,
+   "qty": 1000,
+   "unit": "ml",
+   "store": "gb_tesco",
+   "product": "Filippo Berio Extra Virgin Olive Oil 1 L",
+   "source": "https://www.tesco.com/shop/en-GB/products/253628953",
+   "date": "2026 (undated listing)",
+   "kind": "shelf"
+  },
+  {
+   "id": "beef_mince",
+   "price": 3.09,
+   "qty": 500,
+   "unit": "g",
+   "store": "gb_disc",
+   "product": "Aldi beef mince 500 g",
+   "source": "https://www.moneymagpie.com/save-money/food-inflation-expensive-foods-cheapest-supermarket (weekly basket, June 2026)",
+   "date": "2026-06",
+   "kind": "shelf"
+  },
+  {
+   "id": "beef_mince",
+   "price": 3.09,
+   "qty": 500,
+   "unit": "g",
+   "store": "gb_asda",
+   "product": "Asda beef mince 500 g",
+   "source": "https://www.moneymagpie.com/save-money/food-inflation-expensive-foods-cheapest-supermarket (weekly basket, June 2026)",
+   "date": "2026-06",
+   "kind": "shelf"
+  },
+  {
+   "id": "beef_mince",
+   "price": 3.25,
+   "qty": 500,
+   "unit": "g",
+   "store": "gb_tesco",
+   "product": "Tesco beef mince 500 g",
+   "source": "https://www.moneymagpie.com/save-money/food-inflation-expensive-foods-cheapest-supermarket (weekly basket, June 2026)",
+   "date": "2026-06",
+   "kind": "shelf"
+  },
+  {
+   "id": "white_loaf",
+   "price": 0.55,
+   "qty": 1,
+   "unit": "pc",
+   "store": "gb_disc",
+   "product": "Aldi white bread loaf",
+   "source": "https://www.moneymagpie.com/save-money/food-inflation-expensive-foods-cheapest-supermarket (weekly basket, June 2026)",
+   "date": "2026-06",
+   "kind": "shelf"
+  },
+  {
+   "id": "baked_beans",
+   "price": 0.27,
+   "qty": 1,
+   "unit": "pc",
+   "store": "gb_disc",
+   "product": "Aldi baked beans can",
+   "source": "https://www.moneymagpie.com/save-money/food-inflation-expensive-foods-cheapest-supermarket (weekly basket, June 2026)",
+   "date": "2026-06",
+   "kind": "shelf"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5.49,
+   "qty": 1000,
+   "unit": "g",
+   "store": "gb_disc",
+   "product": "Aldi / Lidl chicken breast 1 kg",
+   "source": "https://pocketwise.co.uk/personal-finance/supermarket-savings/cheapest-supermarket-uk-2026/",
+   "date": "2026",
+   "kind": "shelf"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5.99,
+   "qty": 1000,
+   "unit": "g",
+   "store": "gb_asda",
+   "product": "Asda chicken breast 1 kg",
+   "source": "https://pocketwise.co.uk/personal-finance/supermarket-savings/cheapest-supermarket-uk-2026/",
+   "date": "2026",
+   "kind": "shelf"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5.75,
+   "qty": 1000,
+   "unit": "g",
+   "store": "gb_tesco",
+   "product": "Tesco chicken breast 1 kg (Clubcard price)",
+   "source": "https://pocketwise.co.uk/personal-finance/supermarket-savings/cheapest-supermarket-uk-2026/",
+   "date": "2026",
+   "kind": "shelf"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": "gb_sainsburys",
+   "product": "Sainsbury's chicken breast 1 kg",
+   "source": "https://pocketwise.co.uk/personal-finance/supermarket-savings/cheapest-supermarket-uk-2026/",
+   "date": "2026",
+   "kind": "shelf"
+  }
+ ]
+}

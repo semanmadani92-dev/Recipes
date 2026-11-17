@@ -1,0 +1,73 @@
+{
+ "country": "EC",
+ "currency": "USD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 2.0,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 ($1.80-2.20)",
+   "source": "https://vidala-166.pages.dev/guides/ecuador-quito-cost-of-living (Quito 2026; midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.0,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Whole milk 1 L ($0.90-1.10)",
+   "source": "https://vidala-166.pages.dev/guides/ecuador-quito-cost-of-living (Quito 2026; midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 4.25,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg ($3.50-5.00)",
+   "source": "https://vidala-166.pages.dev/guides/ecuador-quito-cost-of-living (Quito 2026; midpoint of range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1.49,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg",
+   "source": "https://www.bearsavings.com/cost-of-living/compare/ecuador-vs-united-states/ (Numbeo-based, 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2.11,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12",
+   "source": "https://www.bearsavings.com/cost-of-living/compare/ecuador-vs-united-states/ (Numbeo-based, 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5.65,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg",
+   "source": "https://www.bearsavings.com/cost-of-living/compare/ecuador-vs-united-states/ (Numbeo-based, 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

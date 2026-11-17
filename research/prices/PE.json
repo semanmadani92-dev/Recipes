@@ -1,0 +1,84 @@
+{
+ "country": "PE",
+ "currency": "PEN",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 10,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Lima)",
+   "source": "https://expatarrivals.com/peru/cost-of-living-in-peru",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 5.5,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Lima)",
+   "source": "https://expatarrivals.com/peru/cost-of-living-in-peru",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 4.65,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Lima)",
+   "source": "https://expatarrivals.com/peru/cost-of-living-in-peru",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 20,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Lima)",
+   "source": "https://expatarrivals.com/peru/cost-of-living-in-peru",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 12,
+   "qty": 500,
+   "unit": "g",
+   "store": null,
+   "product": "Boneless chicken breast 500 g (Lima)",
+   "source": "https://expatistan.com/cost-of-living/comparison/cuenca/lima",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 5.46,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Whole milk 1 L (Lima)",
+   "source": "https://expatistan.com/cost-of-living/comparison/cuenca/lima",
+   "date": "2026-08",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 9,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Lima)",
+   "source": "https://expatistan.com/cost-of-living/comparison/cuenca/lima",
+   "date": "2026-08",
+   "kind": "average"
+  }
+ ]
+}

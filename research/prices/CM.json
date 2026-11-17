@@ -1,0 +1,40 @@
+{
+ "country": "CM",
+ "currency": "XAF",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 1044,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Douala; few data points)",
+   "source": "https://expatistan.com/price/eggs/douala/USD",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 1112.7842,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Douala, USD 1.90)",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/douala-c278",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 1663.3195,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Boneless chicken breast 1 lb (Douala, USD 2.84)",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/douala-c278",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

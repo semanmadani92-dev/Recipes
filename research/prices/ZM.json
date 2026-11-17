@@ -1,0 +1,29 @@
+{
+ "country": "ZM",
+ "currency": "ZMW",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 41.4643,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (USD 1.8, converted at 23.0 ZMW/USD)",
+   "source": "https://www.whereandwhen.net/budget/zambia/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 41.28,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, box of 12 (EUR 1.6, Numbeo-based)",
+   "source": "https://www.combien-coute.net/oeufs/zambie/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

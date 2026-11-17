@@ -1,0 +1,128 @@
+{
+ "country": "PH",
+ "currency": "PHP",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 110,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Manila)",
+   "source": "https://citycost.org/philippines/ (last update Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 58.3,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg",
+   "source": "https://citycost.org/philippines/ (last update Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 56.19,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg",
+   "source": "https://wagecentre.com/immigration/life/prices-in-the-philippines",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 120,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12",
+   "source": "https://wagecentre.com/immigration/life/prices-in-the-philippines",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 255,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg",
+   "source": "https://wagecentre.com/immigration/life/prices-in-the-philippines",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 102.5,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Dumaguete)",
+   "source": "https://www.numbeo.com/cost-of-living/in/Dumaguete",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 112,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (Dumaguete)",
+   "source": "https://www.numbeo.com/cost-of-living/in/Dumaguete",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 280,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg",
+   "source": "https://trek.zone/en/philippines/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 132,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg",
+   "source": "https://trek.zone/en/philippines/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 56.25,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Well-milled rice 1 kg, national average retail (PSA)",
+   "source": "https://newswav.com/article/prices-of-rice-pork-drop-A2610_WNIhXI (PSA price situationer, mid-Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "pork_belly",
+   "price": 171.485,
+   "qty": 500,
+   "unit": "g",
+   "store": null,
+   "product": "Fresh pork liempo (belly), P342.97/kg national average (PSA)",
+   "source": "https://newswav.com/article/prices-of-rice-pork-drop-A2610_WNIhXI (PSA price situationer, mid-Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  }
+ ]
+}

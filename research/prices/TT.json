@@ -1,0 +1,51 @@
+{
+ "country": "TT",
+ "currency": "TTD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 16.0821,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 2.37 converted at 6.786/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/trinidad-and-tobago/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 18.7286,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 2.76 converted at 6.786/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/trinidad-and-tobago/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 28.4321,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 4.19 converted at 6.786/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/trinidad-and-tobago/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 61.275,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 9.03 converted at 6.786/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/trinidad-and-tobago/",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "country": "MY",
+ "currency": "MYR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 10,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Kuala Lumpur)",
+   "source": "https://expatarrivals.com/malaysia/cost-of-living-in-malaysia",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 9,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Kuala Lumpur)",
+   "source": "https://expatarrivals.com/malaysia/cost-of-living-in-malaysia",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 7,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Kuala Lumpur)",
+   "source": "https://expatarrivals.com/malaysia/cost-of-living-in-malaysia",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 20,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Kuala Lumpur)",
+   "source": "https://expatarrivals.com/malaysia/cost-of-living-in-malaysia",
+   "date": "2026-10",
+   "kind": "average"
+  }
+ ]
+}

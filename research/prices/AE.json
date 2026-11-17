@@ -1,0 +1,128 @@
+{
+ "country": "AE",
+ "currency": "AED",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 6.76,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Dubai)",
+   "source": "https://www.expatica.com/ae/cost-of-living/dubai/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 13.08,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Dubai)",
+   "source": "https://www.expatica.com/ae/cost-of-living/dubai/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 30.96,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg (Dubai)",
+   "source": "https://www.expatica.com/ae/cost-of-living/dubai/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 9.51,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (Dubai)",
+   "source": "https://www.expatica.com/ae/cost-of-living/dubai/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 5.03,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (Dubai)",
+   "source": "https://www.expatica.com/ae/cost-of-living/dubai/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 6.61,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Dubai)",
+   "source": "https://dmcc.ae/cost-of-living-in-dubai-for-expats (Numbeo 2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 12.3,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Dubai)",
+   "source": "https://dmcc.ae/cost-of-living-in-dubai-for-expats (Numbeo 2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 32.65,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillets 1 kg (Dubai)",
+   "source": "https://dmcc.ae/cost-of-living-in-dubai-for-expats (Numbeo 2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 13.3,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Dubai)",
+   "source": "https://expatarrivals.com/dubai/cost-of-living-in-dubai (Feb 2026 averages)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 6.6,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Dubai)",
+   "source": "https://expatarrivals.com/dubai/cost-of-living-in-dubai (Feb 2026 averages)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 9.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Dubai)",
+   "source": "https://expatarrivals.com/dubai/cost-of-living-in-dubai (Feb 2026 averages)",
+   "date": "2026-02",
+   "kind": "average"
+  }
+ ]
+}

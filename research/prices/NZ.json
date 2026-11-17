@@ -1,0 +1,73 @@
+{
+ "country": "NZ",
+ "currency": "NZD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 10.5,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Auckland)",
+   "source": "https://expatarrivals.com/asia-pacific/new-zealand/cost-living-new-zealand",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 3.0,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Auckland)",
+   "source": "https://expatarrivals.com/asia-pacific/new-zealand/cost-living-new-zealand",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 3.3,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Auckland)",
+   "source": "https://expatarrivals.com/asia-pacific/new-zealand/cost-living-new-zealand",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 17,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Auckland)",
+   "source": "https://expatarrivals.com/asia-pacific/new-zealand/cost-living-new-zealand",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 3.17,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Auckland)",
+   "source": "https://citiesinsider.com/country/new-zealand/auckland/cost-of-living/en",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 10.77,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Numbeo, national)",
+   "source": "https://goingnz.com/?p=1165",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

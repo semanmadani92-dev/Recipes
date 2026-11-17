@@ -1,0 +1,196 @@
+{
+ "country": "NG",
+ "currency": "NGN",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 3719.64,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (average, converted from USD 2.78)",
+   "source": "https://www.bearsavings.com/cost-of-living/nigeria/ (July 2026 update, USD, converted at 1,338 NGN/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 3157.68,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (average, converted from USD 2.36)",
+   "source": "https://www.bearsavings.com/cost-of-living/nigeria/ (July 2026 update, USD, converted at 1,338 NGN/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2528.82,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs 12 (average, converted from USD 1.89)",
+   "source": "https://www.bearsavings.com/cost-of-living/nigeria/ (July 2026 update, USD, converted at 1,338 NGN/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5793.54,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (average, converted from USD 4.33)",
+   "source": "https://www.bearsavings.com/cost-of-living/nigeria/ (July 2026 update, USD, converted at 1,338 NGN/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 2662.62,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (average, converted from USD 1.99)",
+   "source": "https://www.bearsavings.com/cost-of-living/nigeria/ (July 2026 update, USD, converted at 1,338 NGN/USD)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2800,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Lagos average, expat guide)",
+   "source": "https://expatarrivals.com/nigeria/cost-of-living-in-nigeria",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 3500,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 litre (Lagos average, expat guide)",
+   "source": "https://expatarrivals.com/nigeria/cost-of-living-in-nigeria",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2000,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Lagos average, expat guide)",
+   "source": "https://expatarrivals.com/nigeria/cost-of-living-in-nigeria",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 5500,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Lagos average, expat guide)",
+   "source": "https://expatarrivals.com/nigeria/cost-of-living-in-nigeria",
+   "date": "2026-09",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 7250,
+   "qty": 30,
+   "unit": "pc",
+   "store": "ng_market",
+   "product": "Eggs, crate of 30 (N6,000-8,500)",
+   "source": "https://nm-stag.nairametrics.com/abuja-families-spend-n300000-monthly-to-maintain-healthy-diet-in-may/ (Abuja markets, May 2026)",
+   "date": "2026-05",
+   "kind": "shelf"
+  },
+  {
+   "id": "rice",
+   "price": 60000,
+   "qty": 50000,
+   "unit": "g",
+   "store": "ng_market",
+   "product": "Imported rice, 50 kg bag (N55,000-65,000)",
+   "source": "https://nm-stag.nairametrics.com/abuja-families-spend-n300000-monthly-to-maintain-healthy-diet-in-may/ (Abuja markets, May 2026)",
+   "date": "2026-05",
+   "kind": "shelf"
+  },
+  {
+   "id": "rice",
+   "price": 50000,
+   "qty": 50000,
+   "unit": "g",
+   "store": "ng_market",
+   "product": "Local rice, 50 kg bag (N45,000-55,000)",
+   "source": "https://nm-stag.nairametrics.com/abuja-families-spend-n300000-monthly-to-maintain-healthy-diet-in-may/ (Abuja markets, May 2026)",
+   "date": "2026-05",
+   "kind": "shelf"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6000,
+   "qty": 1000,
+   "unit": "g",
+   "store": "ng_market",
+   "product": "Chicken 1 kg (N5,500-6,500 by area)",
+   "source": "https://guardian.ng/?p=2855335",
+   "date": "2026 (undated)",
+   "kind": "shelf",
+   "note": "whole chicken pieces, not fillet"
+  },
+  {
+   "id": "eggs",
+   "price": 6999,
+   "qty": 30,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, crate of 30 - highest state average (Taraba)",
+   "source": "https://nairametrics.com/2026/05/07/food-prices-beans-garri-eggs-record-sharp-declines-in-march-nbs/ (NBS Selected Food Prices Watch, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 5610.04,
+   "qty": 30,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, crate of 30 - lowest state average (Niger State)",
+   "source": "https://nairametrics.com/2026/05/07/food-prices-beans-garri-eggs-record-sharp-declines-in-march-nbs/ (NBS Selected Food Prices Watch, March 2026)",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 112000,
+   "qty": 50000,
+   "unit": "g",
+   "store": null,
+   "product": "Local rice, 50 kg bag, national average (NBS)",
+   "source": "https://meiza.ng/cost-of-local-rice-rises-by-20-in-one-month-nbs/",
+   "date": "2026-03",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 35000,
+   "qty": 50000,
+   "unit": "g",
+   "store": "ng_market",
+   "product": "Round tomatoes, big basket (~50 kg) (Lagos, Oct 2026)",
+   "source": "https://www.finelib.com/knowledge/prices/products/Finelib-Prices-Fresh-Tomatoes-Nigeria-Reference-v1.html",
+   "date": "2026-10",
+   "kind": "shelf",
+   "note": "wholesale basket; weight approx 50 kg"
+  }
+ ]
+}

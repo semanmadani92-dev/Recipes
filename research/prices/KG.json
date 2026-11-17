@@ -1,0 +1,51 @@
+{
+ "country": "KG",
+ "currency": "KGS",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 121,
+   "qty": 10,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 10 (national average)",
+   "source": "https://docs.wfp.org/api/documents/WFP-0000172392/download/ (WFP Kyrgyzstan market monitor, Feb 2026)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 72,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (national average)",
+   "source": "https://docs.wfp.org/api/documents/WFP-0000172392/download/ (WFP Kyrgyzstan market monitor, Feb 2026)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 146,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice, medium, 1 kg (national average)",
+   "source": "https://docs.wfp.org/api/documents/WFP-0000172392/download/ (WFP Kyrgyzstan market monitor, Feb 2026)",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 76.49,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Loose milk 1 L (Bishkek average)",
+   "source": "https://www.akchabar.kg/en/news/v-kirgizstane-zafiksirovali-novie-roznichnie-tseni-na-produkti-toplivo-i-ugol-dannie-monitoringa-qbhaqikarafuwqid",
+   "date": "2026-03",
+   "kind": "average"
+  }
+ ]
+}

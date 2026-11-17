@@ -1,0 +1,106 @@
+{
+ "country": "CH",
+ "currency": "CHF",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 7,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Zurich)",
+   "source": "https://www.expatarrivals.com/europe/switzerland/cost-living-switzerland",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.8,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Zurich)",
+   "source": "https://www.expatarrivals.com/europe/switzerland/cost-living-switzerland",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 3,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Zurich)",
+   "source": "https://www.expatarrivals.com/europe/switzerland/cost-living-switzerland",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 23,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Zurich)",
+   "source": "https://www.expatarrivals.com/europe/switzerland/cost-living-switzerland",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "white_loaf",
+   "price": 3,
+   "qty": 1,
+   "unit": "pc",
+   "store": null,
+   "product": "Loaf of white bread (Zurich)",
+   "source": "https://www.expatarrivals.com/europe/switzerland/cost-living-switzerland",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 7.06,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Zurich)",
+   "source": "https://www.expatica.com/ch/cost-of-living/zurich/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.88,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Zurich)",
+   "source": "https://www.expatica.com/ch/cost-of-living/zurich/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 3.34,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Zurich)",
+   "source": "https://www.expatica.com/ch/cost-of-living/zurich/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 21.78,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Zurich)",
+   "source": "https://www.expatica.com/ch/cost-of-living/zurich/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  }
+ ]
+}

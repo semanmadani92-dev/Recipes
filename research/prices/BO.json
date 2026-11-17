@@ -1,0 +1,29 @@
+{
+ "country": "BO",
+ "currency": "BOB",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 18.9,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (USD 1.89)",
+   "source": "https://livingcost.org/cost/bolivia/uruguay",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 47.2,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (USD 4.72)",
+   "source": "https://livingcost.org/cost/bolivia/uruguay",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

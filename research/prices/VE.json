@@ -1,0 +1,51 @@
+{
+ "country": "VE",
+ "currency": "VES",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 1675.6607,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.86 converted at 900.9/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/venezuela/ (USD prices; converted at BCV rate)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 1180.1696,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 1.31 converted at 900.9/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/venezuela/ (USD prices; converted at BCV rate)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2243.2232,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 2.49 converted at 900.9/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/venezuela/ (USD prices; converted at BCV rate)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6072.0179,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 6.74 converted at 900.9/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/venezuela/ (USD prices; converted at BCV rate)",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

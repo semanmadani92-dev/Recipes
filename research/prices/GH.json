@@ -1,0 +1,173 @@
+{
+ "country": "GH",
+ "currency": "GHS",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 30,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Accra)",
+   "source": "https://expatarrivals.com/africa/ghana/cost-living-ghana",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 40,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Accra)",
+   "source": "https://expatarrivals.com/africa/ghana/cost-living-ghana",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 35,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Accra)",
+   "source": "https://expatarrivals.com/africa/ghana/cost-living-ghana",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 65,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Accra)",
+   "source": "https://expatarrivals.com/africa/ghana/cost-living-ghana",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 30,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Accra)",
+   "source": "https://www.whereandwhen.net/budget/ghana/accra/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 42,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Accra)",
+   "source": "https://www.whereandwhen.net/budget/ghana/accra/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 38,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Accra)",
+   "source": "https://www.whereandwhen.net/budget/ghana/accra/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 84,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Accra)",
+   "source": "https://www.whereandwhen.net/budget/ghana/accra/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 28,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Accra)",
+   "source": "https://expatistan.com/cost-of-living/comparison/sofia/accra",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 30,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Whole milk 1 L (Accra)",
+   "source": "https://expatistan.com/cost-of-living/comparison/sofia/accra",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 59,
+   "qty": 500,
+   "unit": "g",
+   "store": null,
+   "product": "Boneless chicken breast 500 g (Accra)",
+   "source": "https://expatistan.com/cost-of-living/comparison/sofia/accra",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 10,
+   "qty": 1000,
+   "unit": "g",
+   "store": "gh_market",
+   "product": "Rice 1 kg, local market (GHS 8-12)",
+   "source": "https://africarrieres.com/ghana/en/guide/decouvrir/cost-of-living (local markets; midpoint of range)",
+   "date": "2026",
+   "kind": "shelf"
+  },
+  {
+   "id": "eggs",
+   "price": 15,
+   "qty": 12,
+   "unit": "pc",
+   "store": "gh_market",
+   "product": "Eggs, 12, local market (GHS 12-18)",
+   "source": "https://africarrieres.com/ghana/en/guide/decouvrir/cost-of-living (local markets; midpoint of range)",
+   "date": "2026",
+   "kind": "shelf"
+  },
+  {
+   "id": "rice",
+   "price": 73.5,
+   "qty": 5000,
+   "unit": "g",
+   "store": "gh_market",
+   "product": "Imported rice 5 kg bag (Accra markets average)",
+   "source": "https://www.citinewsroom.com/2026/04/channel-one-tv-market-price-barometer-tomatoes-cassava-among-high-priced-staples/ (Accra market barometer, Apr 2026)",
+   "date": "2026-04",
+   "kind": "shelf"
+  },
+  {
+   "id": "chicken_legs",
+   "price": 33.4,
+   "qty": 1000,
+   "unit": "g",
+   "store": "gh_market",
+   "product": "Frozen chicken per kg (Accra markets average)",
+   "source": "https://www.citinewsroom.com/2026/04/channel-one-tv-market-price-barometer-tomatoes-cassava-among-high-priced-staples/ (Accra market barometer, Apr 2026)",
+   "date": "2026-04",
+   "kind": "shelf",
+   "note": "frozen chicken pieces"
+  }
+ ]
+}

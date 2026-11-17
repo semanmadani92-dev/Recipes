@@ -1,0 +1,129 @@
+{
+ "country": "AT",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 4,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Vienna)",
+   "source": "https://expatarrivals.com/europe/austria/vienna/cost-living-vienna (Vienna, likely Nov 2025)",
+   "date": "2025-11",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.5,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Vienna)",
+   "source": "https://expatarrivals.com/europe/austria/vienna/cost-living-vienna (Vienna, likely Nov 2025)",
+   "date": "2025-11",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2.7,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Vienna)",
+   "source": "https://expatarrivals.com/europe/austria/vienna/cost-living-vienna (Vienna, likely Nov 2025)",
+   "date": "2025-11",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 13.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Vienna)",
+   "source": "https://expatarrivals.com/europe/austria/vienna/cost-living-vienna (Vienna, likely Nov 2025)",
+   "date": "2025-11",
+   "kind": "average"
+  },
+  {
+   "id": "white_loaf",
+   "price": 2.5,
+   "qty": 1,
+   "unit": "pc",
+   "store": null,
+   "product": "Loaf of white bread (Vienna)",
+   "source": "https://expatarrivals.com/europe/austria/vienna/cost-living-vienna",
+   "date": "2025-11",
+   "kind": "average"
+  },
+  {
+   "id": "cheddar",
+   "price": 9,
+   "qty": 500,
+   "unit": "g",
+   "store": null,
+   "product": "Cheese 500 g (Vienna)",
+   "source": "https://expatarrivals.com/europe/austria/vienna/cost-living-vienna",
+   "date": "2025-11",
+   "kind": "average",
+   "note": "local cheese"
+  },
+  {
+   "id": "eggs",
+   "price": 4.42,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Vienna)",
+   "source": "https://www.expatica.com/at/cost-of-living/vienna/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.6,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Vienna)",
+   "source": "https://www.expatica.com/at/cost-of-living/vienna/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2.33,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Vienna)",
+   "source": "https://www.expatica.com/at/cost-of-living/vienna/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 12.87,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Vienna)",
+   "source": "https://www.expatica.com/at/cost-of-living/vienna/ (Numbeo 2026-06-01)",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 5.42,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (Vienna)",
+   "source": "https://expatistan.com/price/eggs/vienna/EUR",
+   "date": "2026-05",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "country": "LT",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 1.3304,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.49 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/lithuania/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2.2589,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 2.53 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/lithuania/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2.5268,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 2.83 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/lithuania/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6.4375,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 7.21 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/lithuania/",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

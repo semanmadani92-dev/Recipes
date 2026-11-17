@@ -1,0 +1,51 @@
+{
+ "country": "RS",
+ "currency": "RSD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 274.9,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Belgrade)",
+   "source": "https://wagecentre.com/immigration/life/prices-in-belgrade (Belgrade 2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 141.74,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Belgrade)",
+   "source": "https://wagecentre.com/immigration/life/prices-in-belgrade (Belgrade 2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 291.25,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Belgrade)",
+   "source": "https://wagecentre.com/immigration/life/prices-in-belgrade (Belgrade 2026)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 759.91,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Belgrade)",
+   "source": "https://wagecentre.com/immigration/life/prices-in-belgrade (Belgrade 2026)",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "country": "MG",
+ "currency": "MGA",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 8482,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://mylifeelsewhere.com/cost-of-living/madagascar/zimbabwe",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 11794,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken 1 kg",
+   "source": "https://mylifeelsewhere.com/cost-of-living/madagascar/zimbabwe",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

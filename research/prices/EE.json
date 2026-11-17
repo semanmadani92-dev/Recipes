@@ -1,0 +1,51 @@
+{
+ "country": "EE",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 1.0625,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.19 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/estonia/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2.3036,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 2.58 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/estonia/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 2.4732,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 2.77 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/estonia/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 7.8125,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 8.75 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/estonia/",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

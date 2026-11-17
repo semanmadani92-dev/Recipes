@@ -1,0 +1,95 @@
+{
+ "country": "FR",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "chicken_breast",
+   "price": 5.54,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 lb",
+   "source": "https://mylifeelsewhere.com/cost-of-living/france (national average)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 1.4,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 lb",
+   "source": "https://mylifeelsewhere.com/cost-of-living/france (national average)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 0.86,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 lb",
+   "source": "https://mylifeelsewhere.com/cost-of-living/france (national average)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 0.92,
+   "qty": 453.6,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 lb",
+   "source": "https://mylifeelsewhere.com/cost-of-living/france (national average)",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2.3125,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 2.59 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/france/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 12.375,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 13.86 converted at 0.8929/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/france/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.2,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Paris)",
+   "source": "https://blog.parisattitude.com/en/paris-cost-of-living",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "pasta",
+   "price": 1.5,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Pasta 1 kg (Paris)",
+   "source": "https://blog.parisattitude.com/en/paris-cost-of-living",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

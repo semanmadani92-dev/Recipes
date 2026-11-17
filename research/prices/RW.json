@@ -1,0 +1,18 @@
+{
+ "country": "RW",
+ "currency": "RWF",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 2414,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://www.mylifeelsewhere.com/cost-of-living/namibia/rwanda",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

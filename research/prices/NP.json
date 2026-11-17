@@ -1,0 +1,51 @@
+{
+ "country": "NP",
+ "currency": "NPR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 253.1786,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Kathmandu)",
+   "source": "https://www.whereandwhen.net/budget/nepal/kathmandu/ (USD converted at 148.9 NPR/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 119.1429,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Kathmandu)",
+   "source": "https://www.whereandwhen.net/budget/nepal/kathmandu/ (USD converted at 148.9 NPR/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 134.0357,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Kathmandu)",
+   "source": "https://www.whereandwhen.net/budget/nepal/kathmandu/ (USD converted at 148.9 NPR/USD)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 431.8929,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Kathmandu)",
+   "source": "https://www.whereandwhen.net/budget/nepal/kathmandu/ (USD converted at 148.9 NPR/USD)",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

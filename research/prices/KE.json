@@ -1,0 +1,161 @@
+{
+ "country": "KE",
+ "currency": "KES",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "rice",
+   "price": 198,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg",
+   "source": "https://trek.zone/en/kenya/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 116,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://trek.zone/en/kenya/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 869,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken fillet 1 kg",
+   "source": "https://trek.zone/en/kenya/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 216,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12",
+   "source": "https://trek.zone/en/kenya/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 133,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg",
+   "source": "https://trek.zone/en/kenya/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 143,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 kg",
+   "source": "https://trek.zone/en/kenya/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 113.46,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg, national average retail price (KNBS)",
+   "source": "https://www.kenyans.co.ke/news/125773-july-inflation-hits-65-electricity-transport-and-food-costs-rise",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "sugar",
+   "price": 163.84,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Sugar 1 kg (KNBS national average)",
+   "source": "https://thekenyatimes.com/economy/headache-for-kenyans-as-prices-of-essential-commodities-hike/ (KNBS average retail prices, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "vegetable_oil",
+   "price": 361.04,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Cooking oil 1 L (KNBS national average)",
+   "source": "https://thekenyatimes.com/economy/headache-for-kenyans-as-prices-of-essential-commodities-hike/ (KNBS average retail prices, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "onion",
+   "price": 122.37,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Onions 1 kg (KNBS national average)",
+   "source": "https://thekenyatimes.com/economy/headache-for-kenyans-as-prices-of-essential-commodities-hike/ (KNBS average retail prices, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "flour",
+   "price": 184.88,
+   "qty": 2000,
+   "unit": "g",
+   "store": null,
+   "product": "Wheat flour 2 kg (KNBS national average)",
+   "source": "https://thekenyatimes.com/economy/headache-for-kenyans-as-prices-of-essential-commodities-hike/ (KNBS average retail prices, Oct 2026)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "maize_meal",
+   "price": 167,
+   "qty": 2000,
+   "unit": "g",
+   "store": "ke_naivas",
+   "product": "Jogoo maize meal 2 kg (Naivas online)",
+   "source": "https://naivas.online/jogoo-maize-meal-2kg",
+   "date": "undated listing",
+   "kind": "shelf"
+  },
+  {
+   "id": "maize_meal",
+   "price": 180,
+   "qty": 2000,
+   "unit": "g",
+   "store": null,
+   "product": "Maize flour 2 kg (Ksh150-210 across supermarkets, CBK survey)",
+   "source": "https://www.money254.co.ke/post/5-food-items-set-for-price-increases-this-month---cbk-survey-news",
+   "date": "2026-06",
+   "kind": "average"
+  },
+  {
+   "id": "sugar",
+   "price": 305,
+   "qty": 2000,
+   "unit": "g",
+   "store": null,
+   "product": "Sugar 2 kg (average across supermarkets, CBK survey)",
+   "source": "https://www.money254.co.ke/post/5-food-items-set-for-price-increases-this-month---cbk-survey-news",
+   "date": "2026-06",
+   "kind": "average"
+  }
+ ]
+}

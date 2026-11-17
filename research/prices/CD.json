@@ -1,0 +1,18 @@
+{
+ "country": "CD",
+ "currency": "CDF",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 3000,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Kinshasa, CDF 2,500-3,500)",
+   "source": "https://360nations.com/africa/dr-congo/cost-food-groceries.html",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

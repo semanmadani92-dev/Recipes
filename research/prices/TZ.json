@@ -1,0 +1,51 @@
+{
+ "country": "TZ",
+ "currency": "TZS",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 5157,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Dar es Salaam)",
+   "source": "https://www.whereandwhen.net/budget/tanzania/dar-es-salaam/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 2258,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Dar es Salaam)",
+   "source": "https://www.whereandwhen.net/budget/tanzania/dar-es-salaam/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 2838,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Dar es Salaam)",
+   "source": "https://www.whereandwhen.net/budget/tanzania/dar-es-salaam/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 12360,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Dar es Salaam)",
+   "source": "https://www.whereandwhen.net/budget/tanzania/dar-es-salaam/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

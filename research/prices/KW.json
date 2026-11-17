@@ -1,0 +1,51 @@
+{
+ "country": "KW",
+ "currency": "KWD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 0.5,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Kuwait City)",
+   "source": "https://k2.expatarrivals.com/node/18320 (Kuwait City, Jan 2025)",
+   "date": "2025-01",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 0.55,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Kuwait City)",
+   "source": "https://k2.expatarrivals.com/node/18320 (Kuwait City, Jan 2025)",
+   "date": "2025-01",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 2.2,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Kuwait City)",
+   "source": "https://k2.expatarrivals.com/node/18320 (Kuwait City, Jan 2025)",
+   "date": "2025-01",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 0.72,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Kuwait City)",
+   "source": "https://mylifeelsewhere.com/cost-of-living/kuwait-city-c7376/muscat-c7452",
+   "date": "undated",
+   "kind": "average"
+  }
+ ]
+}

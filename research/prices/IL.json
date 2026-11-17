@@ -1,0 +1,73 @@
+{
+ "country": "IL",
+ "currency": "ILS",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 16,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Tel Aviv)",
+   "source": "https://www.expatarrivals.com/middle-east/israel/cost-living-israel",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 7,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Tel Aviv)",
+   "source": "https://www.expatarrivals.com/middle-east/israel/cost-living-israel",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 12,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Tel Aviv)",
+   "source": "https://www.expatarrivals.com/middle-east/israel/cost-living-israel",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 45,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Tel Aviv)",
+   "source": "https://www.expatarrivals.com/middle-east/israel/cost-living-israel",
+   "date": "2026-02",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 11,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://www.whereandwhen.net/budget/israel/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 16,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12",
+   "source": "https://www.whereandwhen.net/budget/israel/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

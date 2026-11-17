@@ -1,0 +1,51 @@
+{
+ "country": "MZ",
+ "currency": "MZN",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 160,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Maputo)",
+   "source": "https://expatarrivals.com/mozambique/cost-of-living-in-mozambique (Maputo, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 100,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Maputo)",
+   "source": "https://expatarrivals.com/mozambique/cost-of-living-in-mozambique (Maputo, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 100,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Maputo)",
+   "source": "https://expatarrivals.com/mozambique/cost-of-living-in-mozambique (Maputo, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 365,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Maputo)",
+   "source": "https://expatarrivals.com/mozambique/cost-of-living-in-mozambique (Maputo, July 2026)",
+   "date": "2026-07",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "country": "BE",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 1.2,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Regular milk 1 L (EUR 0.80-1.60, midpoint)",
+   "source": "https://www.expatica.com/be/about/basics/cost-of-living-in-belgium-how-much-do-you-need-1085097/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

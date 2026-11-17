@@ -1,0 +1,233 @@
+{
+ "country": "ID",
+ "currency": "IDR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 22140.0,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.23)",
+   "source": "https://citycost.org/indonesia/ (Oct 2026; USD converted at its 18,000 IDR/USD)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 15660.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 0.87)",
+   "source": "https://citycost.org/indonesia/ (Oct 2026; USD converted at its 18,000 IDR/USD)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 26640.0,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 1.48)",
+   "source": "https://citycost.org/indonesia/ (Oct 2026; USD converted at its 18,000 IDR/USD)",
+   "date": "2026-10",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 23654.4,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.28 converted at 1.848e+04/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/indonesia/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 16816.8,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 0.91 converted at 1.848e+04/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/indonesia/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 29568.0,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 1.60 converted at 1.848e+04/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/indonesia/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 60799.2,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 3.29 converted at 1.848e+04/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/indonesia/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 23839.2,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (avg, USD 1.29 converted at 1.848e+04/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/indonesia/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 16750,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Beras medium I 1 kg (PIHPS national average)",
+   "source": "https://www.rctiplus.com/news/detail/okezone/5514082/harga-pangan-hari-ini-naik--cabai-rp97-100--daging-sapi-rp153-500-per-kg (Bank Indonesia PIHPS, 2026-11-11)",
+   "date": "2026-11-11",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 16550,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Beras medium II 1 kg (PIHPS)",
+   "source": "https://www.rctiplus.com/news/detail/okezone/5514082/harga-pangan-hari-ini-naik--cabai-rp97-100--daging-sapi-rp153-500-per-kg (Bank Indonesia PIHPS, 2026-11-11)",
+   "date": "2026-11-11",
+   "kind": "average"
+  },
+  {
+   "id": "garlic",
+   "price": 38450,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Bawang putih 1 kg (PIHPS)",
+   "source": "https://www.rctiplus.com/news/detail/okezone/5514082/harga-pangan-hari-ini-naik--cabai-rp97-100--daging-sapi-rp153-500-per-kg (Bank Indonesia PIHPS, 2026-11-11)",
+   "date": "2026-11-11",
+   "kind": "average",
+   "pc_weight_g": 5
+  },
+  {
+   "id": "garlic",
+   "price": 41450,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Bawang putih 1 kg (PIHPS)",
+   "source": "https://www.rctiplus.com/news/detail/ekonomi/5515801/harga-pangan-hari-ini-naik--cabai-rp122-500--daging-sapi-rp158-150-per-kg (PIHPS, 2026-11-13)",
+   "date": "2026-11-13",
+   "kind": "average",
+   "pc_weight_g": 5
+  },
+  {
+   "id": "vegetable_oil",
+   "price": 24700,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Minyak goreng kemasan bermerek II 1 L (PIHPS)",
+   "source": "https://www.rctiplus.com/news/detail/okezone/5514082/harga-pangan-hari-ini-naik--cabai-rp97-100--daging-sapi-rp153-500-per-kg (Bank Indonesia PIHPS, 2026-11-11)",
+   "date": "2026-11-11",
+   "kind": "average"
+  },
+  {
+   "id": "beef_stew",
+   "price": 153500,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Daging sapi 1 kg (PIHPS)",
+   "source": "https://www.rctiplus.com/news/detail/okezone/5514082/harga-pangan-hari-ini-naik--cabai-rp97-100--daging-sapi-rp153-500-per-kg (Bank Indonesia PIHPS, 2026-11-11)",
+   "date": "2026-11-11",
+   "kind": "average"
+  },
+  {
+   "id": "beef_stew",
+   "price": 158150,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Daging sapi 1 kg (PIHPS)",
+   "source": "https://www.rctiplus.com/news/detail/ekonomi/5515801/harga-pangan-hari-ini-naik--cabai-rp122-500--daging-sapi-rp158-150-per-kg (PIHPS, 2026-11-13)",
+   "date": "2026-11-13",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 28900,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Telur ayam ras per kg (PIHPS)",
+   "source": "https://journalarta.com/news/2026/11/13/harga-pangan-pihps-cabai-rawit/ (PIHPS, 2026-11-13)",
+   "date": "2026-11-13",
+   "kind": "average",
+   "note": "priced per kg of eggs (~16 eggs)",
+   "pc_weight_g": 60
+  },
+  {
+   "id": "eggs",
+   "price": 28400,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Telur ayam ras per kg (PIHPS)",
+   "source": "https://www.rctiplus.com/news/detail/okezone/5514082/harga-pangan-hari-ini-naik--cabai-rp97-100--daging-sapi-rp153-500-per-kg (Bank Indonesia PIHPS, 2026-11-11)",
+   "date": "2026-11-11",
+   "kind": "average",
+   "note": "priced per kg of eggs (~16 eggs)",
+   "pc_weight_g": 60
+  },
+  {
+   "id": "fresh_chili",
+   "price": 80700,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Cabai merah keriting 1 kg (PIHPS)",
+   "source": "https://journalarta.com/news/2026/11/13/harga-pangan-pihps-cabai-rawit/ (PIHPS, 2026-11-13)",
+   "date": "2026-11-13",
+   "kind": "average"
+  },
+  {
+   "id": "shallots",
+   "price": 37650,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Bawang merah 1 kg (PIHPS)",
+   "source": "https://www.rctiplus.com/news/detail/okezone/5514082/harga-pangan-hari-ini-naik--cabai-rp97-100--daging-sapi-rp153-500-per-kg (Bank Indonesia PIHPS, 2026-11-11)",
+   "date": "2026-11-11",
+   "kind": "average"
+  },
+  {
+   "id": "shallots",
+   "price": 45950,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Bawang merah 1 kg (PIHPS)",
+   "source": "https://www.rctiplus.com/news/detail/ekonomi/5515801/harga-pangan-hari-ini-naik--cabai-rp122-500--daging-sapi-rp158-150-per-kg (PIHPS, 2026-11-13)",
+   "date": "2026-11-13",
+   "kind": "average"
+  }
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "country": "GR",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "rice",
+   "price": 3,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://www.expatarrivals.com/europe/greece/cost-living-greece",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 10,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg",
+   "source": "https://www.expatarrivals.com/europe/greece/cost-living-greece",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 4,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://k2.expatarrivals.com/node/25472",
+   "date": "2026-04",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.5,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://k2.expatarrivals.com/node/25472",
+   "date": "2026-04",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 9.95,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Fresh chicken breast fillet 1 kg (Greek supermarkets, summer 2026)",
+   "source": "https://nikana.gr/en/tourist-guide/blog/shopping/1786/food-prices-in-greece",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.435,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (EUR 1.08-1.79, summer 2026)",
+   "source": "https://nikana.gr/en/tourist-guide/blog/shopping/1786/food-prices-in-greece",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 4,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (average)",
+   "source": "https://www.whereandwhen.net/budget/greece/athens/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 10,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (average)",
+   "source": "https://www.whereandwhen.net/budget/greece/athens/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

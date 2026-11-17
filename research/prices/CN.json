@@ -1,0 +1,76 @@
+{
+ "country": "CN",
+ "currency": "CNY",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 11.9279,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (avg, USD 1.81 converted at 6.59/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/china/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 6.1946,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "White rice 1 kg (avg, USD 0.94 converted at 6.59/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/china/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 10.544,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 (avg, USD 1.60 converted at 6.59/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/china/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 21.6811,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg (avg, USD 3.29 converted at 6.59/USD)",
+   "source": "https://www.bearsavings.com/cost-of-living/china/",
+   "date": "2026-07",
+   "kind": "average"
+  },
+  {
+   "id": "pork_shoulder",
+   "price": 28.04,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Lean pork, per 500 g CNY 14.02 (Shanghai district retail)",
+   "source": "https://www.sunsirs.com/commodity-news/petail-35233.html (Shanghai district monthly retail average, Aug 2026)",
+   "date": "2026-08",
+   "kind": "average",
+   "note": "lean pork cut; per-500 g (jin) price doubled"
+  },
+  {
+   "id": "eggs",
+   "price": 10.82,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Fresh red-shell eggs, per 500 g CNY 5.41 (Shanghai district retail)",
+   "source": "https://www.sunsirs.com/commodity-news/petail-35233.html (Shanghai district monthly retail average, Aug 2026)",
+   "date": "2026-08",
+   "kind": "average",
+   "note": "priced per kg of eggs (~16 eggs)",
+   "pc_weight_g": 60
+  }
+ ]
+}

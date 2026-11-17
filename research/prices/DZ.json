@@ -1,0 +1,18 @@
+{
+ "country": "DZ",
+ "currency": "DZD",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 237.248,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Algiers, USD 1.76 at 134.8 DZD/USD official)",
+   "source": "https://mylifeelsewhere.com/cost-of-living/algiers-c8/tunis-c2395",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

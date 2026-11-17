@@ -1,0 +1,29 @@
+{
+ "country": "RO",
+ "currency": "RON",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 7,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (supermarket average)",
+   "source": "https://www.whereandwhen.net/budget/romania/",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 15,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, box of 12 (supermarket average)",
+   "source": "https://www.whereandwhen.net/budget/romania/",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

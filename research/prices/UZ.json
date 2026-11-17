@@ -1,0 +1,51 @@
+{
+ "country": "UZ",
+ "currency": "UZS",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "eggs",
+   "price": 19500,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen (Tashkent)",
+   "source": "https://kun.uz/en/28347507 (Tashkent, Numbeo-based)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 14000,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (Tashkent)",
+   "source": "https://kun.uz/en/28347507 (Tashkent, Numbeo-based)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 21500,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (Tashkent)",
+   "source": "https://kun.uz/en/28347507 (Tashkent, Numbeo-based)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 50500,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breasts 1 kg (Tashkent)",
+   "source": "https://kun.uz/en/28347507 (Tashkent, Numbeo-based)",
+   "date": "2026",
+   "kind": "average"
+  }
+ ]
+}

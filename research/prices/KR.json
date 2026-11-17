@@ -1,0 +1,73 @@
+{
+ "country": "KR",
+ "currency": "KRW",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "milk",
+   "price": 2985,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://trek.zone/en/south-korea/prices",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 2800,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L",
+   "source": "https://expatarrivals.com/south-korea/cost-of-living-in-south-korea",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 5000,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, dozen",
+   "source": "https://expatarrivals.com/south-korea/cost-of-living-in-south-korea",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 14000,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Chicken breast 1 kg",
+   "source": "https://expatarrivals.com/south-korea/cost-of-living-in-south-korea",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 5700,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg",
+   "source": "https://expatarrivals.com/south-korea/cost-of-living-in-south-korea",
+   "date": "undated",
+   "kind": "average"
+  },
+  {
+   "id": "napa_cabbage",
+   "price": 3333.3333,
+   "qty": 1,
+   "unit": "pc",
+   "store": "kr_market",
+   "product": "Napa cabbage (3 heads for 10,000 won, Gyeongdong market, Seoul)",
+   "source": "https://newstomato.com/ReadNews.aspx?no=1319432",
+   "date": "2026-11",
+   "kind": "shelf"
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "country": "DE",
+ "currency": "EUR",
+ "collected": "2026-11-17",
+ "items": [
+  {
+   "id": "butter",
+   "price": 1.15,
+   "qty": 250,
+   "unit": "g",
+   "store": "de_disc",
+   "product": "Milsani Deutsche Markenbutter 250 g (Aldi; same price at Lidl)",
+   "source": "https://ms-aktuell.de/welt/lidl-butterpreis-gesenkt-31-10-2026/",
+   "date": "2026-10-31",
+   "kind": "shelf"
+  },
+  {
+   "id": "apples",
+   "price": 2.4,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Apples 1 kg (range 1.80-3.00)",
+   "source": "https://www.expatica.com/de/moving/about/cost-of-living-in-germany-1085100/ (2026; midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "potatoes",
+   "price": 1.575,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Potatoes 1 kg (range 0.75-2.40)",
+   "source": "https://www.expatica.com/de/moving/about/cost-of-living-in-germany-1085100/ (2026; midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "milk",
+   "price": 1.25,
+   "qty": 1000,
+   "unit": "ml",
+   "store": null,
+   "product": "Milk 1 L (range 1.00-1.50)",
+   "source": "https://www.expatica.com/de/moving/about/cost-of-living-in-germany-1085100/ (2026; midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "cheddar",
+   "price": 16.0,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Cheese 1 kg (local, e.g. Gouda) (range 9.00-23.00)",
+   "source": "https://www.expatica.com/de/moving/about/cost-of-living-in-germany-1085100/ (2026; midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "rice",
+   "price": 3.15,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Rice 1 kg (range 1.70-4.60)",
+   "source": "https://www.expatica.com/de/moving/about/cost-of-living-in-germany-1085100/ (2026; midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "eggs",
+   "price": 3.3,
+   "qty": 12,
+   "unit": "pc",
+   "store": null,
+   "product": "Eggs, 12 large (range 2.40-4.20)",
+   "source": "https://www.expatica.com/de/moving/about/cost-of-living-in-germany-1085100/ (2026; midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "tomatoes",
+   "price": 3.45,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Tomatoes 1 kg (range 1.90-5.00)",
+   "source": "https://www.expatica.com/de/moving/about/cost-of-living-in-germany-1085100/ (2026; midpoint of typical range)",
+   "date": "2026",
+   "kind": "average"
+  },
+  {
+   "id": "basmati_rice",
+   "price": 2.49,
+   "qty": 1000,
+   "unit": "g",
+   "store": "de_disc",
+   "product": "BON-RI Basmati-Reis 1 kg (Aldi Süd, reduced from 2.99)",
+   "source": "https://www.aldi-sued.de/newsroom/alle-pressemitteilungen/marke-und-produkte/2026/gutes-fuer-alle-auch-im-neuen-Jahr-aldi-setzt-neuen-tiefpreis-fuer-grundnahrungsmittel",
+   "date": "2026-01",
+   "kind": "shelf"
+  },
+  {
+   "id": "potatoes",
+   "price": 1.89,
+   "qty": 3000,
+   "unit": "g",
+   "store": "de_disc",
+   "product": "Lidl deutsche Speisekartoffeln 3 kg (temporary price cut)",
+   "source": "https://www.topagrar.com/markt/news/lidl-senkt-preise-fur-deutsche-kartoffeln-und-will-absatz-ankurbeln-20020043",
+   "date": "2026-11",
+   "kind": "shelf"
+  },
+  {
+   "id": "chicken_breast",
+   "price": 6.79,
+   "qty": 600,
+   "unit": "g",
+   "store": "de_rewe",
+   "product": "REWE ja! Hähnchenbrustfilet 600 g",
+   "source": "https://www.heidelberg24.de/verbraucher/gag-produkte-laengst-wieder-teuer-dauerhafte-preissenkungen-bei-aldi-rewe-co-nur-pr-zr-93991504.html",
+   "date": "undated",
+   "kind": "shelf"
+  },
+  {
+   "id": "cheddar",
+   "price": 12.9,
+   "qty": 1000,
+   "unit": "g",
+   "store": null,
+   "product": "Cheese 1 kg (Berlin)",
+   "source": "https://www.settle-in-berlin.com/cost-of-living-in-berlin/",
+   "date": "undated",
+   "kind": "average",
+   "note": "local cheese"
+  }
+ ]
+}
