@@ -101,3 +101,51 @@ module.exports = (T) => {
     ctx.assert.deepStrictEqual(bad, []);
   }, { tags: ["browser", "i18n"] });
 };
+
+// English UI strings that are rendered without going through the translation (visible text equal to an English key)
+module.exports.extra = true;
+const _orig = module.exports;
+module.exports = (T) => {
+  _orig(T);
+  T.test("no untranslated English UI strings on screen in de, ja, ar, hi (globe, find, prices, recipe, settings)", async (ctx) => {
+    const fs = require("fs"), path = require("path"), vm = require("vm");
+    const keys = JSON.parse(fs.readFileSync(path.join(ctx.ROOT, "tools/i18n-keys.json"), "utf8")).keys || [];
+    const sb = {}; sb.window = sb; vm.createContext(sb);
+    const bad = [];
+    for (const lang of ["de", "ja", "ar", "hi"]) {
+      vm.runInContext(fs.readFileSync(path.join(ctx.ROOT, `js/i18n/${lang}.js`), "utf8"), sb);
+      const ui = (sb.I18N_DICT[lang] || {}).ui || {};
+      const watch = keys.filter((k) => k.length >= 6 && !/\{/.test(k) && ui[k] && ui[k] !== k);
+      const markets = { de: "DE", ja: "JP", ar: "SA", hi: "IN" };
+      const P = await ctx.newPage({ device: "desktop", lang, market: markets[lang], globe: false });
+      try {
+        await P.goto("find");
+        const found = new Set();
+        const scan = async (where) => (await P.page.evaluate((watch) => {
+          const set = new Set(watch), out = [];
+          const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+          let n;
+          while ((n = w.nextNode())) {
+            const s = n.nodeValue.trim().replace(/^[✓☆★+·\s]+|[↗:\s]+$/g, "");
+            if (s && set.has(s) && n.parentElement && n.parentElement.getClientRects().length && !n.parentElement.closest("[lang=en],script,style")) out.push(s);
+          }
+          document.querySelectorAll("[placeholder],[aria-label]").forEach((e) => ["placeholder", "aria-label"].forEach((a) => { const v = e.getAttribute(a); if (v && set.has(v)) out.push(`${a}="${v}"`); }));
+          return out;
+        }, watch)).forEach((s) => found.add(`${s} (${where})`));
+        for (const v of ["globe", "find", "plan", "pantry", "prices"]) { await P.page.evaluate((v) => { location.hash = v; }, v); await P.page.waitForTimeout(250); await scan(v); }
+        const rid = await P.page.evaluate(() => (window.RECIPES ? window.RECIPES[2].id : null));
+        if (!rid) throw new Error(`${lang}: window.RECIPES missing; errors: ${P.errors.join("; ")}`);
+        await P.page.evaluate((rid) => { location.hash = "recipe-" + rid; }, rid);
+        await P.page.waitForTimeout(300);
+        await P.page.$eval('#recipe-dialog [data-action="compare"]', (b) => b.click()).catch(() => {});
+        await scan("recipe");
+        await P.page.evaluate(() => { const b = document.querySelector('#recipe-dialog [data-action="close"]'); if (b) b.click(); });
+        await P.page.click("#settings-btn");
+        await P.page.waitForTimeout(200);
+        await scan("settings");
+        if (found.size) bad.push(`${lang}: ${[...found].slice(0, 10).join(" | ")}`);
+      } finally { await P.close(); }
+    }
+    ctx.assert.deepStrictEqual(bad, []);
+  }, { timeout: 200000, tags: ["browser", "i18n"] });
+};

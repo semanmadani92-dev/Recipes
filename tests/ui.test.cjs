@@ -104,6 +104,38 @@ module.exports = (T) => {
     } finally { await P.close(); }
   }, { tags: ["browser", "prices"] });
 
+  T.test("exchange rate edit on the Prices page rescales estimates, keeps real store prices, persists, and Reset restores", async (ctx) => {
+    const P = await ctx.newPage({ device: "desktop", market: "JP", globe: false });
+    const { page, assert } = { page: P.page, assert: ctx.assert };
+    try {
+      await P.goto("prices");
+      await page.waitForSelector("#pr-rate input[data-rate]", { state: "attached" });
+      const pick = await page.evaluate(() => {
+        const L = ((window.LOCAL_PRICES || {}).JP || {}).items || {};
+        const est = Object.keys(window.PRICES).find((id) => !L[id] && window.PRICES[id].p > 3);
+        const loc = Object.keys(L)[0] || null;
+        const val = (id) => (id ? +document.querySelector(`#price-body input[data-price="${id}"]`).value : null);
+        return { est, loc, e0: val(est), l0: val(loc), rate: +document.querySelector("#pr-rate input[data-rate]").value };
+      });
+      await page.fill("#pr-rate input[data-rate]", String(pick.rate * 2));
+      await page.dispatchEvent("#pr-rate input[data-rate]", "change");
+      await page.waitForTimeout(200);
+      const val = (id) => page.$eval(`#price-body input[data-price="${id}"]`, (e) => +e.value);
+      const e1 = await val(pick.est);
+      assert.ok(Math.abs(e1 / pick.e0 - 2) < 0.05, `estimate ${pick.est}: ${pick.e0} -> ${e1} after doubling the rate`);
+      if (pick.loc) assert.strictEqual(await val(pick.loc), pick.l0, `real store price ${pick.loc} changed with the exchange rate`);
+      assert.ok(Math.abs(((await ls(page))["wp.rates"] || {}).JP / pick.rate - 2) < 0.01, "rate not saved");
+      await P.reload();
+      await page.evaluate(() => { location.hash = "prices"; });
+      await page.waitForSelector("#price-body input[data-price]", { state: "attached" });
+      assert.strictEqual(await val(pick.est), e1, "rate lost after reload");
+      await page.click("#price-reset"); await page.click("#price-reset");
+      await page.waitForTimeout(200);
+      assert.strictEqual(await val(pick.est), pick.e0, "reset did not restore the default rate");
+      assert.deepStrictEqual([...new Set(P.errors)], []);
+    } finally { await P.close(); }
+  }, { tags: ["browser", "prices"] });
+
   T.test("cooking mode opens, shows steps and moves forward", async (ctx) => {
     const P = await ctx.newPage({ device: "phone", globe: false });
     const { page } = P;

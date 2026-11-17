@@ -265,9 +265,25 @@
   }
   // oven temperatures in recipe steps: "180 °C", "200°C", "180C", "180–200 °C" -> °F in US units
   const toF = (c) => { const f = c * 9 / 5 + 32; return f >= 250 ? Math.round(f / 25) * 25 : Math.round(f / 5) * 5; };
+  // amounts written in step text: "500 ml water", "2 l", "200 g", "1.5 cm thick", "2–3 cm pieces"
+  const STEP_QTY = /(\d+(?:[.,]\d+)?)(?:\s*(–|-|to)\s*(\d+(?:[.,]\d+)?))?\s?(ml|kg|g|l|cm)\b(?![.,]?\d)/g;
+  function usAmount(v, u) {
+    if (u === "ml") return usVolume(v);
+    if (u === "l") return usVolume(v * 1000);
+    if (u === "g") return usWeight(v);
+    if (u === "kg") return usWeight(v * 1000);
+    const inch = Math.max(0.25, kitchenRound(v / 2.54));
+    return fmtCount(inch) + " in";
+  }
   function fmtStep(text) {
     if (!usUnits()) return text;
-    return String(text).replace(/(\d{2,3})(?:\s*(–|-|to)\s*(\d{2,3}))?(\s?)(?:°|º)\s?C\b|\b([12]\d{2})C\b/g, (m, a, dash, b, sp, bare) => {
+    text = String(text).replace(STEP_QTY, (m, a, dash, b, u) => {
+      const x = parseFloat(a.replace(",", ".")), y = b != null ? parseFloat(b.replace(",", ".")) : null;
+      if (y == null) return usAmount(x, u);
+      if (u === "cm") return fmtCount(Math.max(0.25, kitchenRound(x / 2.54))) + dash + usAmount(y, u);
+      return usAmount(x, u) + " " + dash + " " + usAmount(y, u);
+    });
+    return text.replace(/(\d{2,3})(?:\s*(–|-|to)\s*(\d{2,3}))?(\s?)(?:°|º)\s?C\b|\b([12]\d{2})C\b/g, (m, a, dash, b, sp, bare) => {
       if (bare) return toF(+bare) + "°F";
       return toF(+a) + (b ? dash + toF(+b) : "") + sp + "°F";
     });
@@ -282,8 +298,8 @@
   }
   function unitPrice(id) {
     const p = PRICES[id]; const price = priceOf(id);
-    if (p.u === "g") return money((price / p.q) * 1000) + "/kg";
-    if (p.u === "ml") return money((price / p.q) * 1000) + "/l";
+    if (p.u === "g") return usUnits() ? money((price / p.q) * 453.592) + "/lb" : money((price / p.q) * 1000) + "/kg";
+    if (p.u === "ml") return usUnits() ? money((price / p.q) * 946.353) + "/qt" : money((price / p.q) * 1000) + "/l";
     return money(price / p.q) + "/" + (p.u === "pc" ? t("pc") : unitWord(1, p.u, "").trim());
   }
 
@@ -1021,7 +1037,7 @@
         ${marketPicker()}
         <label class="field"><span>${esc(t("Store"))}</span><select data-store>${storeOptions()}</select></label>
         ${rateLine()}
-        <p class="set-note">${esc(t("Prices outside Germany are estimates worked out from German shop prices, local food price levels and exchange rates. You can change any price on the Prices page."))}${localCount(state.market) ? " " + esc(tn(localCount(state.market), "{n} price for {country} comes from real store prices.", "{n} prices for {country} come from real store prices.", { country: mName(state.market) })) : ""}</p>
+        <p class="set-note">${esc(t("Real store prices are used where they were found. The rest are estimates worked out from German shop prices, local food price levels and exchange rates. You can change any price on the Prices page."))}${localCount(state.market) ? " " + esc(tn(localCount(state.market), "{n} price for {country} comes from real store prices.", "{n} prices for {country} come from real store prices.", { country: mName(state.market) })) : ""}</p>
       </section>
       <section class="set-sec"><h3>${esc(t("Units"))}</h3>
         <div class="seg units-seg" role="radiogroup" aria-label="${esc(t("Units"))}">
@@ -1176,7 +1192,7 @@
           <section class="d-section">
             <h2>${esc(t("Ingredients"))}</h2>
             <ul class="ing-list">
-              ${cost.lines.map((l) => `<li class="${l.have ? "have" : ""}"><span class="qty">${esc(fmtQty(l.q, l.u))}</span><span>${esc(l.name)}${l.note ? ` <span class="note" lang="en">(${esc(l.note)})</span>` : ""}</span><button type="button" class="have-btn" data-have="${l.id}" aria-pressed="${l.have}" title="${esc(l.have ? t("In your pantry") : t("Mark as in your pantry"))}">${esc(l.have ? "✓ " + t("Have") : t("Have it?"))}</button></li>`).join("")}
+              ${cost.lines.map((l) => `<li class="${l.have ? "have" : ""}"><span class="qty">${esc(fmtQty(l.q, l.u))}</span><span>${esc(l.name)}${l.note ? ` <span class="note" lang="en">(${esc(fmtStep(l.note))})</span>` : ""}</span><button type="button" class="have-btn" data-have="${l.id}" aria-pressed="${l.have}" title="${esc(l.have ? t("In your pantry") : t("Mark as in your pantry"))}">${esc(l.have ? "✓ " + t("Have") : t("Have it?"))}</button></li>`).join("")}
             </ul>
           </section>
           <section class="d-section">
@@ -1248,7 +1264,7 @@
     const r = byId[state.openRecipe];
     if (!r || !window.CookMode) return;
     const cost = costOf(r, state.servings, true);
-    window.CookMode.open({ name: r.name, steps: r.steps.map(fmtStep), ingredients: cost.lines.map((l) => ({ name: l.name, qty: fmtQty(l.q, l.u), note: l.note })), translateUrl: I18N.lang !== "en" ? I18N.translateUrl(r.steps.map((x, i) => (i + 1) + ". " + x).join("\n")) : null });
+    window.CookMode.open({ name: r.name, steps: r.steps.map(fmtStep), ingredients: cost.lines.map((l) => ({ name: l.name, qty: fmtQty(l.q, l.u), note: l.note ? fmtStep(l.note) : l.note })), translateUrl: I18N.lang !== "en" ? I18N.translateUrl(r.steps.map((x, i) => (i + 1) + ". " + x).join("\n")) : null });
   }
 
   // ---------- notes, ratings, cooked ----------
