@@ -10,7 +10,7 @@ A recipe app in 16 languages with two ways to find food:
   - region, cooking time and difficulty
   - maximum cost per serving
 
-Every recipe shows **what it costs to cook where you shop**: 37 countries, each with its own stores (for example Aldi, Rewe or a Turkish grocer in Germany, Walmart or Whole Foods in the US, D-Mart or a sabzi market in India), in local money. The cost appears as a supermarket-receipt breakdown:
+Every recipe shows **what it costs to cook where you shop**: every recipe country and every large country (over 150), each with its own stores (for example Aldi, Rewe or a Turkish grocer in Germany, Walmart or Whole Foods in the US, D-Mart or a sabzi market in India), in local money. The cost appears as a supermarket-receipt breakdown:
 
 - **Ingredients used**: the share of each pack the recipe needs, in total and per serving.
 - **At the till**: what you pay if you buy whole packs.
@@ -30,11 +30,33 @@ The app speaks English, 中文, हिन्दी, Español, العربية, Fr
 
 ## Countries and stores
 
-The globe button also sets **where you shop**: a country and one of its stores. German prices are the base (typical discounter prices). Every other country and store is estimated from them:
+The globe button also sets **where you shop**: a country and one of its stores. Every recipe country and every country with more than 20 million people is there (over 150), in a searchable list grouped by region (type a country name, its English name, its code or its currency, such as "THB"). On the first visit the app guesses your country from the browser's language region (for example `en-US` → United States, `pt-BR` → Brazil), then from your time zone, and otherwise uses Germany. It does not save the guess until you pick a country yourself.
+
+Each price comes from one of three places, in this order:
+
+1. **Your price**: anything you type on the Prices page, saved for that country only.
+2. **Store price**: a real shelf price seen in a store of that country (supermarket websites, price-statistics offices and similar sources, collected November 2026). It is converted to the German pack size and to the country's cheapest store, then the store factor and store-type factor below are applied.
+3. **Estimate**: worked out from the German price (typical discounter prices):
 
 > German price × country food price level × shelf factor (rice, fish, spices, meat … differ by country) × store factor × store-type factor (markets are cheap for produce, Asian/Turkish grocers for spices and sauces) × exchange rate
 
-The country data is in `js/data/markets.js`. Exchange rates are approximate (late 2025); you can type the current rate on the Prices page. Any price you change is saved for that country only. The Prices page also compares the average cost per serving across the stores of your country and across all countries.
+The Prices page marks store prices and your own prices, says how many of the 345 prices are real store prices for the chosen country, and lists the sources. The recipe receipt says, for example, "5 of 15 ingredients from real store prices in United States."
+
+The hand-written country data is in `js/data/markets.js`. `js/data/markets-world.js` adds the other countries and corrects rates, price levels and stores from the research; `js/data/local-prices.js` holds the store prices. Both are generated (see below). Exchange rates are approximate (November 2026); you can type the current rate on the Prices page. The Prices page also compares the average cost per serving across the stores of your country and across all countries.
+
+### Real store prices: updating them
+
+The research data lives in `research/markets.json` (per country: currency, exchange rate, food price level, shelf factors, stores, sources) and `research/prices/<CC>.json` (observed shelf prices, one row per product). After changing it, run:
+
+```bash
+python3 tools/import_research.py
+```
+
+It writes `js/data/markets-world.js` and `js/data/local-prices.js` and prints a report: markets added, prices per country, and every row it skipped (unknown ingredient, unit that cannot be converted, such as a bunch against a weight) or rejected as an outlier (more than 5× or less than 0.2× the estimate, usually a pack-size mistake). Each observation is converted to the German pack size (weights by `g`, volumes by `ml`, items by `pc`, with typical weights for things such as peppers or cans), divided by its store's factor, and the median per ingredient is kept with up to three source links. It works with no research at all: countries without data get a rough regional price level, their own currency and generic stores ("Supermarket", "Fresh market", "Corner shop").
+
+## Units
+
+The settings sheet has **Metric (g, ml, °C)** or **US (oz, cups, °F)**. US units are the default in the United States, Liberia and Myanmar, metric everywhere else; your choice is saved. In US units, recipe ingredients, the receipt, shopping lists, cooking mode and the video show weights in oz and lb, small amounts of spice in teaspoons, liquids in cups, tablespoons and teaspoons, and oven temperatures in recipe steps ("roast at 200 °C") in °F. Pack sizes stay metric with the US size in brackets, for example "500 g (18 oz)".
 
 Most recipes (422 of 446) show a **photo of the dish** on its card, at the top of the recipe and in the video intro. The photos come from Wikimedia Commons under free licenses (CC BY, CC BY-SA, CC0, GFDL or public domain), and each one is credited with its author, license and a link to the source. `tools/fetch_photos.py` finds and downloads them (see the overrides and skip list at the top of the script); the credits are in `js/data/photos.js`. Dishes without a correct free photo show none rather than a wrong one.
 
@@ -99,7 +121,10 @@ python3 tools/build_standalone.py --globe … --no-photos --out dist/world-pantr
 | `css/style.css` | Styles, with light and dark themes |
 | `js/app.js` | Globe, search and filters, cost calculation, price comparison, routing |
 | `js/i18n.js`, `js/i18n/*.js` | Language switching and the 15 translations |
-| `js/data/markets.js` | Countries, currencies, price levels and stores |
+| `js/data/markets.js` | Hand-written countries, currencies, price levels and stores |
+| `js/data/markets-world.js`, `js/data/local-prices.js` | Generated by `tools/import_research.py`: all other countries, and real store prices with sources |
+| `research/` | Research data: country markets and observed shelf prices |
+| `tools/import_research.py` | Turns the research data into the two generated files above |
 | `tools/i18n_keys.py` | Lists the translatable strings and checks the language files |
 | `js/player.js` | The animated recipe video player |
 | `js/cook.js` | Cooking mode with step timers |
@@ -128,4 +153,4 @@ Add an entry to `RECIPES` in `js/data/recipes.js`, or push it from one of the re
 
 ## About the prices
 
-The base prices are estimates in euros, based on typical discounter and own-brand prices in Germany (Aldi, Lidl, Penny, Rewe, Edeka) for 2025–2026. Other countries and stores are estimated from them (see "Countries and stores" above), using rounded food price level comparisons (Eurostat, World Bank ICP) and approximate exchange rates. They are good for comparing, not exact quotes: real prices vary by store, region, season and offers. Use the Prices tab to adjust them. Pack sizes are the German ones everywhere.
+The base prices are estimates in euros, based on typical discounter and own-brand prices in Germany (Aldi, Lidl, Penny, Rewe, Edeka) for 2025–2026. Other countries and stores are estimated from them (see "Countries and stores" above), using rounded food price level comparisons (Eurostat, World Bank ICP) and approximate exchange rates. Where the research found real shelf prices for a country, those replace the estimate (see "Countries and stores"). They are good for comparing, not exact quotes: real prices vary by store, region, season and offers. Use the Prices tab to adjust them. Pack sizes are the German ones everywhere.

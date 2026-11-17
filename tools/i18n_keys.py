@@ -54,6 +54,8 @@ console.log(JSON.stringify(cats.concat(generic)));'''
     out = subprocess.check_output(["node", "-e", node, ROOT], text=True)
     app = open(os.path.join(ROOT, "js/app.js"), encoding="utf8").read()
     extra = ["Europe", "Middle East", "Africa", "Asia", "Americas", "Oceania", "Easy", "Medium", "Hard", "Intro"]
+    # generic (non-brand) store names that research may use for any country
+    extra += ["Fresh market", "Weekly market", "Corner shop", "Local grocers", "Supermarket"]
     extra += re.findall(r'name: "([^"]+)"', app[app.index("const ALLERGENS"):app.index("const DAYS")])
     extra += re.findall(r'\w+: "([^"]+)"', app[app.index("const STORE_TYPE_NAMES"):app.index("const REGIONS")])
     return json.loads(out) + extra

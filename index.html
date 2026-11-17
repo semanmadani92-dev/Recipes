@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>World Pantry</title>
-<meta name="description" content="Spin a globe to find over 440 famous dishes from more than 150 countries, search recipes by ingredient, and see what each one costs to cook in 37 countries and their stores. In 16 languages.">
+<meta name="description" content="Spin a globe to find over 440 famous dishes from more than 150 countries, search recipes by ingredient, and see what each one costs to cook in more than 150 countries and their stores. In 16 languages.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
@@ -204,6 +204,7 @@
       <input id="price-q" type="search" placeholder="Filter ingredients…" aria-label="Filter ingredients">
       <button type="button" class="btn-ghost" id="price-reset">Reset all prices</button>
     </div>
+    <div class="price-src" id="price-src"></div>
     <div class="table-wrap">
       <table class="price-table">
         <thead><tr><th scope="col">Ingredient</th><th scope="col">Shelf</th><th scope="col" class="num">Pack</th><th scope="col" class="num" id="price-col">Price</th><th scope="col" class="num">Unit price</th><th scope="col" class="num">Used in</th></tr></thead>
@@ -301,6 +302,8 @@
 <script src="js/data/prices-more.js"></script>
 <script src="js/data/prices-extra.js"></script>
 <script src="js/data/markets.js"></script>
+<script src="js/data/markets-world.js"></script>
+<script src="js/data/local-prices.js"></script>
 <script src="js/data/recipes.js"></script>
 <script src="js/data/recipes-europe.js"></script>
 <script src="js/data/recipes-mideast-africa.js"></script>
