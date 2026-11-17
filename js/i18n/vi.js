@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{a} trên {b} nguyên liệu theo giá cửa hàng thật ở {country}.",
 "All prices are estimates for {country}.": "Mọi giá ở {country} đều là ước tính.",
 "{n} sources": "{n} nguồn",
-"{n} store prices": "{n} giá cửa hàng",
 "{n} prices for {country} come from real store prices.": "{n} giá ở {country} lấy từ giá cửa hàng thật.",
 "{n} cups": "{n} cốc",
 "{n} tbsp": "{n} thìa canh",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "Quốc gia khác",
 "Kirana · sabzi mandi": "Tiệm kirana · chợ rau",
 "Kacha bazar": "Chợ tươi (Kacha bazar)",
-"Mercado / tianguis": "Mercado / tianguis (chợ)"
+"Mercado / tianguis": "Mercado / tianguis (chợ)",
+"average price": "giá trung bình",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": "{n} giá là giá trung bình cả nước (cơ quan thống kê, khảo sát giá), tính cho một cửa hàng thông thường.",
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{a} trên {b} nguyên liệu theo giá thật ở {country} (giá cửa hàng hoặc trung bình cả nước).",
+"{n} real prices": "{n} giá thật"
 },
 ing: `salt=Muối
 black_pepper=Tiêu đen

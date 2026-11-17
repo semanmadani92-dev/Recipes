@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{a} von {b} Zutaten mit echten Ladenpreisen aus {country}.",
 "All prices are estimates for {country}.": "Alle Preise für {country} sind Schätzungen.",
 "{n} sources": { one: "{n} Quelle", other: "{n} Quellen" },
-"{n} store prices": { one: "{n} Ladenpreis", other: "{n} Ladenpreise" },
 "{n} prices for {country} come from real store prices.": { one: "{n} Preis für {country} ist ein echter Ladenpreis.", other: "{n} Preise für {country} sind echte Ladenpreise." },
 "{n} cups": { one: "{n} Cup", other: "{n} Cups" },
 "{n} tbsp": "{n} EL",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "Weitere Länder",
 "Kirana · sabzi mandi": "Kirana-Laden · Gemüsemarkt",
 "Kacha bazar": "Kacha Bazar (Frischmarkt)",
-"Mercado / tianguis": "Mercado / Tianguis (Markt)"
+"Mercado / tianguis": "Mercado / Tianguis (Markt)",
+"average price": "Durchschnittspreis",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": { one: "{n} Preis ist ein landesweiter Durchschnitt (Statistikämter, Preiserhebungen), umgerechnet auf einen typischen Laden.", other: "{n} Preise sind landesweite Durchschnitte (Statistikämter, Preiserhebungen), umgerechnet auf einen typischen Laden." },
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{a} von {b} Zutaten mit echten Preisen aus {country} (Ladenpreise oder landesweite Durchschnitte).",
+"{n} real prices": { one: "{n} echter Preis", other: "{n} echte Preise" }
 },
 ing: `salt=Salz
 black_pepper=Schwarzer Pfeffer

@@ -165,6 +165,24 @@ module.exports = (T) => {
     } finally { await P.close(); }
   }, { tags: ["browser", "feature", "markets"] });
 
+  T.test("country search in the picker works in the reader's language (ja: 日本, de: Türkei, ar: مصر)", async (ctx) => {
+    const bad = [];
+    for (const [lang, term, cc] of [["ja", "日本", "JP"], ["de", "türkei", "TR"], ["ar", "مصر", "EG"], ["es", "alemania", "DE"]]) {
+      const P = await ctx.newPage({ device: "phone", lang, globe: false });
+      try {
+        await P.goto("find");
+        await P.page.click("#settings-btn");
+        const q = await P.page.waitForSelector("#mk-q", { state: "attached", timeout: 3000 }).catch(() => null);
+        if (!q) { bad.push(lang + ": no search box"); continue; }
+        await q.fill(term);
+        await P.page.waitForTimeout(100);
+        const vis = await P.page.$$eval("#mk-list .mk-item", (els) => els.filter((e) => !e.hidden && e.offsetParent).map((e) => e.dataset.setMarket));
+        if (!vis.includes(cc)) bad.push(`${lang} '${term}': ${vis.slice(0, 8).join(",") || "nothing"} (want ${cc})`);
+      } finally { await P.close(); }
+    }
+    ctx.assert.deepStrictEqual(bad, []);
+  }, { tags: ["browser", "feature", "markets", "i18n"] });
+
   T.test("LOCAL_PRICES replace the estimate for that market (cheapest store) and store factors still apply", async (ctx) => {
     const P = await ctx.newPage({ device: "desktop", globe: false });
     const { page, assert } = { page: P.page, assert: ctx.assert };
@@ -248,6 +266,56 @@ module.exports = (T) => {
         assert.strictEqual(real2, 0, `${none} has no local prices but shows ${real2} 'store price' tags`);
       }
       assert.deepStrictEqual(await badText(page, "#view-prices"), []);
+      assert.deepStrictEqual([...new Set(P.errors)], []);
+    } finally { await P.close(); }
+  }, { tags: ["browser", "feature", "prices"] });
+
+  T.test("national averages are labelled 'average price', shelf observations 'store price' (per row, every local-price market)", async (ctx) => {
+    const P = await ctx.newPage({ device: "desktop", globe: false });
+    const { page, assert } = { page: P.page, assert: ctx.assert };
+    try {
+      await P.goto("prices");
+      const hasKind = await page.evaluate(() => Object.values(window.LOCAL_PRICES || {}).some((L) => Object.values(L.items).some((i) => i.k)));
+      if (!hasKind) ctx.pending("local-prices.js does not record shelf vs average (k) yet");
+      const bad = await page.evaluate(() => {
+        const out = [];
+        const sel = document.getElementById("pr-market");
+        for (const cc of Object.keys(window.LOCAL_PRICES)) {
+          sel.value = cc; sel.dispatchEvent(new Event("change", { bubbles: true }));
+          const st = document.getElementById("pr-store"); st.value = st.options[0].value; st.dispatchEvent(new Event("change", { bubbles: true }));
+          for (const [id, it] of Object.entries(window.LOCAL_PRICES[cc].items)) {
+            const inp = document.querySelector(`#price-body input[data-price="${id}"]`);
+            if (!inp) continue;
+            const tag = inp.closest("tr").querySelector(".src-tag");
+            const kind = !tag ? "none" : tag.classList.contains("avg") ? "avg" : tag.classList.contains("real") ? "shelf" : "other";
+            const want = it.k === "avg" ? "avg" : "shelf";
+            if (kind !== want) out.push(`${cc}.${id}: tagged ${kind}, data says ${it.k}`);
+          }
+        }
+        return out;
+      });
+      assert.deepStrictEqual(bad.slice(0, 15), [], bad.length + " mislabelled rows");
+      assert.deepStrictEqual([...new Set(P.errors)], []);
+    } finally { await P.close(); }
+  }, { timeout: 200000, tags: ["browser", "feature", "prices"] });
+
+  T.test("editing a real store price marks it 'your price'; Reset brings back the store price", async (ctx) => {
+    const P = await ctx.newPage({ device: "desktop", market: "US", globe: false });
+    const { page, assert } = { page: P.page, assert: ctx.assert };
+    try {
+      await P.goto("prices");
+      const id = await page.evaluate(() => { const L = ((window.LOCAL_PRICES || {}).US || {}).items || {}; return Object.keys(L).find((k) => L[k].k !== "avg") || Object.keys(L)[0] || null; });
+      if (!id) ctx.pending("no US local prices");
+      const sel = `#price-body input[data-price="${id}"]`;
+      const before = await page.$eval(sel, (e) => [+e.value, e.closest("tr").querySelector(".src-tag") ? e.closest("tr").querySelector(".src-tag").className : ""]);
+      await page.click(sel); await page.keyboard.press("Control+A"); await page.keyboard.type(String(Math.round(before[0] * 3 + 1))); await page.keyboard.press("Tab");
+      await page.waitForTimeout(200);
+      const mid = await page.$eval(sel, (e) => [+e.value, e.closest("tr").querySelector(".src-tag") ? e.closest("tr").querySelector(".src-tag").className : ""]);
+      assert.ok(/mine/.test(mid[1]), `after editing ${id}: tag "${mid[1]}"`);
+      await page.click("#price-reset"); await page.click("#price-reset");
+      await page.waitForTimeout(200);
+      const after = await page.$eval(sel, (e) => [+e.value, e.closest("tr").querySelector(".src-tag") ? e.closest("tr").querySelector(".src-tag").className : ""]);
+      assert.deepStrictEqual(after, before, "reset");
       assert.deepStrictEqual([...new Set(P.errors)], []);
     } finally { await P.close(); }
   }, { tags: ["browser", "feature", "prices"] });

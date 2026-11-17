@@ -762,3 +762,4 @@ a.src-tag.real:hover { text-decoration: underline; }
 /* long country and store names must not widen the receipt on a phone */
 .rc-where, .rc-level { min-width: 0; }
 .rc-level select, .prices-tools select { max-width: 100%; min-width: 0; text-overflow: ellipsis; }
+.src-tag.real.avg { color: var(--ink); border-style: dashed; background: transparent; }

@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{a} من {b} مكونًا بأسعار متاجر حقيقية في {country}.",
 "All prices are estimates for {country}.": "كل الأسعار في {country} تقديرية.",
 "{n} sources": { zero: "{n} مصدر", one: "مصدر واحد", two: "مصدران", few: "{n} مصادر", many: "{n} مصدرًا", other: "{n} مصدر" },
-"{n} store prices": { zero: "{n} سعر متجر", one: "سعر متجر واحد", two: "سعرا متجر", few: "{n} أسعار متاجر", many: "{n} سعرًا من المتاجر", other: "{n} سعر متجر" },
 "{n} prices for {country} come from real store prices.": { zero: "{n} سعر في {country} من أسعار متاجر حقيقية.", one: "سعر واحد في {country} من أسعار متاجر حقيقية.", two: "سعران في {country} من أسعار متاجر حقيقية.", few: "{n} أسعار في {country} من أسعار متاجر حقيقية.", many: "{n} سعرًا في {country} من أسعار متاجر حقيقية.", other: "{n} سعر في {country} من أسعار متاجر حقيقية." },
 "{n} cups": { zero: "{n} كوب", one: "كوب واحد", two: "كوبان", few: "{n} أكواب", many: "{n} كوبًا", other: "{n} كوب" },
 "{n} tbsp": "{n} ملعقة كبيرة",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "دول أخرى",
 "Kirana · sabzi mandi": "بقالة كيرانا · سوق الخضار",
 "Kacha bazar": "سوق الخضار (كاتشا بازار)",
-"Mercado / tianguis": "ميركادو / تيانغيس (سوق)"
+"Mercado / tianguis": "ميركادو / تيانغيس (سوق)",
+"average price": "سعر متوسط",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": { zero: "{n} سعر متوسطات وطنية (مكاتب الإحصاء ومسوح الأسعار)، معروضة لمتجر عادي.", one: "سعر واحد متوسط وطني (مكاتب الإحصاء ومسوح الأسعار)، معروض لمتجر عادي.", two: "سعران متوسطان وطنيان (مكاتب الإحصاء ومسوح الأسعار)، معروضان لمتجر عادي.", few: "{n} أسعار متوسطات وطنية (مكاتب الإحصاء ومسوح الأسعار)، معروضة لمتجر عادي.", many: "{n} سعرًا متوسطات وطنية (مكاتب الإحصاء ومسوح الأسعار)، معروضة لمتجر عادي.", other: "{n} سعر متوسطات وطنية (مكاتب الإحصاء ومسوح الأسعار)، معروضة لمتجر عادي." },
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{a} من {b} مكونًا بأسعار حقيقية في {country} (أسعار متاجر أو متوسطات وطنية).",
+"{n} real prices": { zero: "{n} سعر حقيقي", one: "سعر حقيقي واحد", two: "سعران حقيقيان", few: "{n} أسعار حقيقية", many: "{n} سعرًا حقيقيًا", other: "{n} سعر حقيقي" }
 },
 ing: `salt=ملح
 black_pepper=فلفل أسود

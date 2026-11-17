@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{b} 种食材中有 {a} 种使用{country}的真实门店价格。",
 "All prices are estimates for {country}.": "{country}的所有价格均为估算。",
 "{n} sources": "{n} 个来源",
-"{n} store prices": "{n} 个门店价格",
 "{n} prices for {country} come from real store prices.": "{country}有 {n} 个价格来自真实门店价格。",
 "{n} cups": "{n} 杯",
 "{n} tbsp": "{n} 汤匙",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "其他国家",
 "Kirana · sabzi mandi": "基拉纳小店 · 蔬菜市场",
 "Kacha bazar": "生鲜集市（Kacha bazar）",
-"Mercado / tianguis": "传统市场 / 露天集市"
+"Mercado / tianguis": "传统市场 / 露天集市",
+"average price": "平均价格",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": "{n} 个价格是全国平均价格（统计机构和价格调查），按普通商店计算。",
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{b} 种食材中有 {a} 种使用{country}的真实价格（门店价格或全国平均价格）。",
+"{n} real prices": "{n} 个真实价格"
 },
 ing: `salt=盐
 black_pepper=黑胡椒

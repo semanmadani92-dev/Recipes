@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{b}টি উপকরণের মধ্যে {a}টি {country}-এর দোকানের আসল দামে।",
 "All prices are estimates for {country}.": "{country}-এর সব দামই অনুমান।",
 "{n} sources": "{n}টি উৎস",
-"{n} store prices": "দোকানের {n}টি দাম",
 "{n} prices for {country} come from real store prices.": "{country}-এর {n}টি দাম দোকানের আসল দাম থেকে।",
 "{n} cups": "{n} কাপ",
 "{n} tbsp": "{n} টেবিল চামচ",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "অন্যান্য দেশ",
 "Kirana · sabzi mandi": "মুদি দোকান · সবজি মণ্ডি",
 "Kacha bazar": "কাঁচা বাজার",
-"Mercado / tianguis": "মেরকাদো / তিয়াঙ্গিস (বাজার)"
+"Mercado / tianguis": "মেরকাদো / তিয়াঙ্গিস (বাজার)",
+"average price": "গড় দাম",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": "{n}টি দাম জাতীয় গড় (পরিসংখ্যান দপ্তর, দাম জরিপ), সাধারণ দোকানের হিসাবে দেখানো।",
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{b}টি উপকরণের মধ্যে {a}টি {country}-এর আসল দামে (দোকানের দাম বা জাতীয় গড়)।",
+"{n} real prices": "{n}টি আসল দাম"
 },
 ing: `salt=লবণ
 black_pepper=গোলমরিচ

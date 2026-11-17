@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{a} из {b} ингредиентов по реальным ценам магазинов: {country}.",
 "All prices are estimates for {country}.": "Все цены для страны «{country}» — оценки.",
 "{n} sources": { one: "{n} источник", few: "{n} источника", many: "{n} источников", other: "{n} источника" },
-"{n} store prices": { one: "{n} цена из магазина", few: "{n} цены из магазинов", many: "{n} цен из магазинов", other: "{n} цены из магазинов" },
 "{n} prices for {country} come from real store prices.": { one: "{n} цена для страны «{country}» взята из магазинов.", few: "{n} цены для страны «{country}» взяты из магазинов.", many: "{n} цен для страны «{country}» взяты из магазинов.", other: "{n} цены для страны «{country}» взяты из магазинов." },
 "{n} cups": { one: "{n} чашка", few: "{n} чашки", many: "{n} чашек", other: "{n} чашки" },
 "{n} tbsp": "{n} ст. л.",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "Другие страны",
 "Kirana · sabzi mandi": "Кирана · овощной рынок",
 "Kacha bazar": "Кача-базар (рынок)",
-"Mercado / tianguis": "Меркадо / тиангис (рынок)"
+"Mercado / tianguis": "Меркадо / тиангис (рынок)",
+"average price": "средняя цена",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": { one: "{n} цена — средняя по стране (статистика, обзоры цен), пересчитана на обычный магазин.", few: "{n} цены — средние по стране (статистика, обзоры цен), пересчитаны на обычный магазин.", many: "{n} цен — средние по стране (статистика, обзоры цен), пересчитаны на обычный магазин.", other: "{n} цены — средние по стране (статистика, обзоры цен), пересчитаны на обычный магазин." },
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{a} из {b} ингредиентов по реальным ценам: {country} (цены магазинов или средние по стране).",
+"{n} real prices": { one: "{n} реальная цена", few: "{n} реальные цены", many: "{n} реальных цен", other: "{n} реальные цены" }
 },
 ing: `salt=Соль
 black_pepper=Чёрный перец

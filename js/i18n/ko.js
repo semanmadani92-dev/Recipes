@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "재료 {b}개 중 {a}개는 {country}의 실제 매장 가격입니다.",
 "All prices are estimates for {country}.": "{country}의 모든 가격은 추정치입니다.",
 "{n} sources": "출처 {n}개",
-"{n} store prices": "매장 가격 {n}개",
 "{n} prices for {country} come from real store prices.": "{country}의 가격 {n}개는 실제 매장 가격입니다.",
 "{n} cups": "{n}컵",
 "{n} tbsp": "{n}큰술",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "기타 국가",
 "Kirana · sabzi mandi": "키라나 · 채소 시장",
 "Kacha bazar": "카차 바자르 (신선 시장)",
-"Mercado / tianguis": "메르카도 / 티앙기스 (시장)"
+"Mercado / tianguis": "메르카도 / 티앙기스 (시장)",
+"average price": "평균 가격",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": "가격 {n}개는 전국 평균(통계청, 가격 조사)이며 일반 매장 기준으로 표시합니다.",
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "재료 {b}개 중 {a}개는 {country}의 실제 가격입니다(매장 가격 또는 전국 평균).",
+"{n} real prices": "실제 가격 {n}개"
 },
 ing: `salt=소금
 black_pepper=후추

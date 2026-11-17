@@ -77,6 +77,13 @@
     } catch (e) { /* ignore */ }
     return "DE";
   }
+  // someone who used the app before this version had Germany as the default: keep it for them
+  function returningUser() {
+    try {
+      for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && k.startsWith("wp.") && k !== "wp.market") return true; }
+    } catch (e) { /* ignore */ }
+    return false;
+  }
   // US customary units by default where people cook with them
   const US_UNIT_MARKETS = { US: 1, LR: 1, MM: 1 };
 
@@ -84,7 +91,7 @@
     view: "globe",
     country: null,
     saved: new Set(store.get("saved", [])),
-    market: store.get("market", null) || detectMarket(),
+    market: store.get("market", null) || (returningUser() ? "DE" : detectMarket()),
     unitsPref: store.get("units", null),      // "metric" | "us" | null (follow the country)
     stores: store.get("stores", {}),          // market -> store id
     rates: store.get("rates", {}),            // market -> user exchange rate per euro
@@ -104,6 +111,8 @@
     planPicker: false
   };
   state.plan = state.plan.filter((x) => RECIPES.some((r) => r.id === x.id));
+  // remember a first-visit guess, so later visits (which find other wp.* keys) keep it
+  if (store.get("market", null) == null && state.market !== "DE") store.set("market", state.market);
 
   if (!MARKETS[state.market]) state.market = "DE";
   // move settings from the Germany-only version: one price list and three store levels
@@ -200,7 +209,9 @@
   }
   const ovr = (cc) => state.overrides[cc] || {};
   // where a price comes from: "mine" (typed in), "store" (real shelf price) or "est" (estimate)
-  const priceSource = (id, cc) => (ovr(cc)[id] != null ? "mine" : localBase(id, cc) != null ? "store" : "est");
+  // "store" = seen on a shelf, "avg" = national average price (statistics office, price survey)
+  const priceSource = (id, cc) => (ovr(cc)[id] != null ? "mine" : localBase(id, cc) != null ? (LOCAL[cc].items[id].k === "avg" ? "avg" : "store") : "est");
+  const shelfCount = (cc) => Object.keys(PRICES).filter((id) => localBase(id, cc) != null && LOCAL[cc].items[id].k !== "avg").length;
   const localCount = (cc) => (LOCAL[cc] && LOCAL[cc].items ? Object.keys(LOCAL[cc].items).filter((id) => PRICES[id] && localBase(id, cc) != null).length : 0);
   function sourcesFor(cc) {
     const m = MARKETS[cc], seen = new Set(), out = [];
@@ -896,8 +907,10 @@
         const p = PRICES[id]; const changed = mine[id] != null;
         const v = priceOf(id);
         const src = priceSource(id, state.market), L = LOCAL[state.market];
-        const link = src === "store" && L.items[id].src && L.items[id].src[0];
-        const tag = src === "store" ? (link ? `<a class="src-tag real" href="${esc(link)}" target="_blank" rel="noopener" title="${esc(t("Source"))}">${esc(t("store price"))} ↗</a>` : `<span class="src-tag real">${esc(t("store price"))}</span>`)
+        const real = src === "store" || src === "avg";
+        const link = real && L.items[id].src && L.items[id].src[0];
+        const label = src === "avg" ? t("average price") : t("store price"), cls = src === "avg" ? "src-tag real avg" : "src-tag real";
+        const tag = real ? (link ? `<a class="${cls}" href="${esc(link)}" target="_blank" rel="noopener" title="${esc(t("Source"))}">${esc(label)} ↗</a>` : `<span class="${cls}">${esc(label)}</span>`)
           : src === "mine" ? `<span class="src-tag mine">${esc(t("your price"))}</span>` : "";
         return `<tr>
           <td>${esc(name)}${p.s ? `<span class="staple">${esc(t("pantry staple"))}</span>` : ""}${tag}</td>
@@ -911,9 +924,12 @@
   }
   // how many prices are real store prices, and where they come from
   function renderPriceSources() {
-    const cc = state.market, n = localCount(cc), total = Object.keys(PRICES).length, src = sourcesFor(cc), L = LOCAL[cc];
+    const cc = state.market, total = Object.keys(PRICES).length, src = sourcesFor(cc), L = LOCAL[cc];
+    const ids = Object.keys(PRICES).filter((id) => localBase(id, cc) != null);
+    const nAvg = ids.filter((id) => L.items[id].k === "avg").length, n = ids.length - nAvg;
     const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } };
     $("#price-src").innerHTML = `<p class="src-legend"><span class="src-tag real">${esc(t("store price"))}</span> ${esc(n ? t("{a} of {b} prices are real shelf prices seen in stores in {country}.", { a: n, b: total, country: mName(cc) }) : t("No store prices have been collected for {country} yet.", { country: mName(cc) }))}
+      ${nAvg ? `<span class="src-tag real avg">${esc(t("average price"))}</span> ${esc(tn(nAvg, "{n} price is a national average (statistics offices and price surveys), shown at a typical store.", "{n} prices are national averages (statistics offices and price surveys), shown at a typical store."))}` : ""}
       <span class="src-tag">${esc(t("estimate"))}</span> ${esc(t("Worked out from German prices, the local food price level and the exchange rate."))}${MARKETS[cc].fallback ? " " + esc(t("Price level for this country is a rough regional guess.")) : ""}</p>` +
       (src.length ? `<details class="src-list"><summary>${esc(tn(src.length, "{n} source", "{n} sources"))}${L && L.as_of ? " · " + esc(L.as_of) : ""}</summary><ul>${src.map((u) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(host(u))}</a></li>`).join("")}</ul></details>` : "");
   }
@@ -984,7 +1000,7 @@
       <input type="search" id="mk-q" class="mk-q" placeholder="${esc(t("Search countries or currencies…"))}" aria-label="${esc(t("Search countries or currencies…"))}" autocomplete="off">
       <div class="mk-list" id="mk-list">${marketsByRegion().map(([r, list]) => `<div class="mk-group"><h4>${esc(regionLabel(r))}</h4>${list.map(([cc, n]) => {
         const real = localCount(cc);
-        return `<button type="button" class="mk-item${cc === state.market ? " on" : ""}" data-set-market="${cc}" aria-pressed="${cc === state.market}" data-q="${esc((n + " " + I18N.countryEn(cc) + " " + cc + " " + MARKETS[cc].cur).toLocaleLowerCase())}"><span>${esc(n)}</span><small>${esc(MARKETS[cc].cur)}${real ? " · " + esc(tn(real, "{n} store price", "{n} store prices")) : ""}</small></button>`;
+        return `<button type="button" class="mk-item${cc === state.market ? " on" : ""}" data-set-market="${cc}" aria-pressed="${cc === state.market}" data-q="${esc((n + " " + I18N.countryEn(cc) + " " + cc + " " + MARKETS[cc].cur).toLocaleLowerCase())}"><span>${esc(n)}</span><small>${esc(MARKETS[cc].cur)}${real ? " · " + esc(tn(real, "{n} real price", "{n} real prices")) : ""}</small></button>`;
       }).join("")}</div>`).join("")}</div>
       <p class="mk-none" id="mk-none" hidden>${esc(t("No country matches your search."))}</p>
     </div>`;
@@ -1037,7 +1053,7 @@
         ${marketPicker()}
         <label class="field"><span>${esc(t("Store"))}</span><select data-store>${storeOptions()}</select></label>
         ${rateLine()}
-        <p class="set-note">${esc(t("Real store prices are used where they were found. The rest are estimates worked out from German shop prices, local food price levels and exchange rates. You can change any price on the Prices page."))}${localCount(state.market) ? " " + esc(tn(localCount(state.market), "{n} price for {country} comes from real store prices.", "{n} prices for {country} come from real store prices.", { country: mName(state.market) })) : ""}</p>
+        <p class="set-note">${esc(t("Real store prices are used where they were found. The rest are estimates worked out from German shop prices, local food price levels and exchange rates. You can change any price on the Prices page."))}${shelfCount(state.market) ? " " + esc(tn(shelfCount(state.market), "{n} price for {country} comes from real store prices.", "{n} prices for {country} come from real store prices.", { country: mName(state.market) })) : ""}</p>
       </section>
       <section class="set-sec"><h3>${esc(t("Units"))}</h3>
         <div class="seg units-seg" role="radiogroup" aria-label="${esc(t("Units"))}">
@@ -1202,7 +1218,7 @@
           <section class="d-section notes">
             <h2>${esc(t("Your notes"))}</h2>
             <div class="notes-row">
-              <div class="stars" role="radiogroup" aria-label="${esc(t("Your rating"))}">${[1, 2, 3, 4, 5].map((n) => `<button type="button" class="star-btn${note.rating >= n ? " on" : ""}" data-rate="${n}" role="radio" aria-checked="${note.rating === n}" aria-label="${esc(tn(n, "{n} star", "{n} stars"))}">★</button>`).join("")}</div>
+              <div class="stars" role="radiogroup" aria-label="${esc(t("Your rating"))}">${[1, 2, 3, 4, 5].map((n) => `<button type="button" class="star-btn${note.rating >= n ? " on" : ""}" data-star="${n}" role="radio" aria-checked="${note.rating === n}" aria-label="${esc(tn(n, "{n} star", "{n} stars"))}">★</button>`).join("")}</div>
               <button type="button" class="btn-ghost" data-action="cooked">${esc(t("I cooked this"))}</button>
               <span class="cooked-info">${esc(cookedN ? t("Cooked {n}× · last on {date}", { n: cookedN, date: lastCooked }) : t("Not cooked yet"))}${cookedN ? ` <button type="button" class="link-btn" data-action="uncook">${esc(t("undo"))}</button>` : ""}</span>
             </div>
@@ -1218,14 +1234,15 @@
           ${cost.lines.map((l) => `
             <div class="rc-line${l.counted ? "" : " dim"}">
               <span>${esc(l.name)}</span><span>${money(l.usedCost)}</span>
-              <span class="rc-sub">${l.have ? esc(t("in your pantry")) : `${l.packs} × ${esc(packLabel(l.id))} @ ${money(l.price)}${l.staple ? " · " + esc(t("staple")) : ""}${priceSource(l.id, state.market) === "store" ? " · " + esc(t("store price")) : ""}`}</span>
+              <span class="rc-sub">${l.have ? esc(t("in your pantry")) : `${l.packs} × ${esc(packLabel(l.id))} @ ${money(l.price)}${l.staple ? " · " + esc(t("staple")) : ""}${priceSource(l.id, state.market) === "store" ? " · " + esc(t("store price")) : priceSource(l.id, state.market) === "avg" ? " · " + esc(t("average price")) : ""}`}</span>
             </div>`).join("")}
           <div class="rc-rule"></div>
           <div class="rc-total"><span>${esc(t("Ingredients used"))}</span><span>${money(cost.used)}</span></div>
           <div class="rc-total big"><span>${esc(t("Per serving"))}</span><span>${money(cost.perServing)}</span></div>
           <div class="rc-rule"></div>
           <div class="rc-total"><span>${esc(t("At the till (whole packs)"))}</span><span>${money(cost.till)}</span></div>
-          <div class="rc-note rc-src">${(() => { const real = cost.lines.filter((l) => priceSource(l.id, state.market) === "store").length; return real ? esc(t("{a} of {b} ingredients from real store prices in {country}.", { a: real, b: cost.lines.length, country: mName(state.market) })) : esc(t("All prices are estimates for {country}.", { country: mName(state.market) })); })()}</div>
+          <div class="rc-note rc-src">${(() => { const real = cost.lines.filter((l) => priceSource(l.id, state.market) === "store").length, avg = cost.lines.filter((l) => priceSource(l.id, state.market) === "avg").length;
+            return avg ? esc(t("{a} of {b} ingredients from real prices in {country} (store prices or national averages).", { a: real + avg, b: cost.lines.length, country: mName(state.market) })) : real ? esc(t("{a} of {b} ingredients from real store prices in {country}.", { a: real, b: cost.lines.length, country: mName(state.market) })) : esc(t("All prices are estimates for {country}.", { country: mName(state.market) })); })()}</div>
           <div class="rc-note">${esc(t("“At the till” is what you pay buying full packs. Leftovers go back in the cupboard."))}${skipped.length ? " " + esc(tn(skipped.length, "{n} item not counted ({why}).", "{n} items not counted ({why}).", { why })) : ""}</div>
           <label class="rc-toggle"><input type="checkbox" id="staples-toggle" ${state.includeStaples ? "checked" : ""}> ${esc(t("Count pantry staples (salt, oil, spices)"))}</label>
           <div class="rc-actions">
@@ -1466,8 +1483,8 @@
     if (pd) { addToPlan(state.openRecipe, +pd.dataset.planDay, state.servings); renderRecipe(); return; }
     const hv = tg.closest("[data-have]");
     if (hv) { togglePantry(hv.dataset.have); renderRecipe(); pricesChanged(); return; }
-    const rt = tg.closest("[data-rate]");
-    if (rt) { const n = noteFor(state.openRecipe); n.rating = n.rating === +rt.dataset.rate ? 0 : +rt.dataset.rate; saveNotes(); renderRecipe(); return; }
+    const rt = tg.closest("[data-star]");
+    if (rt && state.openRecipe) { const n = noteFor(state.openRecipe); n.rating = n.rating === +rt.dataset.star ? 0 : +rt.dataset.star; saveNotes(); renderRecipe(); return; }
     const sst = tg.closest("[data-set-store]");
     if (sst) { setStore(sst.dataset.setStore); return; }
     const smk = tg.closest("[data-set-market]");

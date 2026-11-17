@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{b} malzemeden {a} tanesi {country} mağazalarının gerçek fiyatlarıyla.",
 "All prices are estimates for {country}.": "{country} için tüm fiyatlar tahmindir.",
 "{n} sources": "{n} kaynak",
-"{n} store prices": "{n} mağaza fiyatı",
 "{n} prices for {country} come from real store prices.": "{country} için {n} fiyat gerçek mağaza fiyatlarından geliyor.",
 "{n} cups": "{n} su bardağı",
 "{n} tbsp": "{n} yemek kaşığı",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "Diğer ülkeler",
 "Kirana · sabzi mandi": "Kirana · sebze pazarı",
 "Kacha bazar": "Kacha bazar (taze pazar)",
-"Mercado / tianguis": "Mercado / tianguis (pazar)"
+"Mercado / tianguis": "Mercado / tianguis (pazar)",
+"average price": "ortalama fiyat",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": "{n} fiyat ulusal ortalamadır (istatistik kurumları, fiyat araştırmaları), tipik bir mağazaya göre gösterilir.",
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{b} malzemeden {a} tanesi {country} için gerçek fiyatlarla (mağaza fiyatları veya ulusal ortalamalar).",
+"{n} real prices": "{n} gerçek fiyat"
 },
 ing: `salt=Tuz
 black_pepper=Karabiber

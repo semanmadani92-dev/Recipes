@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{b} में से {a} सामग्री {country} की दुकानों के असली दामों से।",
 "All prices are estimates for {country}.": "{country} के सभी दाम अनुमान हैं।",
 "{n} sources": "{n} स्रोत",
-"{n} store prices": "दुकानों के {n} दाम",
 "{n} prices for {country} come from real store prices.": "{country} के {n} दाम दुकानों के असली दामों से हैं।",
 "{n} cups": "{n} कप",
 "{n} tbsp": "{n} बड़ा चम्मच",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "अन्य देश",
 "Kirana · sabzi mandi": "किराना · सब्ज़ी मंडी",
 "Kacha bazar": "कच्चा बाज़ार",
-"Mercado / tianguis": "मर्काडो / तियांगिस (बाज़ार)"
+"Mercado / tianguis": "मर्काडो / तियांगिस (बाज़ार)",
+"average price": "औसत दाम",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": { one: "{n} दाम राष्ट्रीय औसत है (सांख्यिकी कार्यालय, मूल्य सर्वे), आम दुकान के हिसाब से दिखाया गया।", other: "{n} दाम राष्ट्रीय औसत हैं (सांख्यिकी कार्यालय, मूल्य सर्वे), आम दुकान के हिसाब से दिखाए गए।" },
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{b} में से {a} सामग्री {country} के असली दामों से (दुकान के दाम या राष्ट्रीय औसत)।",
+"{n} real prices": "{n} असली दाम"
 },
 ing: `salt=नमक
 black_pepper=काली मिर्च

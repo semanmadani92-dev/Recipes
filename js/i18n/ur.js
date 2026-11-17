@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{b} میں سے {a} اجزاء {country} کی دکانوں کی اصل قیمتوں سے۔",
 "All prices are estimates for {country}.": "{country} کی تمام قیمتیں اندازے ہیں۔",
 "{n} sources": "{n} ماخذ",
-"{n} store prices": "دکانوں کی {n} قیمتیں",
 "{n} prices for {country} come from real store prices.": "{country} کی {n} قیمتیں دکانوں کی اصل قیمتوں سے ہیں۔",
 "{n} cups": "{n} کپ",
 "{n} tbsp": "{n} کھانے کا چمچ",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "دیگر ممالک",
 "Kirana · sabzi mandi": "کریانہ · سبزی منڈی",
 "Kacha bazar": "کچا بازار",
-"Mercado / tianguis": "مرکادو / تیانگس (بازار)"
+"Mercado / tianguis": "مرکادو / تیانگس (بازار)",
+"average price": "اوسط قیمت",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": "{n} قیمتیں قومی اوسط ہیں (شماریاتی ادارے، قیمتوں کے سروے)، عام دکان کے حساب سے دکھائی گئیں۔",
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{b} میں سے {a} اجزاء {country} کی اصل قیمتوں سے (دکان کی قیمتیں یا قومی اوسط)۔",
+"{n} real prices": "{n} اصل قیمتیں"
 },
 ing: `salt=نمک
 black_pepper=کالی مرچ

@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{a} dari {b} bahan memakai harga toko asli di {country}.",
 "All prices are estimates for {country}.": "Semua harga untuk {country} adalah perkiraan.",
 "{n} sources": "{n} sumber",
-"{n} store prices": "{n} harga toko",
 "{n} prices for {country} come from real store prices.": "{n} harga untuk {country} berasal dari harga toko asli.",
 "{n} cups": "{n} cangkir",
 "{n} tbsp": "{n} sdm",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "Negara lain",
 "Kirana · sabzi mandi": "Kirana · pasar sayur",
 "Kacha bazar": "Kacha bazar (pasar segar)",
-"Mercado / tianguis": "Mercado / tianguis (pasar)"
+"Mercado / tianguis": "Mercado / tianguis (pasar)",
+"average price": "harga rata-rata",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": "{n} harga adalah rata-rata nasional (badan statistik, survei harga), ditampilkan untuk toko biasa.",
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{a} dari {b} bahan memakai harga asli di {country} (harga toko atau rata-rata nasional).",
+"{n} real prices": "{n} harga asli"
 },
 ing: `salt=Garam
 black_pepper=Lada hitam

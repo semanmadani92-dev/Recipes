@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{b}品目中{a}品目は{country}の実際の店頭価格です。",
 "All prices are estimates for {country}.": "{country}の価格はすべて推定です。",
 "{n} sources": "{n}件の出典",
-"{n} store prices": "店頭価格{n}件",
 "{n} prices for {country} come from real store prices.": "{country}の{n}件の価格は実際の店頭価格です。",
 "{n} cups": "{n}カップ",
 "{n} tbsp": "大さじ{n}",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "その他の国",
 "Kirana · sabzi mandi": "キラナ（個人商店）· 野菜市場",
 "Kacha bazar": "カチャ・バザール（生鮮市場）",
-"Mercado / tianguis": "メルカド / ティアンギス（市場）"
+"Mercado / tianguis": "メルカド / ティアンギス（市場）",
+"average price": "平均価格",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": "{n}件の価格は全国平均（統計機関・価格調査）で、一般的な店舗の価格として表示しています。",
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{b}品目中{a}品目は{country}の実際の価格です（店頭価格または全国平均）。",
+"{n} real prices": "実際の価格{n}件"
 },
 ing: `salt=塩
 black_pepper=黒こしょう

@@ -332,7 +332,6 @@ ui: {
 "{a} of {b} ingredients from real store prices in {country}.": "{a} de {b} ingredientes con precios reales de tienda en {country}.",
 "All prices are estimates for {country}.": "Todos los precios son estimaciones para {country}.",
 "{n} sources": { one: "{n} fuente", other: "{n} fuentes" },
-"{n} store prices": { one: "{n} precio de tienda", other: "{n} precios de tienda" },
 "{n} prices for {country} come from real store prices.": { one: "{n} precio para {country} viene de precios reales de tienda.", other: "{n} precios para {country} vienen de precios reales de tienda." },
 "{n} cups": { one: "{n} taza", other: "{n} tazas" },
 "{n} tbsp": "{n} cda.",
@@ -342,7 +341,11 @@ ui: {
 "Other countries": "Otros países",
 "Kirana · sabzi mandi": "Kirana · mercado de verduras",
 "Kacha bazar": "Kacha bazar (mercado fresco)",
-"Mercado / tianguis": "Mercado / tianguis"
+"Mercado / tianguis": "Mercado / tianguis",
+"average price": "precio medio",
+"{n} prices are national averages (statistics offices and price surveys), shown at a typical store.": { one: "{n} precio es una media nacional (oficinas de estadística, encuestas de precios), ajustada a una tienda típica.", other: "{n} precios son medias nacionales (oficinas de estadística, encuestas de precios), ajustadas a una tienda típica." },
+"{a} of {b} ingredients from real prices in {country} (store prices or national averages).": "{a} de {b} ingredientes con precios reales en {country} (precios de tienda o medias nacionales).",
+"{n} real prices": { one: "{n} precio real", other: "{n} precios reales" }
 },
 ing: `salt=Sal
 black_pepper=Pimienta negra
