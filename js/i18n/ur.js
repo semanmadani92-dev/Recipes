@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} چائے کا چمچ",
 "Corner shop": "نکڑ کی دکان",
 "Local grocers": "مقامی کریانہ",
-"Other countries": "دیگر ممالک"
+"Other countries": "دیگر ممالک",
+"Kirana · sabzi mandi": "کریانہ · سبزی منڈی",
+"Kacha bazar": "کچا بازار",
+"Mercado / tianguis": "مرکادو / تیانگس (بازار)"
 },
 ing: `salt=نمک
 black_pepper=کالی مرچ

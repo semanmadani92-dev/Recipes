@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} চা চামচ",
 "Corner shop": "মোড়ের দোকান",
 "Local grocers": "স্থানীয় মুদি দোকান",
-"Other countries": "অন্যান্য দেশ"
+"Other countries": "অন্যান্য দেশ",
+"Kirana · sabzi mandi": "মুদি দোকান · সবজি মণ্ডি",
+"Kacha bazar": "কাঁচা বাজার",
+"Mercado / tianguis": "মেরকাদো / তিয়াঙ্গিস (বাজার)"
 },
 ing: `salt=লবণ
 black_pepper=গোলমরিচ

@@ -179,6 +179,7 @@
     return m.stores.find((s) => s[0] === state.stores[cc]) || m.stores[0];
   }
   function roundPrice(v) {
+    if (v >= 1e6) return Math.round(v / 1000) * 1000;   // rials, old pounds ...
     if (v >= 10000) return Math.round(v / 100) * 100;
     if (v >= 1000) return Math.round(v / 10) * 10;
     if (v >= 100) return Math.round(v);
@@ -988,7 +989,13 @@
   }
   function storeOptions() {
     const cur = storeOf()[0];
-    return MARKETS[state.market].stores.map((st) => `<option value="${st[0]}"${st[0] === cur ? " selected" : ""}>${esc(storeName(st))} — ${esc(storeLevel(st))}</option>`).join("");
+    return MARKETS[state.market].stores.map((st) => {
+      // "Fresh market — Fresh market · −10%" reads twice: drop the type when the name says it already
+      let lvl = storeLevel(st);
+      const type = t(STORE_TYPE_NAMES[st[2]] || "Supermarket");
+      if (storeName(st) === type) lvl = lvl.slice(type.length).replace(/^ · /, "");
+      return `<option value="${st[0]}"${st[0] === cur ? " selected" : ""}>${esc(storeName(st))}${lvl ? " — " + esc(lvl) : ""}</option>`;
+    }).join("");
   }
   function rateLine() {
     const m = MARKETS[state.market];

@@ -86,6 +86,7 @@ UNIT_GRAMS = {"bell_pepper": 160, "cucumber": 400, "lettuce": 350, "white_cabbag
               "mint": 30, "dill": 30, "chives": 25, "pita": 70, "burger_buns": 60, "corn_tortillas": 30, "chapati_ready": 50,
               "toast_bread": 25, "rye_bread": 50, "bratwurst": 100, "duck_legs": 300, "chorizo_fresh": 90, "poblano_peppers": 120,
               "celery": 50, "lemongrass": 30}
+OLD_BEFORE = (2026, 1)   # (year, month): rows dated earlier (2025) are "older"
 COUNT_UNITS = {"pc", "can", "bunch", "clove", "cube", "sachet", "sheet", "stalk", "slice", "leaf"}
 
 def region_of(cc):
@@ -182,15 +183,15 @@ def build_markets(log):
     return world, n_research, n_fallback, len(research)
 
 # ---------- local prices ----------
-def to_pack(pid, price, qty, unit):
-    """price for qty `unit` -> price of the German pack, or None"""
+def to_pack(pid, price, qty, unit, pc_weight=None):
+    """price for qty `unit` -> price of the German pack, or None (pc_weight: grams per piece, from the row)"""
     p = PRICES[pid]; pu, pq = p["u"], p["q"]
     if unit in ("kg", "l"): qty *= 1000
     unit = {"kg": "g", "l": "ml"}.get(unit, unit)
     if qty <= 0: return None
     if unit == pu or (unit == "pc" and pu in COUNT_UNITS): return price * pq / qty
     if {unit, pu} <= {"g", "ml"}: return price * pq / qty          # density ~1 (milk, oil, sauces)
-    w = UNIT_GRAMS.get(pid)
+    w = pc_weight if pc_weight and pc_weight > 0 else UNIT_GRAMS.get(pid)
     if w and unit in ("g", "ml") and pu in COUNT_UNITS: return price * (pq * w) / qty
     if w and unit == "pc" and pu in ("g", "ml"): return price * pq / (qty * w)
     return None
@@ -220,7 +221,7 @@ def build_prices(markets, log):
             pid, price, qty, unit = it.get("id"), num(it.get("price")), num(it.get("qty")), it.get("unit")
             if pid not in PRICES: skipped += 1; log.append(f"{cc}: unknown id {pid!r}"); continue
             if not price or price <= 0 or not qty: skipped += 1; log.append(f"{cc} {pid}: no price/qty"); continue
-            pack = to_pack(pid, price * conv, qty, unit)
+            pack = to_pack(pid, price * conv, qty, unit, num(it.get("pc_weight_g")))
             if pack is None: skipped += 1; log.append(f"{cc} {pid}: unit {unit} vs pack {PRICES[pid]['u']} skipped"); continue
             st = stores.get(it.get("store"))
             if it.get("store") and not st: log.append(f"{cc} {pid}: store {it.get('store')} not in market, treated as cheapest")
@@ -231,11 +232,16 @@ def build_prices(markets, log):
             ratio = base / est if est else 1
             if ratio > 5 or ratio < 0.2:
                 outliers += 1; log.append(f"{cc} {pid}: outlier {base:.2f} vs estimate {est:.2f} (x{ratio:.2f}) rejected"); continue
-            obs[pid].append(base); used += 1
+            m_date = re.match(r"(\d{4})(?:-(\d{2}))?", str(it.get("date") or ""))
+            old = bool(m_date) and (int(m_date.group(1)), int(m_date.group(2) or 6)) < OLD_BEFORE
+            obs[pid].append((base, old)); used += 1
             s = url(it.get("source"))
             if s and s not in src[pid]: src[pid].append(s)
         items = {}
-        for pid, vals in obs.items():
+        for pid, rows in obs.items():
+            # older observations (2025) count only when there is nothing recent
+            vals = [b for b, old in rows if not old] or [b for b, old in rows]
+            if len(vals) < len(rows): log.append(f"{cc} {pid}: {len(rows) - len(vals)} older rows left out (newer ones exist)")
             v = statistics.median(vals)
             v = round(v, 2) if v < 100 else round(v)
             items[pid] = {"p": v, "n": len(vals), "src": src[pid][:3]}

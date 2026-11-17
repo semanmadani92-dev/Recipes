@@ -20,7 +20,18 @@ async function tour(ctx, lang, device) {
     await page.waitForTimeout(1200);
     const htmlLang = await page.evaluate(() => document.documentElement.lang);
     if (!htmlLang.toLowerCase().startsWith(lang)) problems.push(`<html lang> is "${htmlLang}"`);
-    const check = async (where, scope) => { const b = await badText(page, scope); if (b.length) problems.push(`${where}: ${b.join("; ")}`); };
+    const check = async (where, scope) => {
+      const b = await badText(page, scope); if (b.length) problems.push(`${where}: ${b.join("; ")}`);
+      // nothing may make a phone page (or an open dialog) scroll sideways
+      const ov = await page.evaluate(() => {
+        const out = [];
+        const d = document.documentElement.scrollWidth - window.innerWidth;
+        if (d > 2) out.push(`page ${d}px wider than the screen`);
+        document.querySelectorAll("dialog[open]").forEach((dl) => { const x = dl.scrollWidth - dl.clientWidth; if (x > 2) out.push(`#${dl.id} scrolls sideways by ${x}px`); });
+        return out;
+      });
+      if (device === "phone" && ov.length) problems.push(`${where}: ${ov.join("; ")}`);
+    };
     await check("globe");
     for (const v of ["find", "plan", "pantry", "saved", "prices"]) {
       const t0 = Date.now();

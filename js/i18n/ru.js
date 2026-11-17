@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} ч. л.",
 "Corner shop": "Магазин у дома",
 "Local grocers": "Местные продуктовые лавки",
-"Other countries": "Другие страны"
+"Other countries": "Другие страны",
+"Kirana · sabzi mandi": "Кирана · овощной рынок",
+"Kacha bazar": "Кача-базар (рынок)",
+"Mercado / tianguis": "Меркадо / тиангис (рынок)"
 },
 ing: `salt=Соль
 black_pepper=Чёрный перец

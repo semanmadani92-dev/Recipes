@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} sdt",
 "Corner shop": "Warung",
 "Local grocers": "Toko kelontong lokal",
-"Other countries": "Negara lain"
+"Other countries": "Negara lain",
+"Kirana · sabzi mandi": "Kirana · pasar sayur",
+"Kacha bazar": "Kacha bazar (pasar segar)",
+"Mercado / tianguis": "Mercado / tianguis (pasar)"
 },
 ing: `salt=Garam
 black_pepper=Lada hitam

@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "小さじ{n}",
 "Corner shop": "近所の商店",
 "Local grocers": "地元の食料品店",
-"Other countries": "その他の国"
+"Other countries": "その他の国",
+"Kirana · sabzi mandi": "キラナ（個人商店）· 野菜市場",
+"Kacha bazar": "カチャ・バザール（生鮮市場）",
+"Mercado / tianguis": "メルカド / ティアンギス（市場）"
 },
 ing: `salt=塩
 black_pepper=黒こしょう

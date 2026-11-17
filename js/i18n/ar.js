@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} ملعقة صغيرة",
 "Corner shop": "بقالة الحي",
 "Local grocers": "بقالات محلية",
-"Other countries": "دول أخرى"
+"Other countries": "دول أخرى",
+"Kirana · sabzi mandi": "بقالة كيرانا · سوق الخضار",
+"Kacha bazar": "سوق الخضار (كاتشا بازار)",
+"Mercado / tianguis": "ميركادو / تيانغيس (سوق)"
 },
 ing: `salt=ملح
 black_pepper=فلفل أسود

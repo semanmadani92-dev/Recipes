@@ -116,6 +116,36 @@ module.exports = (T) => {
     assert.ok(far.length <= Math.max(3, n * 0.02), `${far.length} of ${n} local prices are >8x off the estimate (unit/pack-size errors?):\n` + far.slice(0, 15).join("\n"));
   });
 
+  T.test("pegged currencies have consistent rates (USD pegs, CFA franc, BAM, BTN=INR, NAD=ZAR)", async ({ data, assert }) => {
+    const { w } = data();
+    const r = (cur) => { const m = Object.values(w.MARKETS).find((x) => x.cur === cur); return m ? m.rate : null; };
+    const bad = [];
+    // the same currency must have the same rate in every market
+    const byCur = {};
+    for (const [cc, m] of Object.entries(w.MARKETS)) (byCur[m.cur] = byCur[m.cur] || []).push([cc, m.rate]);
+    for (const [cur, list] of Object.entries(byCur)) if (new Set(list.map((x) => x[1])).size > 1) bad.push(`${cur} has different rates: ${JSON.stringify(list)}`);
+    const usd = r("USD");
+    const pegs = [["AED", usd * 3.6725], ["SAR", usd * 3.75], ["QAR", usd * 3.64], ["OMR", usd * 0.3845], ["JOD", usd * 0.709], ["BSD", usd], ["BZD", usd * 2],
+      ["XOF", 655.957], ["XAF", 655.957], ["BAM", 1.95583], ["DKK", 7.46], ["BTN", r("INR")], ["NAD", r("ZAR")]];
+    for (const [cur, want] of pegs) { const got = r(cur); if (got != null && want && Math.abs(got / want - 1) > 0.03) bad.push(`${cur}: rate ${got}, peg says ${want.toFixed(4)}`); }
+    assert.deepStrictEqual(bad, []);
+  });
+
+  T.test("generic store names (not brands) are translatable: one of the allowed names, translated in all languages", async ({ data, ROOT, assert }) => {
+    const { w } = data();
+    const vm = require("vm");
+    const sb = {}; sb.window = sb; vm.createContext(sb);
+    for (const f of fs.readdirSync(path.join(ROOT, "js/i18n"))) vm.runInContext(fs.readFileSync(path.join(ROOT, "js/i18n", f), "utf8"), sb);
+    const D = sb.I18N_DICT;
+    const names = new Map();
+    for (const [cc, m] of Object.entries(w.MARKETS)) for (const st of m.stores) names.set(st[1], (names.get(st[1]) || []).concat(cc));
+    // lower-case shop words mean a description, not a brand ("Fresh market", "Asian & Latino grocers", "Tiendas en divisas")
+    const generic = [...names.keys()].filter((n) => /(?<![-\w])(grocers?|market|markets|shops?|stores?|stalls|hypermarkets|supermarkets|tiendas|mercados?|divisas|tianguis)\b/.test(n));
+    const bad = generic.map((n) => [n, Object.keys(D).filter((l) => !(D[l].ui || {})[n])]).filter(([, miss]) => miss.length)
+      .map(([n, miss]) => `"${n}" (${names.get(n).join(",")}): untranslated in ${miss.length} languages — use one of ${GENERIC_STORES.join(" / ")} or a brand`);
+    assert.deepStrictEqual(bad, []);
+  });
+
   T.test("python3 tools/i18n_keys.py --check passes", async ({ ROOT, assert }) => {
     let out = "", code = 0;
     try { out = execFileSync("python3", ["tools/i18n_keys.py", "--check"], { cwd: ROOT, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] }); }

@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} TL",
 "Corner shop": "Kiosk / Tante-Emma-Laden",
 "Local grocers": "Lebensmittelhändler",
-"Other countries": "Weitere Länder"
+"Other countries": "Weitere Länder",
+"Kirana · sabzi mandi": "Kirana-Laden · Gemüsemarkt",
+"Kacha bazar": "Kacha Bazar (Frischmarkt)",
+"Mercado / tianguis": "Mercado / Tianguis (Markt)"
 },
 ing: `salt=Salz
 black_pepper=Schwarzer Pfeffer

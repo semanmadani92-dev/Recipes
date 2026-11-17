@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} 茶匙",
 "Corner shop": "街角小店",
 "Local grocers": "本地杂货店",
-"Other countries": "其他国家"
+"Other countries": "其他国家",
+"Kirana · sabzi mandi": "基拉纳小店 · 蔬菜市场",
+"Kacha bazar": "生鲜集市（Kacha bazar）",
+"Mercado / tianguis": "传统市场 / 露天集市"
 },
 ing: `salt=盐
 black_pepper=黑胡椒

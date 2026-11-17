@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} çay kaşığı",
 "Corner shop": "Mahalle bakkalı",
 "Local grocers": "Yerel bakkallar",
-"Other countries": "Diğer ülkeler"
+"Other countries": "Diğer ülkeler",
+"Kirana · sabzi mandi": "Kirana · sebze pazarı",
+"Kacha bazar": "Kacha bazar (taze pazar)",
+"Mercado / tianguis": "Mercado / tianguis (pazar)"
 },
 ing: `salt=Tuz
 black_pepper=Karabiber

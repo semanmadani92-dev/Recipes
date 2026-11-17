@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n}작은술",
 "Corner shop": "동네 가게",
 "Local grocers": "동네 식료품점",
-"Other countries": "기타 국가"
+"Other countries": "기타 국가",
+"Kirana · sabzi mandi": "키라나 · 채소 시장",
+"Kacha bazar": "카차 바자르 (신선 시장)",
+"Mercado / tianguis": "메르카도 / 티앙기스 (시장)"
 },
 ing: `salt=소금
 black_pepper=후추

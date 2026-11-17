@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} c. à c.",
 "Corner shop": "Épicerie de quartier",
 "Local grocers": "Épiceries locales",
-"Other countries": "Autres pays"
+"Other countries": "Autres pays",
+"Kirana · sabzi mandi": "Kirana · marché aux légumes",
+"Kacha bazar": "Kacha bazar (marché frais)",
+"Mercado / tianguis": "Mercado / tianguis (marché)"
 },
 ing: `salt=Sel
 black_pepper=Poivre noir

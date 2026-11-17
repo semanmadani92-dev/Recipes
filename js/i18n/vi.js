@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} thìa cà phê",
 "Corner shop": "Tiệm tạp hóa đầu ngõ",
 "Local grocers": "Tiệm tạp hóa địa phương",
-"Other countries": "Quốc gia khác"
+"Other countries": "Quốc gia khác",
+"Kirana · sabzi mandi": "Tiệm kirana · chợ rau",
+"Kacha bazar": "Chợ tươi (Kacha bazar)",
+"Mercado / tianguis": "Mercado / tianguis (chợ)"
 },
 ing: `salt=Muối
 black_pepper=Tiêu đen

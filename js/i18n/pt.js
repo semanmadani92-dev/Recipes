@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} c. chá",
 "Corner shop": "Mercadinho de bairro",
 "Local grocers": "Mercearias locais",
-"Other countries": "Outros países"
+"Other countries": "Outros países",
+"Kirana · sabzi mandi": "Kirana · feira de verduras",
+"Kacha bazar": "Kacha bazar (mercado fresco)",
+"Mercado / tianguis": "Mercado / tianguis (feira)"
 },
 ing: `salt=Sal
 black_pepper=Pimenta-do-reino

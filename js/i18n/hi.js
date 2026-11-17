@@ -339,7 +339,10 @@ ui: {
 "{n} tsp": "{n} छोटा चम्मच",
 "Corner shop": "नुक्कड़ की दुकान",
 "Local grocers": "स्थानीय किराना",
-"Other countries": "अन्य देश"
+"Other countries": "अन्य देश",
+"Kirana · sabzi mandi": "किराना · सब्ज़ी मंडी",
+"Kacha bazar": "कच्चा बाज़ार",
+"Mercado / tianguis": "मर्काडो / तियांगिस (बाज़ार)"
 },
 ing: `salt=नमक
 black_pepper=काली मिर्च
